@@ -6,4 +6,10 @@
 //  Copyright © 2017 DevMountain. All rights reserved.
 //
 
-import Foundation
+class BaseService {
+  unowned let provider: ServiceProviderType
+  
+  init(provider: ServiceProviderType) {
+    self.provider = provider
+  }
+}

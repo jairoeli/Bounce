@@ -6,4 +6,7 @@
 //  Copyright © 2017 DevMountain. All rights reserved.
 //
 
-import Foundation
+import ObjectMapper
+import Then
+
+protocol ModelType: ImmutableMappable, Then {}

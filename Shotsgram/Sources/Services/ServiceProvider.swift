@@ -6,4 +6,5 @@
 //  Copyright © 2017 DevMountain. All rights reserved.
 //
 
-import Foundation
+protocol ServiceProviderType: class {}
+final class ServiceProvider: ServiceProviderType {}
