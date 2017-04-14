@@ -20,6 +20,7 @@
 		9CCEB2231EA16C6300D42EA4 /* Shot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEB2221EA16C6300D42EA4 /* Shot.swift */; };
 		9CCEB2251EA16F7B00D42EA4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEB2241EA16F7B00D42EA4 /* User.swift */; };
 		9CCEB22A1EA1718C00D42EA4 /* DribbbleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEB2291EA1718C00D42EA4 /* DribbbleAPI.swift */; };
+		9CCEB22D1EA1743400D42EA4 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEB22C1EA1743400D42EA4 /* Logging.swift */; };
 		9CFB68511EA052BE00C0D9BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CFB68501EA052BE00C0D9BB /* Assets.xcassets */; };
 		9CFB68541EA052BE00C0D9BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CFB68521EA052BE00C0D9BB /* LaunchScreen.storyboard */; };
 		9CFB685C1EA0543C00C0D9BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB685B1EA0543C00C0D9BB /* AppDelegate.swift */; };
@@ -51,6 +52,7 @@
 		9CCEB2221EA16C6300D42EA4 /* Shot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Shot.swift; path = Sources/Model/Shot.swift; sourceTree = "<group>"; };
 		9CCEB2241EA16F7B00D42EA4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Sources/Model/User.swift; sourceTree = "<group>"; };
 		9CCEB2291EA1718C00D42EA4 /* DribbbleAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DribbbleAPI.swift; path = Sources/Networking/DribbbleAPI.swift; sourceTree = "<group>"; };
+		9CCEB22C1EA1743400D42EA4 /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Logging.swift; path = Sources/Logging/Logging.swift; sourceTree = "<group>"; };
 		9CFB68461EA052BE00C0D9BB /* Shotsgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shotsgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CFB68501EA052BE00C0D9BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		9CFB68531EA052BE00C0D9BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -131,6 +133,14 @@
 			name = Networking;
 			sourceTree = "<group>";
 		};
+		9CCEB22B1EA1740000D42EA4 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				9CCEB22C1EA1743400D42EA4 /* Logging.swift */,
+			);
+			name = Logging;
+			sourceTree = "<group>";
+		};
 		9CFB683D1EA052BE00C0D9BB = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +194,7 @@
 				9CFB68651EA05B2700C0D9BB /* Model */,
 				9CCEB2151EA1543600D42EA4 /* ViewModels */,
 				9CFB68681EA05B9B00C0D9BB /* iOS Shotsgram */,
+				9CCEB22B1EA1740000D42EA4 /* Logging */,
 				9CFB68781EA0605600C0D9BB /* Rx */,
 				9CFB686F1EA05F4100C0D9BB /* Utils */,
 			);
@@ -390,6 +401,7 @@
 				9CFB68771EA0602C00C0D9BB /* UIScrollView+ScrollToBottom.swift in Sources */,
 				9CFB68731EA05FA100C0D9BB /* String+BoundingRect.swift in Sources */,
 				9CCEB22A1EA1718C00D42EA4 /* DribbbleAPI.swift in Sources */,
+				9CCEB22D1EA1743400D42EA4 /* Logging.swift in Sources */,
 				9CCEB2231EA16C6300D42EA4 /* Shot.swift in Sources */,
 				9CFB68671EA05B5800C0D9BB /* ModelType.swift in Sources */,
 				9CCEB21D1EA15BDA00D42EA4 /* ShotFeedViewController.swift in Sources */,
