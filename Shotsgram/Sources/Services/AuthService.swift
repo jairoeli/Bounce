@@ -12,6 +12,8 @@ import Alamofire
 import RxSwift
 
 protocol AuthServiceType {
+  var accessToken: AccessToken? { get }
+  
   /// Start OAuth authorization process.
   ///
   /// - returns: An Observable of `AccessToken` instance.
@@ -30,6 +32,7 @@ final class AuthService: BaseService, AuthServiceType {
   
   fileprivate var currentViewController: UIViewController?
   fileprivate let callbackSubject = PublishSubject<String>()
+  private(set) var accessToken: AccessToken?
   
   func authorize() -> Observable<AccessToken> {
     let url = URL(string: "https://dribbble.com/oauth/authorize?client_id=\(self.clientID)")!
@@ -56,7 +59,7 @@ final class AuthService: BaseService, AuthServiceType {
       "client_secret": self.clientSecret,
       "code": code
     ]
-    return Observable.create { observer in
+    return Observable.create { [weak self] observer in
       let request = Alamofire
         .request(urlString, method: .post, parameters: parameters)
         .responseString { response in
@@ -64,6 +67,7 @@ final class AuthService: BaseService, AuthServiceType {
           case .success(let jsonString):
             do {
               let accessToken = try AccessToken(JSONString: jsonString)
+              self?.accessToken = accessToken
               observer.onNext(accessToken)
               observer.onCompleted()
             } catch let error {
