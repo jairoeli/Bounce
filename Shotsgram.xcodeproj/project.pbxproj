@@ -23,6 +23,8 @@
 		9CCEB22D1EA1743400D42EA4 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEB22C1EA1743400D42EA4 /* Logging.swift */; };
 		9CCEB22F1EA1822800D42EA4 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEB22E1EA1822800D42EA4 /* Networking.swift */; };
 		9CCEB2311EA1865400D42EA4 /* AuthPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEB2301EA1865400D42EA4 /* AuthPlugin.swift */; };
+		9CCEB2331EA188F300D42EA4 /* ObjectMapper+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEB2321EA188F300D42EA4 /* ObjectMapper+Rx.swift */; };
+		9CCEB2351EA18AFB00D42EA4 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEB2341EA18AFB00D42EA4 /* UserService.swift */; };
 		9CFB68511EA052BE00C0D9BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CFB68501EA052BE00C0D9BB /* Assets.xcassets */; };
 		9CFB68541EA052BE00C0D9BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CFB68521EA052BE00C0D9BB /* LaunchScreen.storyboard */; };
 		9CFB685C1EA0543C00C0D9BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB685B1EA0543C00C0D9BB /* AppDelegate.swift */; };
@@ -57,6 +59,8 @@
 		9CCEB22C1EA1743400D42EA4 /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Logging.swift; path = Sources/Logging/Logging.swift; sourceTree = "<group>"; };
 		9CCEB22E1EA1822800D42EA4 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Networking.swift; path = Sources/Networking/Networking.swift; sourceTree = "<group>"; };
 		9CCEB2301EA1865400D42EA4 /* AuthPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthPlugin.swift; path = Sources/Networking/AuthPlugin.swift; sourceTree = "<group>"; };
+		9CCEB2321EA188F300D42EA4 /* ObjectMapper+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ObjectMapper+Rx.swift"; path = "Sources/Rx/ObjectMapper+Rx.swift"; sourceTree = "<group>"; };
+		9CCEB2341EA18AFB00D42EA4 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = Sources/Services/UserService.swift; sourceTree = "<group>"; };
 		9CFB68461EA052BE00C0D9BB /* Shotsgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shotsgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CFB68501EA052BE00C0D9BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		9CFB68531EA052BE00C0D9BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -213,6 +217,7 @@
 				9CFB68601EA05A6B00C0D9BB /* ServiceProvider.swift */,
 				9CFB68631EA05AA800C0D9BB /* BaseService.swift */,
 				9CCEB20E1EA14BB600D42EA4 /* AuthService.swift */,
+				9CCEB2341EA18AFB00D42EA4 /* UserService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -265,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				9CFB68791EA0608500C0D9BB /* UIViewController+Rx.swift */,
+				9CCEB2321EA188F300D42EA4 /* ObjectMapper+Rx.swift */,
 			);
 			name = Rx;
 			sourceTree = "<group>";
@@ -400,6 +406,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CCEB2351EA18AFB00D42EA4 /* UserService.swift in Sources */,
+				9CCEB2331EA188F300D42EA4 /* ObjectMapper+Rx.swift in Sources */,
 				9CCEB21B1EA15B1C00D42EA4 /* ShotFeedViewModel.swift in Sources */,
 				9CCEB21F1EA15D5F00D42EA4 /* SplashViewModel.swift in Sources */,
 				9CFB686C1EA05D4200C0D9BB /* BaseViewController.swift in Sources */,
