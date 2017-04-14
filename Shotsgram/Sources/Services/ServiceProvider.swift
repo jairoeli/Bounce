@@ -6,5 +6,11 @@
 //  Copyright © 2017 DevMountain. All rights reserved.
 //
 
-protocol ServiceProviderType: class {}
-final class ServiceProvider: ServiceProviderType {}
+protocol ServiceProviderType: class {
+  var authService: AuthServiceType { get }
+}
+
+
+final class ServiceProvider: ServiceProviderType {
+  lazy var authService: AuthServiceType = AuthService(provider: self)
+}

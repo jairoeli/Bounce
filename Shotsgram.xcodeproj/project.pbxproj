@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		52C70FC5C3F6C224224209F1 /* Pods_Shotsgram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14303A17F11DE2712520E2B8 /* Pods_Shotsgram.framework */; };
+		9CCEB20D1EA14AD500D42EA4 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEB20C1EA14AD500D42EA4 /* AccessToken.swift */; };
+		9CCEB20F1EA14BB600D42EA4 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEB20E1EA14BB600D42EA4 /* AuthService.swift */; };
+		9CCEB2111EA152D900D42EA4 /* URLNavigationMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEB2101EA152D900D42EA4 /* URLNavigationMap.swift */; };
+		9CCEB2171EA1548000D42EA4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEB2161EA1548000D42EA4 /* LoginViewModel.swift */; };
+		9CCEB2191EA1576300D42EA4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEB2181EA1576300D42EA4 /* LoginViewController.swift */; };
+		9CCEB21B1EA15B1C00D42EA4 /* ShotFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEB21A1EA15B1C00D42EA4 /* ShotFeedViewModel.swift */; };
+		9CCEB21D1EA15BDA00D42EA4 /* ShotFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEB21C1EA15BDA00D42EA4 /* ShotFeedViewController.swift */; };
+		9CCEB21F1EA15D5F00D42EA4 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEB21E1EA15D5F00D42EA4 /* SplashViewModel.swift */; };
+		9CCEB2211EA161A600D42EA4 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEB2201EA161A600D42EA4 /* SplashViewController.swift */; };
 		9CFB68511EA052BE00C0D9BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CFB68501EA052BE00C0D9BB /* Assets.xcassets */; };
 		9CFB68541EA052BE00C0D9BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CFB68521EA052BE00C0D9BB /* LaunchScreen.storyboard */; };
 		9CFB685C1EA0543C00C0D9BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB685B1EA0543C00C0D9BB /* AppDelegate.swift */; };
@@ -27,6 +36,15 @@
 		08C1D24F279717C463081D91 /* Pods-Shotsgram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shotsgram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shotsgram/Pods-Shotsgram.debug.xcconfig"; sourceTree = "<group>"; };
 		14303A17F11DE2712520E2B8 /* Pods_Shotsgram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shotsgram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CFBEC196429B0DC65E7C580 /* Pods-Shotsgram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shotsgram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shotsgram/Pods-Shotsgram.release.xcconfig"; sourceTree = "<group>"; };
+		9CCEB20C1EA14AD500D42EA4 /* AccessToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccessToken.swift; path = Sources/Model/AccessToken.swift; sourceTree = "<group>"; };
+		9CCEB20E1EA14BB600D42EA4 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthService.swift; path = Sources/Services/AuthService.swift; sourceTree = "<group>"; };
+		9CCEB2101EA152D900D42EA4 /* URLNavigationMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLNavigationMap.swift; path = Sources/Utils/URLNavigationMap.swift; sourceTree = "<group>"; };
+		9CCEB2161EA1548000D42EA4 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewModel.swift; path = Sources/ViewModels/LoginViewModel.swift; sourceTree = "<group>"; };
+		9CCEB2181EA1576300D42EA4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "Sources/iOS Shotsgram/ViewControllers/Login/LoginViewController.swift"; sourceTree = "<group>"; };
+		9CCEB21A1EA15B1C00D42EA4 /* ShotFeedViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShotFeedViewModel.swift; path = Sources/ViewModels/ShotFeedViewModel.swift; sourceTree = "<group>"; };
+		9CCEB21C1EA15BDA00D42EA4 /* ShotFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShotFeedViewController.swift; path = "Sources/iOS Shotsgram/ViewControllers/Shots/ShotFeedViewController.swift"; sourceTree = "<group>"; };
+		9CCEB21E1EA15D5F00D42EA4 /* SplashViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashViewModel.swift; path = Sources/ViewModels/SplashViewModel.swift; sourceTree = "<group>"; };
+		9CCEB2201EA161A600D42EA4 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashViewController.swift; path = "Sources/iOS Shotsgram/ViewControllers/Splash/SplashViewController.swift"; sourceTree = "<group>"; };
 		9CFB68461EA052BE00C0D9BB /* Shotsgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shotsgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CFB68501EA052BE00C0D9BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		9CFB68531EA052BE00C0D9BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,6 +81,40 @@
 				7CFBEC196429B0DC65E7C580 /* Pods-Shotsgram.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		9CCEB2121EA153E000D42EA4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9CCEB2181EA1576300D42EA4 /* LoginViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		9CCEB2131EA153EA00D42EA4 /* Shots */ = {
+			isa = PBXGroup;
+			children = (
+				9CCEB21C1EA15BDA00D42EA4 /* ShotFeedViewController.swift */,
+			);
+			name = Shots;
+			sourceTree = "<group>";
+		};
+		9CCEB2141EA153F800D42EA4 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				9CCEB2201EA161A600D42EA4 /* SplashViewController.swift */,
+			);
+			name = Splash;
+			sourceTree = "<group>";
+		};
+		9CCEB2151EA1543600D42EA4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9CCEB2161EA1548000D42EA4 /* LoginViewModel.swift */,
+				9CCEB21A1EA15B1C00D42EA4 /* ShotFeedViewModel.swift */,
+				9CCEB21E1EA15D5F00D42EA4 /* SplashViewModel.swift */,
+			);
+			name = ViewModels;
 			sourceTree = "<group>";
 		};
 		9CFB683D1EA052BE00C0D9BB = {
@@ -115,6 +167,7 @@
 			children = (
 				9CFB68621EA05A6E00C0D9BB /* Services */,
 				9CFB68651EA05B2700C0D9BB /* Model */,
+				9CCEB2151EA1543600D42EA4 /* ViewModels */,
 				9CFB68681EA05B9B00C0D9BB /* iOS Shotsgram */,
 				9CFB68781EA0605600C0D9BB /* Rx */,
 				9CFB686F1EA05F4100C0D9BB /* Utils */,
@@ -127,6 +180,7 @@
 			children = (
 				9CFB68601EA05A6B00C0D9BB /* ServiceProvider.swift */,
 				9CFB68631EA05AA800C0D9BB /* BaseService.swift */,
+				9CCEB20E1EA14BB600D42EA4 /* AuthService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -135,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				9CFB68661EA05B5800C0D9BB /* ModelType.swift */,
+				9CCEB20C1EA14AD500D42EA4 /* AccessToken.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -153,6 +208,9 @@
 			children = (
 				9CFB686B1EA05D4200C0D9BB /* BaseViewController.swift */,
 				9CFB686D1EA05EC700C0D9BB /* BaseCollectionViewCell.swift */,
+				9CCEB2121EA153E000D42EA4 /* Login */,
+				9CCEB2141EA153F800D42EA4 /* Splash */,
+				9CCEB2131EA153EA00D42EA4 /* Shots */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -164,6 +222,7 @@
 				9CFB68721EA05FA100C0D9BB /* String+BoundingRect.swift */,
 				9CFB68741EA05FF600C0D9BB /* UICollectionViewCell+CellWidth.swift */,
 				9CFB68761EA0602C00C0D9BB /* UIScrollView+ScrollToBottom.swift */,
+				9CCEB2101EA152D900D42EA4 /* URLNavigationMap.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -307,17 +366,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CCEB21B1EA15B1C00D42EA4 /* ShotFeedViewModel.swift in Sources */,
+				9CCEB21F1EA15D5F00D42EA4 /* SplashViewModel.swift in Sources */,
 				9CFB686C1EA05D4200C0D9BB /* BaseViewController.swift in Sources */,
 				9CFB68611EA05A6B00C0D9BB /* ServiceProvider.swift in Sources */,
 				9CFB68771EA0602C00C0D9BB /* UIScrollView+ScrollToBottom.swift in Sources */,
 				9CFB68731EA05FA100C0D9BB /* String+BoundingRect.swift in Sources */,
 				9CFB68671EA05B5800C0D9BB /* ModelType.swift in Sources */,
+				9CCEB21D1EA15BDA00D42EA4 /* ShotFeedViewController.swift in Sources */,
 				9CFB685C1EA0543C00C0D9BB /* AppDelegate.swift in Sources */,
+				9CCEB20F1EA14BB600D42EA4 /* AuthService.swift in Sources */,
 				9CFB68711EA05F7200C0D9BB /* Snap.swift in Sources */,
+				9CCEB2171EA1548000D42EA4 /* LoginViewModel.swift in Sources */,
+				9CCEB2111EA152D900D42EA4 /* URLNavigationMap.swift in Sources */,
 				9CFB68641EA05AA800C0D9BB /* BaseService.swift in Sources */,
 				9CFB68751EA05FF600C0D9BB /* UICollectionViewCell+CellWidth.swift in Sources */,
+				9CCEB2191EA1576300D42EA4 /* LoginViewController.swift in Sources */,
 				9CFB687A1EA0608500C0D9BB /* UIViewController+Rx.swift in Sources */,
 				9CFB686E1EA05EC700C0D9BB /* BaseCollectionViewCell.swift in Sources */,
+				9CCEB20D1EA14AD500D42EA4 /* AccessToken.swift in Sources */,
+				9CCEB2211EA161A600D42EA4 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

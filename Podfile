@@ -18,6 +18,7 @@ target 'Shotsgram' do
   pod 'RxDataSources'
   pod 'RxOptional'
   pod 'RxKeyboard'
+  pod 'RxSwiftUtilities'
 
   # UI
   pod 'SnapKit'
