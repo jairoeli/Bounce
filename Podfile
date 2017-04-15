@@ -37,5 +37,6 @@ target 'Shotsgram' do
   pod 'SwiftyImage'
   pod 'UITextView+Placeholder'
   pod 'URLNavigator'
+  pod 'KeychainAccess'
 
 end

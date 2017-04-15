@@ -35,14 +35,9 @@ final class LoginViewModel: LoginViewModelType {
     
     self.loginButtonEnabled = isLoading.map { !$0 }.asDriver()
     self.presentMainScreen = self.login
-      .flatMap {
-        // TODO: Error handling
-        provider.authService.authorize()
-          .trackActivity(isLoading)
-    }
-      .map { _ in
-        ShotFeedViewModel(provider: provider)
-    }
+      .flatMap { provider.authService.authorize().trackActivity(isLoading) }
+      .flatMap { provider.userService.fetchMe() }
+      .map { ShotFeedViewModel(provider: provider) }
   }
   
 }

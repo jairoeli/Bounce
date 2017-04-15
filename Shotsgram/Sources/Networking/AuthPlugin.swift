@@ -19,7 +19,7 @@ struct AuthPlugin: PluginType {
   func prepare(_ request: URLRequest, target: TargetType) -> URLRequest {
     var request = request
     
-    if let accessToken = self.provider.authService.accessToken?.accessToken {
+    if let accessToken = self.provider.authService.currentAccessToken?.accessToken {
       request.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
     }
     
