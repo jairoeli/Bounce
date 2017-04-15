@@ -52,7 +52,7 @@ final class ShotFeedViewController: BaseViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.view.backgroundColor = .white
+    self.view.backgroundColor = .whiteSmoke
     
     self.collectionView.addSubview(self.refreshControl)
     self.view.addSubview(self.collectionView)
@@ -142,13 +142,3 @@ extension ShotFeedViewController: UICollectionViewDelegateFlowLayout {
   }
   
 }
-
-
-
-
-
-
-
-
-
-

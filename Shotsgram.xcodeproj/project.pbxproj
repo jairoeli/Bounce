@@ -19,6 +19,7 @@
 		9C08EEA21EA1CB7E00A7FA16 /* ShotCellModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C08EEA11EA1CB7E00A7FA16 /* ShotCellModelType.swift */; };
 		9C08EEA41EA1CC1200A7FA16 /* ShotViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C08EEA31EA1CC1200A7FA16 /* ShotViewCell.swift */; };
 		9C08EEA61EA2885A00A7FA16 /* CollectionActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C08EEA51EA2885A00A7FA16 /* CollectionActivityIndicatorView.swift */; };
+		9C08EEA81EA28E9700A7FA16 /* UIColor+Dribbble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C08EEA71EA28E9700A7FA16 /* UIColor+Dribbble.swift */; };
 		9CCEB20D1EA14AD500D42EA4 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEB20C1EA14AD500D42EA4 /* AccessToken.swift */; };
 		9CCEB20F1EA14BB600D42EA4 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEB20E1EA14BB600D42EA4 /* AuthService.swift */; };
 		9CCEB2111EA152D900D42EA4 /* URLNavigationMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEB2101EA152D900D42EA4 /* URLNavigationMap.swift */; };
@@ -65,6 +66,7 @@
 		9C08EEA11EA1CB7E00A7FA16 /* ShotCellModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShotCellModelType.swift; path = "Sources/iOS Shotsgram/ViewControllers/Shots/ShotCellModelType.swift"; sourceTree = "<group>"; };
 		9C08EEA31EA1CC1200A7FA16 /* ShotViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShotViewCell.swift; path = "Sources/iOS Shotsgram/ViewControllers/Shots/ShotViewCell.swift"; sourceTree = "<group>"; };
 		9C08EEA51EA2885A00A7FA16 /* CollectionActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionActivityIndicatorView.swift; path = "Sources/iOS Shotsgram/ViewControllers/CollectionActivityIndicatorView.swift"; sourceTree = "<group>"; };
+		9C08EEA71EA28E9700A7FA16 /* UIColor+Dribbble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Dribbble.swift"; path = "Sources/Utils/UIColor+Dribbble.swift"; sourceTree = "<group>"; };
 		9CCEB20C1EA14AD500D42EA4 /* AccessToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccessToken.swift; path = Sources/Model/AccessToken.swift; sourceTree = "<group>"; };
 		9CCEB20E1EA14BB600D42EA4 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthService.swift; path = Sources/Services/AuthService.swift; sourceTree = "<group>"; };
 		9CCEB2101EA152D900D42EA4 /* URLNavigationMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLNavigationMap.swift; path = Sources/Utils/URLNavigationMap.swift; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 				9CFB68741EA05FF600C0D9BB /* UICollectionViewCell+CellWidth.swift */,
 				9CCEB2101EA152D900D42EA4 /* URLNavigationMap.swift */,
 				9C08EE961EA1C58300A7FA16 /* UIScrollView+ScrollToBottom.swift */,
+				9C08EEA71EA28E9700A7FA16 /* UIColor+Dribbble.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -480,6 +483,7 @@
 				9C08EE8C1EA1BDF800A7FA16 /* Feed.swift in Sources */,
 				9CFB68751EA05FF600C0D9BB /* UICollectionViewCell+CellWidth.swift in Sources */,
 				9CCEB2191EA1576300D42EA4 /* LoginViewController.swift in Sources */,
+				9C08EEA81EA28E9700A7FA16 /* UIColor+Dribbble.swift in Sources */,
 				9CFB687A1EA0608500C0D9BB /* UIViewController+Rx.swift in Sources */,
 				9C08EEA61EA2885A00A7FA16 /* CollectionActivityIndicatorView.swift in Sources */,
 				9C08EE971EA1C58300A7FA16 /* UIScrollView+ScrollToBottom.swift in Sources */,
