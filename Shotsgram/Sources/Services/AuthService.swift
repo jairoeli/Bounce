@@ -28,12 +28,13 @@ protocol AuthServiceType {
 
 final class AuthService: BaseService, AuthServiceType {
   
-  fileprivate let keychain = Keychain(service: "jed.shotsgram")
   fileprivate let clientID = "869d59f0d22a730c9af9d9ccb00c7da03f5cbfd5eb3af36dc975c2b41f45a5ae"
   fileprivate let clientSecret = "be6df695bf0be8c51cc554d97e586cc97c3a607777a7a72fb7756a6ac804e346"
   
   fileprivate var currentViewController: UIViewController?
   fileprivate let callbackSubject = PublishSubject<String>()
+  
+  fileprivate let keychain = Keychain(service: "jed.Shotsgram")
   private(set) var currentAccessToken: AccessToken?
   
   override init(provider: ServiceProviderType) {
@@ -43,7 +44,12 @@ final class AuthService: BaseService, AuthServiceType {
   }
   
   func authorize() -> Observable<Void> {
-    let url = URL(string: "https://dribbble.com/oauth/authorize?client_id=\(self.clientID)")!
+    let parameters: [String: String] = [
+      "client_id": self.clientID,
+      "scope": "public+write+comment+upload",
+      ]
+    let parameterString = parameters.map { "\($0)=\($1)" }.joined(separator: "&")
+    let url = URL(string: "https://dribbble.com/oauth/authorize?\(parameterString)")!
     
     let safariViewController = SFSafariViewController(url: url)
     let navigationController = UINavigationController(rootViewController: safariViewController)

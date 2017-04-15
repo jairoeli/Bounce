@@ -30,11 +30,12 @@ final class LoginViewModel: LoginViewModelType {
   let presentMainScreen: Observable<ShotFeedViewModelType>
   
   // MARK: Initializing
+  
   init(provider: ServiceProviderType) {
     let isLoading = ActivityIndicator()
-    
     self.isLoading = isLoading.asDriver()
     self.presentMainScreen = self.login
+      .filter(!isLoading)
       .flatMap { provider.authService.authorize().trackActivity(isLoading) }
       .flatMap { provider.userService.fetchMe() }
       .map { ShotFeedViewModel(provider: provider) }

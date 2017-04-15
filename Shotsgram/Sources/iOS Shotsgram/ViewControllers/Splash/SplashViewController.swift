@@ -17,6 +17,7 @@ final class SplashViewController: BaseViewController {
   
   init(viewModel: SplashViewModelType) {
     super.init()
+    self.configure(viewModel: viewModel)
   }
   
   required init?(coder aDecoder: NSCoder) {
@@ -43,7 +44,7 @@ final class SplashViewController: BaseViewController {
     // INPUT
     self.rx.viewDidAppear
       .map { _ in Void() }
-      .bind(to: viewModel.viewDidAppear)
+      .bind(to: viewModel.checkIfAuthenticated)
       .addDisposableTo(self.disposeBag)
     
     // OUTPUT

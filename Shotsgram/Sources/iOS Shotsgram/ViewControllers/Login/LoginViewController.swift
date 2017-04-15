@@ -12,6 +12,7 @@ import UIKit
 final class LoginViewController: BaseViewController {
   
   // MARK: - Constants
+  
   fileprivate struct Metric {
     static let loginButtonLeftRight = 30.f
     static let loginButtonBottom = 30.f
@@ -28,7 +29,7 @@ final class LoginViewController: BaseViewController {
     return .lightContent
   }
   
-  fileprivate let loginButton = UIButton(type: .system).then {
+  fileprivate let loginButton = UIButton().then {
     $0.titleLabel?.font = Font.loginButtonTitle
     $0.setTitle("Login with Dribbble", for: .normal)
     $0.setBackgroundImage(
@@ -36,14 +37,14 @@ final class LoginViewController: BaseViewController {
         .color(.pink)
         .corner(radius: 3)
         .image,
-        for: .normal
+      for: .normal
     )
     $0.setBackgroundImage(
       UIImage.resizable()
         .color(.darkPink)
         .corner(radius: 3)
         .image,
-        for: .highlighted
+      for: .highlighted
     )
   }
   
@@ -69,13 +70,13 @@ final class LoginViewController: BaseViewController {
   }
   
   override func setupConstraints() {
-    self.loginButton.snp.makeConstraints { (make) in
+    self.loginButton.snp.makeConstraints { make in
       make.left.equalTo(Metric.loginButtonLeftRight)
       make.right.equalTo(-Metric.loginButtonLeftRight)
       make.bottom.equalTo(-Metric.loginButtonBottom)
       make.height.equalTo(Metric.loginButtonHeight)
     }
-    self.activityIndicatorView.snp.makeConstraints { (make) in
+    self.activityIndicatorView.snp.makeConstraints { make in
       make.center.equalTo(self.loginButton)
     }
   }
@@ -83,12 +84,12 @@ final class LoginViewController: BaseViewController {
   // MARK: - Configuring
   
   private func configure(viewModel: LoginViewModelType) {
-    // INPUT
+    // Input
     self.loginButton.rx.tap
       .bind(to: viewModel.login)
       .addDisposableTo(self.disposeBag)
     
-    // OUTPUT
+    // Output
     viewModel.isLoading
       .drive(self.loginButton.rx.isHidden)
       .addDisposableTo(self.disposeBag)

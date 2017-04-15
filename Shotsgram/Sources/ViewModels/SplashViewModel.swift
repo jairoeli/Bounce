@@ -10,7 +10,10 @@ import RxCocoa
 import RxSwift
 
 protocol SplashViewModelType {
-  var viewDidAppear: PublishSubject<Void> { get }
+  // Input
+  var checkIfAuthenticated: PublishSubject<Void> { get }
+  
+  // Output
   var presentLoginScreen: Observable<LoginViewModelType> { get }
   var presentMainScreen: Observable<ShotFeedViewModelType> { get }
 }
@@ -20,7 +23,7 @@ protocol SplashViewModelType {
 final class SplashViewModel: SplashViewModelType {
   
   // MARK: Input
-  let viewDidAppear: PublishSubject<Void> = .init()
+  let checkIfAuthenticated: PublishSubject<Void> = .init()
   
   
   // MARK: Output
@@ -30,7 +33,7 @@ final class SplashViewModel: SplashViewModelType {
   
   // MARK: Initializing
   init(provider: ServiceProviderType) {
-    let isAuthenticated = self.viewDidAppear
+    let isAuthenticated = self.checkIfAuthenticated
       .flatMap { provider.userService.fetchMe() }
       .map { true }
       .catchError { _ in .just(false) }
