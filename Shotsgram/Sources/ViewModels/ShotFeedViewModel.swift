@@ -61,7 +61,7 @@ final class ShotFeedViewModel: ShotFeedViewModelType {
       .shareReplay(1)
     
     let didLoadMoreShots = self.loadMore
-      .withLatestFrom(nextURL.asObservable().debug("nextURL"))
+      .withLatestFrom(nextURL.asObservable())
       .filterNil()
       .filter(!isRefreshing)
       .filter(!isLoading)

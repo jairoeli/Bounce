@@ -17,6 +17,8 @@ final class ShotFeedViewController: BaseViewController {
   
   fileprivate struct Reusable {
     static let shotViewCell = ReusableCell<ShotViewCell>()
+    static let activityIndicatorView = ReusableView<CollectionActivityIndicatorView>()
+    static let emptyView = ReusableView<UICollectionReusableView>()
   }
   
   // MARK: - Properties
@@ -30,6 +32,7 @@ final class ShotFeedViewController: BaseViewController {
     $0.backgroundColor = .clear
     $0.alwaysBounceVertical = true
     $0.register(Reusable.shotViewCell)
+    $0.register(Reusable.activityIndicatorView, kind: UICollectionElementKindSectionFooter)
   }
   fileprivate let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
   
@@ -68,6 +71,7 @@ final class ShotFeedViewController: BaseViewController {
   // MARK: Configuring
   
   private func configure(viewModel: ShotFeedViewModelType) {
+    
     self.collectionView.rx.setDelegate(self).addDisposableTo(self.disposeBag)
     self.dataSource.configureCell = { dataSource, collectionView, indexPath, sectionItem in
       switch sectionItem {
@@ -77,6 +81,13 @@ final class ShotFeedViewController: BaseViewController {
         return cell
       }
     }
+    self.dataSource.supplementaryViewFactory = { dataSource, collectionView, kind, indexPath in
+      if kind == UICollectionElementKindSectionFooter {
+        return collectionView.dequeue(Reusable.activityIndicatorView, kind: kind, for: indexPath)
+      }
+      return collectionView.dequeue(Reusable.emptyView, kind: "empty", for: indexPath)
+    }
+
     
     // INPUT
     self.rx.viewDidLoad
@@ -124,6 +135,10 @@ extension ShotFeedViewController: UICollectionViewDelegateFlowLayout {
     case .image(let viewModel):
       return ShotViewCell.size(width: sectionWidth, viewModel: viewModel)
     }
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+    return CGSize(width: collectionView.width, height: 44)
   }
   
 }
