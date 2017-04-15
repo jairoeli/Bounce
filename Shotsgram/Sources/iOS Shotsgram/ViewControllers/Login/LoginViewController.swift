@@ -13,7 +13,7 @@ final class LoginViewController: BaseViewController {
   
   // MARK: - Constants
   fileprivate struct Metric {
-    static let loginButtonLeftRight = 15.f
+    static let loginButtonLeftRight = 30.f
     static let loginButtonBottom = 30.f
     static let loginButtonHeight = 40.f
   }
@@ -24,9 +24,27 @@ final class LoginViewController: BaseViewController {
   
   // MARK: - UI
   
+  override var preferredStatusBarStyle: UIStatusBarStyle {
+    return .lightContent
+  }
+  
   fileprivate let loginButton = UIButton(type: .system).then {
     $0.titleLabel?.font = Font.loginButtonTitle
     $0.setTitle("Login with Dribbble", for: .normal)
+    $0.setBackgroundImage(
+      UIImage.resizable()
+        .color(.pink)
+        .corner(radius: 3)
+        .image,
+        for: .normal
+    )
+    $0.setBackgroundImage(
+      UIImage.resizable()
+        .color(.darkPink)
+        .corner(radius: 3)
+        .image,
+        for: .highlighted
+    )
   }
   
   fileprivate let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .white)
@@ -45,7 +63,9 @@ final class LoginViewController: BaseViewController {
   // MARK: - View Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.view.backgroundColor = .jet
     self.view.addSubview(self.loginButton)
+    self.view.addSubview(self.activityIndicatorView)
   }
   
   override func setupConstraints() {
@@ -69,11 +89,11 @@ final class LoginViewController: BaseViewController {
       .addDisposableTo(self.disposeBag)
     
     // OUTPUT
-    viewModel.loginButtonEnabled
+    viewModel.isLoading
       .drive(self.loginButton.rx.isHidden)
       .addDisposableTo(self.disposeBag)
     
-    viewModel.loginButtonEnabled
+    viewModel.isLoading
       .drive(self.activityIndicatorView.rx.isAnimating)
       .addDisposableTo(self.disposeBag)
     

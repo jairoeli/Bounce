@@ -15,7 +15,7 @@ protocol LoginViewModelType {
   var login: PublishSubject<Void> { get }
   
   // Output
-  var loginButtonEnabled: Driver<Bool> { get }
+  var isLoading: Driver<Bool> { get }
   var presentMainScreen: Observable<ShotFeedViewModelType> { get }
 }
 
@@ -26,14 +26,14 @@ final class LoginViewModel: LoginViewModelType {
   
   
   // MARK: Output
-  let loginButtonEnabled: Driver<Bool>
+  let isLoading: Driver<Bool>
   let presentMainScreen: Observable<ShotFeedViewModelType>
   
   // MARK: Initializing
   init(provider: ServiceProviderType) {
     let isLoading = ActivityIndicator()
     
-    self.loginButtonEnabled = isLoading.map { !$0 }.asDriver()
+    self.isLoading = isLoading.asDriver()
     self.presentMainScreen = self.login
       .flatMap { provider.authService.authorize().trackActivity(isLoading) }
       .flatMap { provider.userService.fetchMe() }
