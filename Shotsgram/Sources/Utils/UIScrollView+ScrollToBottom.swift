@@ -2,7 +2,7 @@
 //  UIScrollView+ScrollToBottom.swift
 //  Shotsgram
 //
-//  Created by Jairo Eli de Leon on 4/13/17.
+//  Created by Jairo Eli de Leon on 4/14/17.
 //  Copyright © 2017 DevMountain. All rights reserved.
 //
 

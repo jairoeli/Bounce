@@ -10,6 +10,7 @@ import Moya
 import MoyaSugar
 
 enum DribbbleAPI {
+  case url(URL)
   case me
   case shots
 }
@@ -20,8 +21,16 @@ extension DribbbleAPI: SugarTargetType {
     return URL(string: "https://api.dribbble.com/v1")!
   }
   
+  var url: URL {
+    switch self {
+      case .url(let url): return url
+      default: return self.defaultURL
+    }
+  }
+  
   var route: Route {
     switch self {
+      case .url: return .get("")
       case .me: return .get("/user")
       case .shots: return .get("/shots")
     }
@@ -29,6 +38,7 @@ extension DribbbleAPI: SugarTargetType {
   
   var params: Parameters? {
     switch self {
+      case .shots: return ["per_page": 100]
       default: return nil
     }
   }
@@ -37,6 +47,10 @@ extension DribbbleAPI: SugarTargetType {
     switch self {
       default: return .request
     }
+  }
+  
+  var httpHeaderFields: [String : String]? {
+    return ["Accept": "application/json"]
   }
   
   var sampleData: Data {

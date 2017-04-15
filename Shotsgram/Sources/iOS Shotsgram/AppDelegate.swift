@@ -16,6 +16,8 @@ import SwiftyImage
 import Then
 import UITextView_Placeholder
 import URLNavigator
+import Kingfisher
+import WebLinking
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -66,7 +68,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func presentMainScreen(viewModel: ShotFeedViewModelType) {
     let viewController = ShotFeedViewController(viewModel: viewModel)
-    self.window?.rootViewController = viewController
+    let navigationController = UINavigationController(rootViewController: viewController)
+    self.window?.rootViewController = navigationController
   }
 
 }
