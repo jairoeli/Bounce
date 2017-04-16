@@ -24,6 +24,8 @@ target 'Shotsgram' do
   pod 'RxOptional'
   pod 'RxKeyboard'
   pod 'RxSwiftUtilities'
+  pod 'RxReusable'
+  pod 'RxGesture'
 
   # UI
   pod 'SnapKit'

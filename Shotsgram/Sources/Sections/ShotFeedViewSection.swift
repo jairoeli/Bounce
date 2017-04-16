@@ -9,23 +9,20 @@
 import RxDataSources
 
 enum ShotFeedViewSection {
-  case shot([ShotFeedViewSectionItem])
-//  case comment([ShotFeedViewSectionItem])
+  case shotTile([ShotFeedViewSectionItem])
 }
 
 extension ShotFeedViewSection: SectionModelType {
   
   var items: [ShotFeedViewSectionItem] {
     switch self {
-      case .shot(let items): return items
-//      case .comment(let items): return items
+      case .shotTile(let items): return items
     }
   }
   
   init(original: ShotFeedViewSection, items: [ShotFeedViewSectionItem]) {
     switch original {
-      case .shot: self = .shot(items)
-//      case .comment: self = .comment(items)
+      case .shotTile: self = .shotTile(items)
     }
   }
   

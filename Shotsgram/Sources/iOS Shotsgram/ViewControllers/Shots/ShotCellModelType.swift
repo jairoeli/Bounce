@@ -16,13 +16,14 @@ protocol ShotCellModelType {
 
 final class ShotCellModel: ShotCellModelType {
   
-  // Output
+  // MARK: Output
   let imageURL: URL
   
-  // MARK: - Initializing
+  
+  // MARK: Initializing
   
   init(provider: ServiceProviderType, shot: Shot) {
-    self.imageURL = shot.imageURLs.hidpi ?? shot.imageURLs.normal
+    self.imageURL = shot.imageURLs.teaser
   }
   
 }

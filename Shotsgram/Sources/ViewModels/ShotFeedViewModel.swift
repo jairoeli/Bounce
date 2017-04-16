@@ -43,7 +43,7 @@ final class ShotFeedViewModel: ShotFeedViewModelType {
   
   // MARK: - Initializing
   
-  init(provider: ServiceProviderType) {
+  init(provider: ServiceProviderType, shot initialShot: Shot? = nil) {
     let isRefreshing = ActivityIndicator()
     self.isRefreshing = isRefreshing.asDriver()
     let isLoading = ActivityIndicator()
@@ -104,14 +104,13 @@ final class ShotFeedViewModel: ShotFeedViewModelType {
       .startWith([])
       .shareReplay(1)
     
-
     let shotSection: Observable<[ShotFeedViewSection]> = shot
       .map { shots in
         let sectionItems = shots.map { shot -> ShotFeedViewSectionItem in
           let viewModel = ShotCellModel(provider: provider, shot: shot)
           return ShotFeedViewSectionItem.image(viewModel)
         }
-        let section = ShotFeedViewSection.shot(sectionItems)
+        let section = ShotFeedViewSection.shotTile(sectionItems)
         return [section]
       }
       .shareReplay(1)

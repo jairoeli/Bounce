@@ -21,6 +21,15 @@ final class ShotFeedViewController: BaseViewController {
     static let emptyView = ReusableView<UICollectionReusableView>()
   }
   
+  fileprivate struct Constant {
+    static let shotTileSectionColumnCount = 2
+  }
+  
+  fileprivate struct Metric {
+    static let shotTileSectionInsetLeftRight = 10.f
+    static let shotTileSectionItemSpacing = 10.f
+  }
+  
   // MARK: - Properties
   
   fileprivate let dataSource = RxCollectionViewSectionedReloadDataSource<ShotFeedViewSection>()
@@ -33,8 +42,8 @@ final class ShotFeedViewController: BaseViewController {
     $0.alwaysBounceVertical = true
     $0.register(Reusable.shotViewCell)
     $0.register(Reusable.activityIndicatorView, kind: UICollectionElementKindSectionFooter)
+    $0.register(Reusable.emptyView, kind: "empty")
   }
-  fileprivate let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
   
   // MARK: - Initializing
   
@@ -53,18 +62,13 @@ final class ShotFeedViewController: BaseViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.view.backgroundColor = .whiteSmoke
-    
-    self.collectionView.addSubview(self.refreshControl)
     self.view.addSubview(self.collectionView)
-    self.view.addSubview(self.activityIndicatorView)
+    self.collectionView.addSubview(self.refreshControl)
   }
   
   override func setupConstraints() {
     self.collectionView.snp.makeConstraints { make in
       make.edges.equalToSuperview()
-    }
-    self.activityIndicatorView.snp.makeConstraints { make in
-      make.center.equalToSuperview()
     }
   }
 
@@ -123,8 +127,29 @@ final class ShotFeedViewController: BaseViewController {
 // MARK: - UICollectionViewDelegateFlowLayout
 extension ShotFeedViewController: UICollectionViewDelegateFlowLayout {
   
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+    
+    switch self.dataSource[section] {
+      case .shotTile:
+      let topBottom = Metric.shotTileSectionItemSpacing
+      let leftRight = Metric.shotTileSectionInsetLeftRight
+      return UIEdgeInsets(top: topBottom, left: leftRight, bottom: topBottom, right: leftRight)
+    }
+    
+  }
+  
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-    return 0
+    switch self.dataSource[section] {
+      case .shotTile:
+      return Metric.shotTileSectionItemSpacing
+    }
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+    switch self.dataSource[section] {
+      case .shotTile:
+      return Metric.shotTileSectionItemSpacing
+    }
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -132,8 +157,10 @@ extension ShotFeedViewController: UICollectionViewDelegateFlowLayout {
     let sectionItem = self.dataSource[indexPath]
     
     switch sectionItem {
-    case .image(let viewModel):
-      return ShotViewCell.size(width: sectionWidth, viewModel: viewModel)
+      case .image(let viewModel):
+      let columnCount = Constant.shotTileSectionColumnCount.f
+      let cellWidth = (sectionWidth - Metric.shotTileSectionItemSpacing) / columnCount
+      return ShotViewCell.size(width: cellWidth, viewModel: viewModel)
     }
   }
   

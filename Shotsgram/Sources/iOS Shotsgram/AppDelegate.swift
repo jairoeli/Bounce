@@ -64,7 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   // MARK: - Appearance
   
   private func configureAppearance() {
-    let navigationBarBackgroundImage = UIImage.resizable().color(.jet).image
+    let navigationBarBackgroundImage = UIImage.resizable().color(.pink).image
     UINavigationBar.appearance().setBackgroundImage(navigationBarBackgroundImage, for: .default)
     UINavigationBar.appearance().shadowImage = UIImage()
     UINavigationBar.appearance().barStyle = .black

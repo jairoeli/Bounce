@@ -20,6 +20,9 @@
 		9C08EEA41EA1CC1200A7FA16 /* ShotViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C08EEA31EA1CC1200A7FA16 /* ShotViewCell.swift */; };
 		9C08EEA61EA2885A00A7FA16 /* CollectionActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C08EEA51EA2885A00A7FA16 /* CollectionActivityIndicatorView.swift */; };
 		9C08EEA81EA28E9700A7FA16 /* UIColor+Dribbble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C08EEA71EA28E9700A7FA16 /* UIColor+Dribbble.swift */; };
+		9C08EEAB1EA2B48D00A7FA16 /* ShotViewTitleCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C08EEAA1EA2B48D00A7FA16 /* ShotViewTitleCellModel.swift */; };
+		9C08EEAD1EA2B55D00A7FA16 /* ShotViewTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C08EEAC1EA2B55D00A7FA16 /* ShotViewTitleCell.swift */; };
+		9C738F5A1EA2EB65003CC0D8 /* ExclusiveGestureRecognizerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C738F591EA2EB65003CC0D8 /* ExclusiveGestureRecognizerDelegate.swift */; };
 		9CCEB20D1EA14AD500D42EA4 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEB20C1EA14AD500D42EA4 /* AccessToken.swift */; };
 		9CCEB20F1EA14BB600D42EA4 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEB20E1EA14BB600D42EA4 /* AuthService.swift */; };
 		9CCEB2111EA152D900D42EA4 /* URLNavigationMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEB2101EA152D900D42EA4 /* URLNavigationMap.swift */; };
@@ -67,6 +70,9 @@
 		9C08EEA31EA1CC1200A7FA16 /* ShotViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShotViewCell.swift; path = "Sources/iOS Shotsgram/ViewControllers/Shots/ShotViewCell.swift"; sourceTree = "<group>"; };
 		9C08EEA51EA2885A00A7FA16 /* CollectionActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionActivityIndicatorView.swift; path = "Sources/iOS Shotsgram/ViewControllers/CollectionActivityIndicatorView.swift"; sourceTree = "<group>"; };
 		9C08EEA71EA28E9700A7FA16 /* UIColor+Dribbble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Dribbble.swift"; path = "Sources/Utils/UIColor+Dribbble.swift"; sourceTree = "<group>"; };
+		9C08EEAA1EA2B48D00A7FA16 /* ShotViewTitleCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShotViewTitleCellModel.swift; path = "Sources/iOS Shotsgram/ViewControllers/Shots/Title/ShotViewTitleCellModel.swift"; sourceTree = "<group>"; };
+		9C08EEAC1EA2B55D00A7FA16 /* ShotViewTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShotViewTitleCell.swift; path = "Sources/iOS Shotsgram/ViewControllers/Shots/Title/ShotViewTitleCell.swift"; sourceTree = "<group>"; };
+		9C738F591EA2EB65003CC0D8 /* ExclusiveGestureRecognizerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExclusiveGestureRecognizerDelegate.swift; path = Sources/Utils/ExclusiveGestureRecognizerDelegate.swift; sourceTree = "<group>"; };
 		9CCEB20C1EA14AD500D42EA4 /* AccessToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccessToken.swift; path = Sources/Model/AccessToken.swift; sourceTree = "<group>"; };
 		9CCEB20E1EA14BB600D42EA4 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthService.swift; path = Sources/Services/AuthService.swift; sourceTree = "<group>"; };
 		9CCEB2101EA152D900D42EA4 /* URLNavigationMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLNavigationMap.swift; path = Sources/Utils/URLNavigationMap.swift; sourceTree = "<group>"; };
@@ -137,6 +143,15 @@
 			name = Sections;
 			sourceTree = "<group>";
 		};
+		9C08EEA91EA2B45300A7FA16 /* Title */ = {
+			isa = PBXGroup;
+			children = (
+				9C08EEAA1EA2B48D00A7FA16 /* ShotViewTitleCellModel.swift */,
+				9C08EEAC1EA2B55D00A7FA16 /* ShotViewTitleCell.swift */,
+			);
+			name = Title;
+			sourceTree = "<group>";
+		};
 		9CCEB2121EA153E000D42EA4 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +166,7 @@
 				9CCEB21C1EA15BDA00D42EA4 /* ShotFeedViewController.swift */,
 				9C08EEA31EA1CC1200A7FA16 /* ShotViewCell.swift */,
 				9C08EEA11EA1CB7E00A7FA16 /* ShotCellModelType.swift */,
+				9C08EEA91EA2B45300A7FA16 /* Title */,
 			);
 			name = Shots;
 			sourceTree = "<group>";
@@ -308,6 +324,7 @@
 				9CCEB2101EA152D900D42EA4 /* URLNavigationMap.swift */,
 				9C08EE961EA1C58300A7FA16 /* UIScrollView+ScrollToBottom.swift */,
 				9C08EEA71EA28E9700A7FA16 /* UIColor+Dribbble.swift */,
+				9C738F591EA2EB65003CC0D8 /* ExclusiveGestureRecognizerDelegate.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -456,8 +473,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CCEB2351EA18AFB00D42EA4 /* UserService.swift in Sources */,
+				9C738F5A1EA2EB65003CC0D8 /* ExclusiveGestureRecognizerDelegate.swift in Sources */,
 				9C08EE9C1EA1C82300A7FA16 /* ShotFeedViewSection.swift in Sources */,
 				9C08EE991EA1C6A600A7FA16 /* ShotService.swift in Sources */,
+				9C08EEAB1EA2B48D00A7FA16 /* ShotViewTitleCellModel.swift in Sources */,
 				9CCEB2331EA188F300D42EA4 /* ObjectMapper+Rx.swift in Sources */,
 				9CCEB21B1EA15B1C00D42EA4 /* ShotFeedViewModel.swift in Sources */,
 				9CCEB21F1EA15D5F00D42EA4 /* SplashViewModel.swift in Sources */,
@@ -480,6 +499,7 @@
 				9CCEB2171EA1548000D42EA4 /* LoginViewModel.swift in Sources */,
 				9CCEB2111EA152D900D42EA4 /* URLNavigationMap.swift in Sources */,
 				9CFB68641EA05AA800C0D9BB /* BaseService.swift in Sources */,
+				9C08EEAD1EA2B55D00A7FA16 /* ShotViewTitleCell.swift in Sources */,
 				9C08EE8C1EA1BDF800A7FA16 /* Feed.swift in Sources */,
 				9CFB68751EA05FF600C0D9BB /* UICollectionViewCell+CellWidth.swift in Sources */,
 				9CCEB2191EA1576300D42EA4 /* LoginViewController.swift in Sources */,
