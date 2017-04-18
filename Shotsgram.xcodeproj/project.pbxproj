@@ -49,6 +49,8 @@
 		9CCEB2311EA1865400D42EA4 /* AuthPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEB2301EA1865400D42EA4 /* AuthPlugin.swift */; };
 		9CCEB2331EA188F300D42EA4 /* ObjectMapper+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEB2321EA188F300D42EA4 /* ObjectMapper+Rx.swift */; };
 		9CCEB2351EA18AFB00D42EA4 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEB2341EA18AFB00D42EA4 /* UserService.swift */; };
+		9CE2E78D1EA6175A00FAE6CF /* UICollectionView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE2E78C1EA6175A00FAE6CF /* UICollectionView+Rx.swift */; };
+		9CE2E78F1EA6182100FAE6CF /* UITableView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE2E78E1EA6182100FAE6CF /* UITableView+Rx.swift */; };
 		9CFB68511EA052BE00C0D9BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CFB68501EA052BE00C0D9BB /* Assets.xcassets */; };
 		9CFB68541EA052BE00C0D9BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CFB68521EA052BE00C0D9BB /* LaunchScreen.storyboard */; };
 		9CFB685C1EA0543C00C0D9BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB685B1EA0543C00C0D9BB /* AppDelegate.swift */; };
@@ -108,6 +110,8 @@
 		9CCEB2301EA1865400D42EA4 /* AuthPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthPlugin.swift; path = Sources/Networking/AuthPlugin.swift; sourceTree = "<group>"; };
 		9CCEB2321EA188F300D42EA4 /* ObjectMapper+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ObjectMapper+Rx.swift"; path = "Sources/Rx/ObjectMapper+Rx.swift"; sourceTree = "<group>"; };
 		9CCEB2341EA18AFB00D42EA4 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = Sources/Services/UserService.swift; sourceTree = "<group>"; };
+		9CE2E78C1EA6175A00FAE6CF /* UICollectionView+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UICollectionView+Rx.swift"; path = "Sources/Rx/UICollectionView+Rx.swift"; sourceTree = "<group>"; };
+		9CE2E78E1EA6182100FAE6CF /* UITableView+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableView+Rx.swift"; path = "Sources/Rx/UITableView+Rx.swift"; sourceTree = "<group>"; };
 		9CFB68461EA052BE00C0D9BB /* Shotsgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shotsgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CFB68501EA052BE00C0D9BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		9CFB68531EA052BE00C0D9BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -388,6 +392,8 @@
 				9C08EE8D1EA1C1DB00A7FA16 /* Observable+ActivityIndicator.swift */,
 				9C08EE8F1EA1C33900A7FA16 /* RxOperators.swift */,
 				9C08EE911EA1C3D700A7FA16 /* UIScrollView+Rx.swift */,
+				9CE2E78C1EA6175A00FAE6CF /* UICollectionView+Rx.swift */,
+				9CE2E78E1EA6182100FAE6CF /* UITableView+Rx.swift */,
 			);
 			name = Rx;
 			sourceTree = "<group>";
@@ -535,6 +541,7 @@
 				9CCEB21F1EA15D5F00D42EA4 /* SplashViewModel.swift in Sources */,
 				9CFB686C1EA05D4200C0D9BB /* BaseViewController.swift in Sources */,
 				9C08EE8E1EA1C1DB00A7FA16 /* Observable+ActivityIndicator.swift in Sources */,
+				9CE2E78F1EA6182100FAE6CF /* UITableView+Rx.swift in Sources */,
 				9CFB68611EA05A6B00C0D9BB /* ServiceProvider.swift in Sources */,
 				9CFB68731EA05FA100C0D9BB /* String+BoundingRect.swift in Sources */,
 				9C08EE951EA1C50900A7FA16 /* Paging.swift in Sources */,
@@ -573,6 +580,7 @@
 				9CFB686E1EA05EC700C0D9BB /* BaseCollectionViewCell.swift in Sources */,
 				9CCEB20D1EA14AD500D42EA4 /* AccessToken.swift in Sources */,
 				9CCEB2211EA161A600D42EA4 /* SplashViewController.swift in Sources */,
+				9CE2E78D1EA6175A00FAE6CF /* UICollectionView+Rx.swift in Sources */,
 				9C6186861EA57F6C004F3F04 /* MainTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
