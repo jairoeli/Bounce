@@ -72,12 +72,12 @@ final class SettingsViewController: BaseViewController {
     // Input
     self.tableView.rx.itemSelected
       .bind(to: viewModel.tableViewDidSelectItem)
-      .addDisposableTo(self.disposeBag)
+      .disposed(by: self.disposeBag)
     
     // Output
     viewModel.tableViewSections
       .drive(self.tableView.rx.items(dataSource: self.dataSource))
-      .addDisposableTo(self.disposeBag)
+      .disposed(by: self.disposeBag)
     
   }
   

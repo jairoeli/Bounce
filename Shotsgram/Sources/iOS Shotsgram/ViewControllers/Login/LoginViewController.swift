@@ -87,20 +87,20 @@ final class LoginViewController: BaseViewController {
     // Input
     self.loginButton.rx.tap
       .bind(to: viewModel.login)
-      .addDisposableTo(self.disposeBag)
+      .disposed(by: self.disposeBag)
     
     // Output
     viewModel.isLoading
       .drive(self.loginButton.rx.isHidden)
-      .addDisposableTo(self.disposeBag)
+      .disposed(by: self.disposeBag)
     
     viewModel.isLoading
       .drive(self.activityIndicatorView.rx.isAnimating)
-      .addDisposableTo(self.disposeBag)
+      .disposed(by: self.disposeBag)
     
     viewModel.presentMainScreen
       .subscribe(onNext: AppDelegate.shared.presentMainScreen)
-      .addDisposableTo(self.disposeBag)
+      .disposed(by: self.disposeBag)
   }
   
 }

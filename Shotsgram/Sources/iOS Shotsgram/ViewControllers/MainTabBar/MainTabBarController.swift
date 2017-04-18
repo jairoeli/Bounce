@@ -46,7 +46,7 @@ final class MainTabBarController: UITabBarController {
       .drive(onNext: { [weak self] navigationControllers in
         self?.viewControllers = navigationControllers
       })
-      .addDisposableTo(self.disposeBag)
+      .disposed(by: self.disposeBag)
   }
   
 }

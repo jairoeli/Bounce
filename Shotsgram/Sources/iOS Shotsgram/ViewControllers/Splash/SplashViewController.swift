@@ -45,20 +45,20 @@ final class SplashViewController: BaseViewController {
     self.rx.viewDidAppear
       .map { _ in Void() }
       .bind(to: viewModel.checkIfAuthenticated)
-      .addDisposableTo(self.disposeBag)
+      .disposed(by: self.disposeBag)
     
     // OUTPUT
     viewModel.presentLoginScreen
       .subscribe(onNext: { viewModel in
         AppDelegate.shared.presentLoginScreen(viewModel: viewModel)
       })
-      .addDisposableTo(self.disposeBag)
+      .disposed(by: self.disposeBag)
     
     viewModel.presentMainScreen
       .subscribe(onNext: { viewModel in
         AppDelegate.shared.presentMainScreen(viewModel: viewModel)
       })
-      .addDisposableTo(self.disposeBag)
+      .disposed(by: self.disposeBag)
   }
   
 }

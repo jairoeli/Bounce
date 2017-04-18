@@ -80,7 +80,7 @@ final class ShotFeedViewController: BaseViewController {
   
   private func configure(viewModel: ShotFeedViewModelType) {
     
-    self.collectionView.rx.setDelegate(self).addDisposableTo(self.disposeBag)
+    self.collectionView.rx.setDelegate(self).disposed(by: self.disposeBag)
     self.dataSource.configureCell = { dataSource, collectionView, indexPath, sectionItem in
       switch sectionItem {
         case .image(let viewModel):
@@ -100,28 +100,28 @@ final class ShotFeedViewController: BaseViewController {
     // INPUT
     self.rx.viewDidLoad
       .bind(to: viewModel.refresh)
-      .addDisposableTo(self.disposeBag)
+      .disposed(by: self.disposeBag)
     
     self.rx.deallocated
       .bind(to: viewModel.dispose)
-      .addDisposableTo(self.disposeBag)
+      .disposed(by: self.disposeBag)
     
     self.refreshControl.rx.controlEvent(.valueChanged)
       .bind(to: viewModel.refresh)
-      .addDisposableTo(self.disposeBag)
+      .disposed(by: self.disposeBag)
     
     self.collectionView.rx.isReachedBottom
       .bind(to: viewModel.loadMore)
-      .addDisposableTo(self.disposeBag)
+      .disposed(by: self.disposeBag)
     
     // OUTPUT
     viewModel.isRefreshing
       .drive(self.refreshControl.rx.isRefreshing)
-      .addDisposableTo(self.disposeBag)
+      .disposed(by: self.disposeBag)
     
     viewModel.sections
       .drive(self.collectionView.rx.items(dataSource: self.dataSource))
-      .addDisposableTo(self.disposeBag)
+      .disposed(by: self.disposeBag)
     
   }
   
