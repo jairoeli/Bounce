@@ -10,6 +10,7 @@ import UIKit
 import CGFloatLiteral
 import ManualLayout
 import RxOptional
+import RxReusable
 import SnapKit
 import SwiftyColor
 import SwiftyImage
@@ -18,6 +19,7 @@ import UITextView_Placeholder
 import URLNavigator
 import Kingfisher
 import WebLinking
+import Immutable
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -77,10 +79,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     self.window?.rootViewController = viewController
   }
 
-  func presentMainScreen(viewModel: ShotFeedViewModelType) {
-    let viewController = ShotFeedViewController(viewModel: viewModel)
-    let navigationController = UINavigationController(rootViewController: viewController)
-    self.window?.rootViewController = navigationController
+  func presentMainScreen(viewModel: MainTabBarViewModelType) {
+    let mainTabBarController = MainTabBarController(viewModel: viewModel)
+    self.window?.rootViewController = mainTabBarController
   }
 
 }

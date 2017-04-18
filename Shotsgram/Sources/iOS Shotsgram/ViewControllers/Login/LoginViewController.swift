@@ -64,7 +64,7 @@ final class LoginViewController: BaseViewController {
   // MARK: - View Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.view.backgroundColor = .jet
+    self.view.backgroundColor = .whiteSmoke
     self.view.addSubview(self.loginButton)
     self.view.addSubview(self.activityIndicatorView)
   }

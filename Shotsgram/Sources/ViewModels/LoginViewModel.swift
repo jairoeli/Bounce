@@ -16,7 +16,7 @@ protocol LoginViewModelType {
   
   // Output
   var isLoading: Driver<Bool> { get }
-  var presentMainScreen: Observable<ShotFeedViewModelType> { get }
+  var presentMainScreen: Observable<MainTabBarViewModelType> { get }
 }
 
 final class LoginViewModel: LoginViewModelType {
@@ -27,7 +27,7 @@ final class LoginViewModel: LoginViewModelType {
   
   // MARK: Output
   let isLoading: Driver<Bool>
-  let presentMainScreen: Observable<ShotFeedViewModelType>
+  let presentMainScreen: Observable<MainTabBarViewModelType>
   
   // MARK: Initializing
   
@@ -38,7 +38,7 @@ final class LoginViewModel: LoginViewModelType {
       .filter(!isLoading)
       .flatMap { provider.authService.authorize().trackActivity(isLoading) }
       .flatMap { provider.userService.fetchMe() }
-      .map { ShotFeedViewModel(provider: provider) }
+      .map { MainTabBarViewModel(provider: provider) }
   }
   
 }

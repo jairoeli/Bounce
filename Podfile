@@ -6,9 +6,7 @@ target 'Shotsgram' do
 
   # Networking
   pod 'Alamofire'
-  pod 'Moya'
   pod 'Moya/RxSwift'
-  pod 'MoyaSugar'
   pod 'MoyaSugar/RxSwift'
   pod 'WebLinking', :git => 'https://github.com/kylef/WebLinking.swift',
                     :commit => 'fddbacc30deab8afe12ce1d3b78bd27c593a0c29'
@@ -30,6 +28,7 @@ target 'Shotsgram' do
   # UI
   pod 'SnapKit'
   pod 'ManualLayout'
+  pod 'Immutable'
 
   # Logging
   pod 'CocoaLumberjack/Swift'
