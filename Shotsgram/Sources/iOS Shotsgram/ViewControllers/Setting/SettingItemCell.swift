@@ -20,7 +20,7 @@ final class SettingItemCell: BaseTableViewCell {
   // MARK: - Configuring
   func configure(viewModel: SettingItemCellModelType) {
     self.textLabel?.text = viewModel.textLabelText
-    self.detailTextLabel?.text = viewModel.textLabelText
+    self.detailTextLabel?.text = viewModel.detailTextLabel
   }
   
 }

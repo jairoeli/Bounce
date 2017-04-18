@@ -37,6 +37,7 @@ final class SettingsViewController: BaseViewController {
     self.tabBarItem.image = #imageLiteral(resourceName: "setting")
     self.tabBarItem.selectedImage = #imageLiteral(resourceName: "setting_selected").withRenderingMode(.alwaysOriginal)
     self.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
+    self.configure(viewModel: viewModel)
   }
   
   required init?(coder aDecoder: NSCoder) {
@@ -105,6 +106,12 @@ final class SettingsViewController: BaseViewController {
         }
         .forEach(actionSheet.addAction)
         self.present(actionSheet, animated: true, completion: nil)
+      })
+      .disposed(by: self.disposeBag)
+    
+    viewModel.presentOpenSourceViewController
+      .subscribe(onNext: { [weak self] in
+        self?.navigationController?.pushViewController(OpenSourceViewController(), animated: true)
       })
       .disposed(by: self.disposeBag)
     

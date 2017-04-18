@@ -51,6 +51,7 @@
 		9CCEB2351EA18AFB00D42EA4 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEB2341EA18AFB00D42EA4 /* UserService.swift */; };
 		9CE2E78D1EA6175A00FAE6CF /* UICollectionView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE2E78C1EA6175A00FAE6CF /* UICollectionView+Rx.swift */; };
 		9CE2E78F1EA6182100FAE6CF /* UITableView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE2E78E1EA6182100FAE6CF /* UITableView+Rx.swift */; };
+		9CE2E7911EA62EA900FAE6CF /* OpenSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE2E7901EA62EA900FAE6CF /* OpenSourceViewController.swift */; };
 		9CFB68511EA052BE00C0D9BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CFB68501EA052BE00C0D9BB /* Assets.xcassets */; };
 		9CFB68541EA052BE00C0D9BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CFB68521EA052BE00C0D9BB /* LaunchScreen.storyboard */; };
 		9CFB685C1EA0543C00C0D9BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB685B1EA0543C00C0D9BB /* AppDelegate.swift */; };
@@ -112,6 +113,7 @@
 		9CCEB2341EA18AFB00D42EA4 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = Sources/Services/UserService.swift; sourceTree = "<group>"; };
 		9CE2E78C1EA6175A00FAE6CF /* UICollectionView+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UICollectionView+Rx.swift"; path = "Sources/Rx/UICollectionView+Rx.swift"; sourceTree = "<group>"; };
 		9CE2E78E1EA6182100FAE6CF /* UITableView+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableView+Rx.swift"; path = "Sources/Rx/UITableView+Rx.swift"; sourceTree = "<group>"; };
+		9CE2E7901EA62EA900FAE6CF /* OpenSourceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpenSourceViewController.swift; path = "Sources/iOS Shotsgram/ViewControllers/Setting/OpenSourceViewController.swift"; sourceTree = "<group>"; };
 		9CFB68461EA052BE00C0D9BB /* Shotsgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shotsgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CFB68501EA052BE00C0D9BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		9CFB68531EA052BE00C0D9BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				9C61867D1EA56E44004F3F04 /* SettingsViewController.swift */,
+				9CE2E7901EA62EA900FAE6CF /* OpenSourceViewController.swift */,
 				9C6186731EA5662D004F3F04 /* SettingItemCell.swift */,
 				9C6186711EA5659C004F3F04 /* SettingItemCellModel.swift */,
 			);
@@ -576,6 +579,7 @@
 				9C08EE901EA1C33900A7FA16 /* RxOperators.swift in Sources */,
 				9C61867C1EA56B01004F3F04 /* String+Localized.swift in Sources */,
 				9C08EEA41EA1CC1200A7FA16 /* ShotViewCell.swift in Sources */,
+				9CE2E7911EA62EA900FAE6CF /* OpenSourceViewController.swift in Sources */,
 				9CCEB2311EA1865400D42EA4 /* AuthPlugin.swift in Sources */,
 				9CFB686E1EA05EC700C0D9BB /* BaseCollectionViewCell.swift in Sources */,
 				9CCEB20D1EA14AD500D42EA4 /* AccessToken.swift in Sources */,

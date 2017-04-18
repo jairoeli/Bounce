@@ -21,6 +21,7 @@ protocol SettingsViewModelType: class {
   
   // output
   var tableViewSections: Driver<[SettingsViewSection]> { get }
+  var presentOpenSourceViewController: Observable<Void> { get }
   var presentLogoutAlert: Observable<[LogoutAlertActionItem]> { get }
   var presentLoginScreen: Observable<LoginViewModelType> { get }
 }
@@ -35,6 +36,7 @@ final class SettingsViewModel: SettingsViewModelType {
   // MARK: - Output
   
   let tableViewSections: Driver<[SettingsViewSection]>
+  let presentOpenSourceViewController: Observable<Void>
   let presentLogoutAlert: Observable<[LogoutAlertActionItem]>
   let presentLoginScreen: Observable<LoginViewModelType>
   
@@ -49,6 +51,16 @@ final class SettingsViewModel: SettingsViewModelType {
       .combineLatest(sections) { $0 }
       .asDriver(onErrorJustReturn: [])
     
+    self.presentOpenSourceViewController = self.tableViewDidSelectItem
+      .filter { sectionItem -> Bool in
+        if case .openSource = sectionItem {
+          return true
+        } else {
+          return false
+        }
+    }
+    .mapVoid()
+    
     self.presentLogoutAlert = self.tableViewDidSelectItem
       .filter { sectionItem -> Bool in
         if case .logout = sectionItem {
@@ -60,6 +72,7 @@ final class SettingsViewModel: SettingsViewModelType {
       .map { _ in [.logout, .cancel] }
     
     self.presentLoginScreen = self.logoutAlertDidSelectActionItem
+      .filter { $0 == .logout }
       .do(onNext: { _ in provider.authService.logout() })
       .map { _ in LoginViewModel(provider: provider) }
     
