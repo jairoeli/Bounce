@@ -18,6 +18,7 @@ final class ShotViewController: BaseViewController {
     static let imageCell = ReusableCell<ShotViewImageCell>()
     static let titleCell = ReusableCell<ShotViewTitleCell>()
     static let textCell = ReusableCell<ShotViewTextCell>()
+    static let reactionCell = ReusableCell<ReactionCell>()
   }
   
   fileprivate struct Metric {}
@@ -35,6 +36,7 @@ final class ShotViewController: BaseViewController {
     $0.register(Reusable.imageCell)
     $0.register(Reusable.titleCell)
     $0.register(Reusable.textCell)
+    $0.register(Reusable.reactionCell)
   }
   
   // MARK: - Initializing
@@ -54,8 +56,8 @@ final class ShotViewController: BaseViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.view.backgroundColor = .whiteSmoke
-    self.collectionView.addSubview(self.collectionView)
     self.collectionView.addSubview(self.refreshControl)
+    self.view.addSubview(self.collectionView)
   }
   
   override func setupConstraints() {
@@ -85,12 +87,21 @@ final class ShotViewController: BaseViewController {
         let cell = collectionView.dequeue(Reusable.textCell, for: indexPath)
         cell.configure(viewModel: viewModel)
         return cell
+        
+        case .reaction(let viewModel):
+        let cell = collectionView.dequeue(Reusable.reactionCell, for: indexPath)
+        cell.configure(viewModel: viewModel)
+        return cell
       }
     }
     
     // Input
+    self.rx.deallocated
+      .bind(to: viewModel.dispose)
+      .disposed(by: self.disposeBag)
+    
     self.rx.viewDidLoad
-      .bind(to: viewModel.viewDidLoad)
+      .bind(to: viewModel.refresh)
       .disposed(by: self.disposeBag)
     
     self.refreshControl.rx.controlEvent(.valueChanged)
@@ -124,6 +135,7 @@ extension ShotViewController: UICollectionViewDelegateFlowLayout {
       case .image(let viewModel): return ShotViewImageCell.size(width: sectionWidth, viewModel: viewModel)
       case .title(let viewModel): return ShotViewTitleCell.size(width: sectionWidth, viewModel: viewModel)
       case .text(let viewModel): return ShotViewTextCell.size(width: sectionWidth, viewModel: viewModel)
+      case .reaction(let viewModel): return ReactionCell.size(width: sectionWidth, viewModel: viewModel)
     }
   }
   

@@ -10,6 +10,8 @@ import ObjectMapper
 
 struct AccessToken: ModelType {
   
+  enum Event {}
+  
   var accessToken: String
   var tokenType: String
   var scope: String

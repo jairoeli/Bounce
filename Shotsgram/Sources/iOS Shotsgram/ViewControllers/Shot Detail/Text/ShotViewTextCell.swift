@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import ActiveLabel
+import TTTAttributedLabel
 
 final class ShotViewTextCell: BaseCollectionViewCell {
   
@@ -21,14 +21,10 @@ final class ShotViewTextCell: BaseCollectionViewCell {
   
   // MARK: - UI
   
-  fileprivate let label = ActiveLabel(frame: .zero).then {
+  fileprivate let label = TTTAttributedLabel(frame: .zero).then {
     $0.numberOfLines = 0
-    $0.enabledTypes = [.mention, .url]
-    $0.mentionColor = .linkBlue
-    $0.mentionSelectedColor = UIColor.darkLinkBlue
-    $0.URLColor = .linkBlue
-    $0.URLSelectedColor = UIColor.darkLinkBlue
-    $0.handleURLTap { url in UIApplication.shared.open(url, options: [:], completionHandler: nil) }
+    $0.linkAttributes = [NSForegroundColorAttributeName: UIColor.linkBlue]
+    $0.activeLinkAttributes = [NSForegroundColorAttributeName: UIColor.darkLinkBlue]
   }
   
   override init(frame: CGRect) {
@@ -40,7 +36,7 @@ final class ShotViewTextCell: BaseCollectionViewCell {
   // MARK: - Configuring
   
   func configure(viewModel: ShotViewTextCellModelType) {
-    self.label.attributedText = viewModel.text
+    self.label.setText(viewModel.text)
     self.setNeedsLayout()
   }
   

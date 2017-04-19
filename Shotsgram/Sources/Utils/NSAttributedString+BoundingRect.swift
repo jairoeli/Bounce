@@ -6,19 +6,24 @@
 //  Copyright © 2017 DevMountain. All rights reserved.
 //
 
-import ActiveLabel
+import TTTAttributedLabel
 
 extension NSAttributedString {
   
   func size(thatFits size: CGSize, limitedToNumberOfLines: Int = 0) -> CGSize {
-    let size = ActiveLabel(frame: .zero).sizeThatFits(size)
+    let size = TTTAttributedLabel.sizeThatFitsAttributedString(self, withConstraints: size, limitedToNumberOfLines: UInt(limitedToNumberOfLines))
     return snap(size)
   }
   
-  var width: CGFloat {
-    let constraintSize = CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)
-    return self.size(thatFits: constraintSize).width
-  }
+  /*
+   var width: CGFloat {
+   let constraintSize = CGSize(
+   width: CGFloat.greatestFiniteMagnitude,
+   height: CGFloat.greatestFiniteMagnitude
+   )
+   return self.size(thatFits: constraintSize).width
+   }
+   */
   
   func height(thatFitsWidth width: CGFloat) -> CGFloat {
     let constraintSize = CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)

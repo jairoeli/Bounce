@@ -1,5 +1,4 @@
 PODS:
-  - ActiveLabel (0.7.1)
   - Alamofire (4.4.0)
   - CGFloatLiteral (0.3.0)
   - CocoaLumberjack/Default (3.1.0)
@@ -51,12 +50,12 @@ PODS:
   - SwiftyColor (1.0.0)
   - SwiftyImage (1.1.0)
   - Then (2.1.0)
+  - TTTAttributedLabel (2.0.0)
   - UITextView+Placeholder (1.2.0)
   - URLNavigator (1.1.2)
   - WebLinking (1.1.0)
 
 DEPENDENCIES:
-  - ActiveLabel
   - Alamofire
   - CGFloatLiteral
   - CocoaLumberjack/Swift
@@ -80,6 +79,7 @@ DEPENDENCIES:
   - SwiftyColor
   - SwiftyImage
   - Then
+  - TTTAttributedLabel
   - UITextView+Placeholder
   - URLNavigator
   - WebLinking (from `https://github.com/kylef/WebLinking.swift`, commit `fddbacc30deab8afe12ce1d3b78bd27c593a0c29`)
@@ -95,7 +95,6 @@ CHECKOUT OPTIONS:
     :git: https://github.com/kylef/WebLinking.swift
 
 SPEC CHECKSUMS:
-  ActiveLabel: 68625f22775f51c31bb691ca8de20f1e5a3bc825
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   CGFloatLiteral: faba125ab2bb8fa90142c414f876b83099c26f25
   CocoaLumberjack: 8311463ddf9ee86a06ef92a071dd656c89244500
@@ -120,10 +119,11 @@ SPEC CHECKSUMS:
   SwiftyColor: 7fa09db14051bc5d7f539e1c4576665975225992
   SwiftyImage: 4d3feb0211beb7217b39ac553e3ee64ceb72d611
   Then: 8496793c8fcac95482b943909b440724c7d8d82c
+  TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
   UITextView+Placeholder: 77680995fcdd07c3f52ec92fe1150874a2ac89ff
   URLNavigator: 269e73ee727a7cabfa8e510a312bac3884325cc3
   WebLinking: 3f71787c14a225148e8be29fe6e7c98597cbc459
 
-PODFILE CHECKSUM: 81c361f9b591b541bd67f5be608e3ae9bdfbaee7
+PODFILE CHECKSUM: 70665eaa789658ab33c7eb8a39ffb535402d7af5
 
 COCOAPODS: 1.2.1

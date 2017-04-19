@@ -33,6 +33,14 @@
 		9C6186821EA57E10004F3F04 /* MainTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6186811EA57E10004F3F04 /* MainTabBarViewModel.swift */; };
 		9C6186861EA57F6C004F3F04 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6186851EA57F6C004F3F04 /* MainTabBarController.swift */; };
 		9C738F5A1EA2EB65003CC0D8 /* ExclusiveGestureRecognizerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C738F591EA2EB65003CC0D8 /* ExclusiveGestureRecognizerDelegate.swift */; };
+		9CC64F921EA7E5180024C1E4 /* ModelStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC64F911EA7E5180024C1E4 /* ModelStream.swift */; };
+		9CC64F951EA7ED1E0024C1E4 /* ReactionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC64F941EA7ED1E0024C1E4 /* ReactionButtonView.swift */; };
+		9CC64F971EA7EE940024C1E4 /* TouchAreaInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC64F961EA7EE940024C1E4 /* TouchAreaInsets.swift */; };
+		9CC64F991EA7F0060024C1E4 /* ReactionButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC64F981EA7F0060024C1E4 /* ReactionButtonViewModel.swift */; };
+		9CC64F9B1EA7F2F30024C1E4 /* ReactionLikeButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC64F9A1EA7F2F30024C1E4 /* ReactionLikeButtonViewModel.swift */; };
+		9CC64F9D1EA7F4810024C1E4 /* ReactionCommentButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC64F9C1EA7F4810024C1E4 /* ReactionCommentButtonViewModel.swift */; };
+		9CC64F9F1EA7F5630024C1E4 /* ReactionCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC64F9E1EA7F5630024C1E4 /* ReactionCellModel.swift */; };
+		9CC64FA11EA7F8410024C1E4 /* ReactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC64FA01EA7F8410024C1E4 /* ReactionCell.swift */; };
 		9CCEB20D1EA14AD500D42EA4 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEB20C1EA14AD500D42EA4 /* AccessToken.swift */; };
 		9CCEB20F1EA14BB600D42EA4 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEB20E1EA14BB600D42EA4 /* AuthService.swift */; };
 		9CCEB2111EA152D900D42EA4 /* URLNavigationMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEB2101EA152D900D42EA4 /* URLNavigationMap.swift */; };
@@ -106,6 +114,14 @@
 		9C6186811EA57E10004F3F04 /* MainTabBarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarViewModel.swift; path = Sources/ViewModels/MainTabBarViewModel.swift; sourceTree = "<group>"; };
 		9C6186851EA57F6C004F3F04 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarController.swift; path = "Sources/iOS Shotsgram/ViewControllers/MainTabBar/MainTabBarController.swift"; sourceTree = "<group>"; };
 		9C738F591EA2EB65003CC0D8 /* ExclusiveGestureRecognizerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExclusiveGestureRecognizerDelegate.swift; path = Sources/Utils/ExclusiveGestureRecognizerDelegate.swift; sourceTree = "<group>"; };
+		9CC64F911EA7E5180024C1E4 /* ModelStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelStream.swift; path = Sources/Model/ModelStream.swift; sourceTree = "<group>"; };
+		9CC64F941EA7ED1E0024C1E4 /* ReactionButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReactionButtonView.swift; path = "Sources/iOS Shotsgram/ViewControllers/Shot Detail/Reaction/ReactionButtonView.swift"; sourceTree = "<group>"; };
+		9CC64F961EA7EE940024C1E4 /* TouchAreaInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TouchAreaInsets.swift; path = Sources/Utils/TouchAreaInsets.swift; sourceTree = "<group>"; };
+		9CC64F981EA7F0060024C1E4 /* ReactionButtonViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReactionButtonViewModel.swift; path = Sources/ViewModels/ReactionButtonViewModel.swift; sourceTree = "<group>"; };
+		9CC64F9A1EA7F2F30024C1E4 /* ReactionLikeButtonViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReactionLikeButtonViewModel.swift; path = Sources/ViewModels/ReactionLikeButtonViewModel.swift; sourceTree = "<group>"; };
+		9CC64F9C1EA7F4810024C1E4 /* ReactionCommentButtonViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReactionCommentButtonViewModel.swift; path = Sources/ViewModels/ReactionCommentButtonViewModel.swift; sourceTree = "<group>"; };
+		9CC64F9E1EA7F5630024C1E4 /* ReactionCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReactionCellModel.swift; path = "Sources/iOS Shotsgram/ViewControllers/Shot Detail/Reaction/ReactionCellModel.swift"; sourceTree = "<group>"; };
+		9CC64FA01EA7F8410024C1E4 /* ReactionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReactionCell.swift; path = "Sources/iOS Shotsgram/ViewControllers/Shot Detail/Reaction/ReactionCell.swift"; sourceTree = "<group>"; };
 		9CCEB20C1EA14AD500D42EA4 /* AccessToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccessToken.swift; path = Sources/Model/AccessToken.swift; sourceTree = "<group>"; };
 		9CCEB20E1EA14BB600D42EA4 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthService.swift; path = Sources/Services/AuthService.swift; sourceTree = "<group>"; };
 		9CCEB2101EA152D900D42EA4 /* URLNavigationMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLNavigationMap.swift; path = Sources/Utils/URLNavigationMap.swift; sourceTree = "<group>"; };
@@ -230,6 +246,16 @@
 			name = Base;
 			sourceTree = "<group>";
 		};
+		9CC64F931EA7ECE00024C1E4 /* Reaction */ = {
+			isa = PBXGroup;
+			children = (
+				9CC64F941EA7ED1E0024C1E4 /* ReactionButtonView.swift */,
+				9CC64FA01EA7F8410024C1E4 /* ReactionCell.swift */,
+				9CC64F9E1EA7F5630024C1E4 /* ReactionCellModel.swift */,
+			);
+			name = Reaction;
+			sourceTree = "<group>";
+		};
 		9CCEB2121EA153E000D42EA4 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +291,9 @@
 				9CCEB21A1EA15B1C00D42EA4 /* ShotFeedViewModel.swift */,
 				9C6186771EA567B4004F3F04 /* SettingsViewModel.swift */,
 				9CE2E7961EA64C8300FAE6CF /* ShotViewModel.swift */,
+				9CC64F981EA7F0060024C1E4 /* ReactionButtonViewModel.swift */,
+				9CC64F9A1EA7F2F30024C1E4 /* ReactionLikeButtonViewModel.swift */,
+				9CC64F9C1EA7F4810024C1E4 /* ReactionCommentButtonViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -290,10 +319,11 @@
 		9CE2E79C1EA6556A00FAE6CF /* Shot Detail */ = {
 			isa = PBXGroup;
 			children = (
+				9C287B901EA6ED5B00DF3B6F /* ShotViewController.swift */,
 				9CE2E7A11EA6577700FAE6CF /* Image */,
 				9C287B8D1EA6E68D00DF3B6F /* Title */,
 				9CE2E7A41EA6597500FAE6CF /* Text */,
-				9C287B901EA6ED5B00DF3B6F /* ShotViewController.swift */,
+				9CC64F931EA7ECE00024C1E4 /* Reaction */,
 			);
 			name = "Shot Detail";
 			sourceTree = "<group>";
@@ -394,6 +424,7 @@
 			isa = PBXGroup;
 			children = (
 				9CFB68661EA05B5800C0D9BB /* ModelType.swift */,
+				9CC64F911EA7E5180024C1E4 /* ModelStream.swift */,
 				9CCEB20C1EA14AD500D42EA4 /* AccessToken.swift */,
 				9CCEB2221EA16C6300D42EA4 /* Shot.swift */,
 				9CCEB2241EA16F7B00D42EA4 /* User.swift */,
@@ -436,10 +467,11 @@
 				9C08EEA71EA28E9700A7FA16 /* UIColor+Dribbble.swift */,
 				9C738F591EA2EB65003CC0D8 /* ExclusiveGestureRecognizerDelegate.swift */,
 				9C61867B1EA56B01004F3F04 /* String+Localized.swift */,
+				9CE2E7AB1EA66C9E00FAE6CF /* NSAttributedString+BoundingRect.swift */,
 				9CE2E7921EA649C100FAE6CF /* NSAttributedString+HTMLString.swift */,
 				9CE2E7941EA64BC800FAE6CF /* UIEdgeInsets+Init.swift */,
 				9CE2E79A1EA64EA500FAE6CF /* BorderLayer.swift */,
-				9CE2E7AB1EA66C9E00FAE6CF /* NSAttributedString+BoundingRect.swift */,
+				9CC64F961EA7EE940024C1E4 /* TouchAreaInsets.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -597,22 +629,28 @@
 				9C08EE991EA1C6A600A7FA16 /* ShotService.swift in Sources */,
 				9CE2E7A31EA657E600FAE6CF /* ShotViewImageCellModel.swift in Sources */,
 				9C08EEAB1EA2B48D00A7FA16 /* ShotViewTitleCellModel.swift in Sources */,
+				9CC64F9B1EA7F2F30024C1E4 /* ReactionLikeButtonViewModel.swift in Sources */,
 				9C61867A1EA5681C004F3F04 /* SettingsViewSection.swift in Sources */,
 				9CCEB2331EA188F300D42EA4 /* ObjectMapper+Rx.swift in Sources */,
 				9CCEB21B1EA15B1C00D42EA4 /* ShotFeedViewModel.swift in Sources */,
 				9C287B911EA6ED5B00DF3B6F /* ShotViewController.swift in Sources */,
+				9CC64FA11EA7F8410024C1E4 /* ReactionCell.swift in Sources */,
 				9CCEB21F1EA15D5F00D42EA4 /* SplashViewModel.swift in Sources */,
 				9CFB686C1EA05D4200C0D9BB /* BaseViewController.swift in Sources */,
 				9C08EE8E1EA1C1DB00A7FA16 /* Observable+ActivityIndicator.swift in Sources */,
+				9CC64F9F1EA7F5630024C1E4 /* ReactionCellModel.swift in Sources */,
 				9CE2E7931EA649C100FAE6CF /* NSAttributedString+HTMLString.swift in Sources */,
+				9CC64F951EA7ED1E0024C1E4 /* ReactionButtonView.swift in Sources */,
 				9CE2E78F1EA6182100FAE6CF /* UITableView+Rx.swift in Sources */,
 				9CFB68611EA05A6B00C0D9BB /* ServiceProvider.swift in Sources */,
 				9CFB68731EA05FA100C0D9BB /* String+BoundingRect.swift in Sources */,
 				9C08EE951EA1C50900A7FA16 /* Paging.swift in Sources */,
 				9CE2E79B1EA64EA500FAE6CF /* BorderLayer.swift in Sources */,
+				9CC64F9D1EA7F4810024C1E4 /* ReactionCommentButtonViewModel.swift in Sources */,
 				9C6186821EA57E10004F3F04 /* MainTabBarViewModel.swift in Sources */,
 				9CE2E7951EA64BC800FAE6CF /* UIEdgeInsets+Init.swift in Sources */,
 				9C6186761EA566B3004F3F04 /* BaseTableViewCell.swift in Sources */,
+				9CC64F991EA7F0060024C1E4 /* ReactionButtonViewModel.swift in Sources */,
 				9C08EEA21EA1CB7E00A7FA16 /* ShotCellModelType.swift in Sources */,
 				9CCEB22A1EA1718C00D42EA4 /* DribbbleAPI.swift in Sources */,
 				9C6186721EA5659C004F3F04 /* SettingItemCellModel.swift in Sources */,
@@ -622,6 +660,7 @@
 				9CFB68671EA05B5800C0D9BB /* ModelType.swift in Sources */,
 				9C08EE921EA1C3D700A7FA16 /* UIScrollView+Rx.swift in Sources */,
 				9CCEB21D1EA15BDA00D42EA4 /* ShotFeedViewController.swift in Sources */,
+				9CC64F921EA7E5180024C1E4 /* ModelStream.swift in Sources */,
 				9CFB685C1EA0543C00C0D9BB /* AppDelegate.swift in Sources */,
 				9CCEB2251EA16F7B00D42EA4 /* User.swift in Sources */,
 				9CCEB20F1EA14BB600D42EA4 /* AuthService.swift in Sources */,
@@ -649,6 +688,7 @@
 				9CE2E7911EA62EA900FAE6CF /* OpenSourceViewController.swift in Sources */,
 				9CCEB2311EA1865400D42EA4 /* AuthPlugin.swift in Sources */,
 				9CFB686E1EA05EC700C0D9BB /* BaseCollectionViewCell.swift in Sources */,
+				9CC64F971EA7EE940024C1E4 /* TouchAreaInsets.swift in Sources */,
 				9CCEB20D1EA14AD500D42EA4 /* AccessToken.swift in Sources */,
 				9CCEB2211EA161A600D42EA4 /* SplashViewController.swift in Sources */,
 				9CE2E78D1EA6175A00FAE6CF /* UICollectionView+Rx.swift in Sources */,
