@@ -55,7 +55,12 @@ final class ShotViewCell: BaseCollectionViewCell {
     
     // Output
     self.imageView.kf.setImage(with: viewModel.imageURL, placeholder: nil)
-    // MARK: TODO: present
+    viewModel.presentShotViewController
+      .whileDisplaying(self)
+      .subscribe(onNext: { viewModel in
+        Navigator.push(ShotViewController(viewModel: viewModel))
+      })
+      .disposed(by: self.disposeBag)
   }
   
   // MARK: Size
