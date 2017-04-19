@@ -29,6 +29,7 @@ target 'Shotsgram' do
   pod 'SnapKit'
   pod 'ManualLayout'
   pod 'Immutable'
+  pod 'ActiveLabel'
 
   # Logging
   pod 'CocoaLumberjack/Swift'

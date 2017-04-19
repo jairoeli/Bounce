@@ -47,7 +47,15 @@ final class ShotViewCell: BaseCollectionViewCell {
   // MARK: Configuring
   
   func configure(viewModel: ShotCellModelType) {
+    // Input
+    self.cardView.rx.tapGesture()
+      .mapVoid()
+      .bind(to: viewModel.showShot)
+      .disposed(by: self.disposeBag)
+    
+    // Output
     self.imageView.kf.setImage(with: viewModel.imageURL, placeholder: nil)
+    // MARK: TODO: present
   }
   
   // MARK: Size

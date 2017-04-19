@@ -63,7 +63,7 @@ class OpenSourceViewController: UIViewController, UITableViewDataSource, UITable
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = UITableViewCell(style: .value1, reuseIdentifier: cellId)
+    let cell = UITableViewCell(style: .default, reuseIdentifier: cellId)
     cell.textLabel?.text = items[indexPath.row]
     return cell
   }

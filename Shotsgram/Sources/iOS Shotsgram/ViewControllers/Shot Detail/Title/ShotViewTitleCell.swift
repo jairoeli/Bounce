@@ -78,15 +78,9 @@ final class ShotViewTitleCell: BaseCollectionViewCell {
       - Metric.avatarViewSize
       - Metric.titleLabelLeft
       - Metric.paddingLeftRight
-    let titleLabelHeight = viewModel.title.height(
-      thatFitsWidth: titleLabelWidth,
-      font: Font.titleLabel
-    )
+    let titleLabelHeight = viewModel.title.height(thatFitsWidth: titleLabelWidth, font: Font.titleLabel)
     let usernameLabelHeight = snap(Font.usernameLabel.lineHeight)
-    let contentHeight = max(
-      Metric.avatarViewSize,
-      Metric.titleLabelTop + titleLabelHeight + Metric.usernameLabelTop + usernameLabelHeight
-    )
+    let contentHeight = max(Metric.avatarViewSize, Metric.titleLabelTop + titleLabelHeight + Metric.usernameLabelTop + usernameLabelHeight)
     
     return CGSize(width: width, height: Metric.paddingTopBottom * 2 + contentHeight)
   }
