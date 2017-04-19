@@ -8,37 +8,48 @@
 
 import RxCocoa
 import RxSwift
+import RxSwiftUtilities
 
 protocol ShotViewModelType {
   // Input
   var viewDidLoad: PublishSubject<Void> { get }
-  //  var refresh: PublishSubject<Void> { get }
+  var refresh: PublishSubject<Void> { get }
   
   // Output
-  //  var isRefreshing: Driver<Bool> { get }
+  var isRefreshing: Driver<Bool> { get }
   var sections: Driver<[ShotViewSection]> { get }
   
 }
 
 final class ShotViewModel: ShotViewModelType {
   
-  // MARK: Input
+  // MARK: - Input
   
   let viewDidLoad: PublishSubject<Void> = .init()
+  let refresh: PublishSubject<Void> = .init()
   
-  //  // MARK: Output
+  // MARK: - Output
   
+  let isRefreshing: Driver<Bool>
   let sections: Driver<[ShotViewSection]>
   
   // MARK: - Initializing
   
   init(provider: ServiceProviderType, shotID: Int, shot: Shot?) {
-    let shotDidLoad: Observable<Shot> = self.viewDidLoad
-      .flatMap { provider.shotService.shot(id: shotID) }
-      .map { $0 as Shot? }
-      .startWith(shot)
-      .filterNil()
-      .shareReplay(1)
+    let isRefreshing = ActivityIndicator()
+    self.isRefreshing = isRefreshing.asDriver()
+    
+    let shotDidLoad: Observable<Shot> = Observable
+      .of(self.viewDidLoad.asObservable(), self.refresh.asObservable())
+      .merge()
+      .flatMap {
+        provider.shotService.shot(id: shotID)
+          .trackActivity(isRefreshing)
+          .ignoreErrors()
+    }
+    .map { $0 as Shot? }
+    .startWith(shot)
+    .filterNil()
     
     let shotSectionItemImage: Observable<ShotViewSectionItem> = shotDidLoad
       .map { shot in .image(ShotViewImageCellModel(provider: provider, shot: shot)) }
@@ -67,9 +78,3 @@ final class ShotViewModel: ShotViewModelType {
   }
   
 }
-
-
-
-
-
-
