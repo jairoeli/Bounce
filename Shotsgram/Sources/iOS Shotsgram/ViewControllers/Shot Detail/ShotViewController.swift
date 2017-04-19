@@ -8,6 +8,7 @@
 
 import UIKit
 import ReusableKit
+import RxCocoa
 import RxDataSources
 
 final class ShotViewController: BaseViewController {
@@ -38,6 +39,7 @@ final class ShotViewController: BaseViewController {
     $0.register(Reusable.textCell)
     $0.register(Reusable.reactionCell)
   }
+  fileprivate let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
   
   // MARK: - Initializing
   
@@ -58,11 +60,15 @@ final class ShotViewController: BaseViewController {
     self.view.backgroundColor = .whiteSmoke
     self.collectionView.addSubview(self.refreshControl)
     self.view.addSubview(self.collectionView)
+    self.view.addSubview(self.activityIndicatorView)
   }
   
   override func setupConstraints() {
     self.collectionView.snp.makeConstraints { make in
       make.edges.equalToSuperview()
+    }
+    self.activityIndicatorView.snp.makeConstraints { (make) in
+      make.center.equalToSuperview()
     }
   }
   
@@ -109,6 +115,15 @@ final class ShotViewController: BaseViewController {
       .disposed(by: self.disposeBag)
     
     // Output
+    viewModel.sections
+      .map { $0.isEmpty }
+      .drive(self.collectionView.rx.isHidden)
+      .disposed(by: self.disposeBag)
+    
+    Driver.combineLatest(viewModel.isRefreshing, viewModel.sections.map { $0.isEmpty }) { $0 && $1 }
+      .drive(self.activityIndicatorView.rx.isAnimating)
+      .disposed(by: self.disposeBag)
+    
     viewModel.isRefreshing
       .drive(self.refreshControl.rx.isRefreshing)
       .disposed(by: self.disposeBag)
@@ -116,7 +131,6 @@ final class ShotViewController: BaseViewController {
     viewModel.sections
       .drive(self.collectionView.rx.items(dataSource: self.dataSource))
       .disposed(by: self.disposeBag)
-    
   }
   
 }
