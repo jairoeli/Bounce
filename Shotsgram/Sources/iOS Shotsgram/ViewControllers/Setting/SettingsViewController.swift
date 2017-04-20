@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 import ReusableKit
 import RxDataSources
 
@@ -66,6 +67,7 @@ final class SettingsViewController: BaseViewController {
       switch sectionItem {
         case .openSource(let viewModel): cell.configure(viewModel: viewModel)
         case .logout(let viewModel): cell.configure(viewModel: viewModel)
+        case .icons(let viewModel): cell.configure(viewModel: viewModel)
       }
       
       return cell
@@ -79,6 +81,15 @@ final class SettingsViewController: BaseViewController {
     // Output
     viewModel.tableViewSections
       .drive(self.tableView.rx.items(dataSource: self.dataSource))
+      .disposed(by: self.disposeBag)
+    
+    viewModel.presentWebViewController
+      .subscribe(onNext: { [weak self] url in
+        guard let `self` = self else { return }
+        let viewController = SFSafariViewController(url: url)
+        
+        self.present(viewController, animated: true, completion: nil)
+      })
       .disposed(by: self.disposeBag)
     
     viewModel.presentLogoutAlert

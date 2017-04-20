@@ -21,6 +21,7 @@ protocol SettingsViewModelType: class {
   
   // output
   var tableViewSections: Driver<[SettingsViewSection]> { get }
+  var presentWebViewController: Observable<URL> { get }
   var presentOpenSourceViewController: Observable<Void> { get }
   var presentLogoutAlert: Observable<[LogoutAlertActionItem]> { get }
   var presentLoginScreen: Observable<LoginViewModelType> { get }
@@ -36,6 +37,7 @@ final class SettingsViewModel: SettingsViewModelType {
   // MARK: - Output
   
   let tableViewSections: Driver<[SettingsViewSection]>
+  let presentWebViewController: Observable<URL>
   let presentOpenSourceViewController: Observable<Void>
   let presentLogoutAlert: Observable<[LogoutAlertActionItem]>
   let presentLoginScreen: Observable<LoginViewModelType>
@@ -50,6 +52,16 @@ final class SettingsViewModel: SettingsViewModelType {
     self.tableViewSections = Observable
       .combineLatest(sections) { $0 }
       .asDriver(onErrorJustReturn: [])
+    
+    self.presentWebViewController = self.tableViewDidSelectItem
+      .filter { sectionItem -> Bool in
+        if case .icons = sectionItem {
+          return true
+        } else {
+          return false
+        }
+    }
+    .map(URL(string: "https://nucleoapp.com")!)
     
     self.presentOpenSourceViewController = self.tableViewDidSelectItem
       .filter { sectionItem -> Bool in
@@ -82,6 +94,7 @@ final class SettingsViewModel: SettingsViewModelType {
   
   private class func aboutSection(provider: ServiceProviderType) -> Observable<SettingsViewSection> {
     let sectionsItems: [SettingsViewSectionItem] = [
+      .icons(SettingItemCellModel(text: "Nucleo App", detailText: nil)),
       .openSource(SettingItemCellModel(text: "Open Source License".localized, detailText: nil))
     ]
     

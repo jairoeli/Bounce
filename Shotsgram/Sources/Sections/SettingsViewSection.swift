@@ -32,5 +32,6 @@ extension SettingsViewSection: SectionModelType {
 
 enum SettingsViewSectionItem {
   case openSource(SettingItemCellModelType)
+  case icons(SettingItemCellModelType)
   case logout(SettingItemCellModelType)
 }
