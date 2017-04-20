@@ -49,11 +49,10 @@ final class ShotFeedViewController: BaseViewController {
   
   init(viewModel: ShotFeedViewModelType) {
     super.init()
-//    self.title = "Shot"
-    self.navigationItem.title = "Shots"
-    self.tabBarItem.image = #imageLiteral(resourceName: "shots")
-    self.tabBarItem.selectedImage = #imageLiteral(resourceName: "shots_selected").withRenderingMode(.alwaysOriginal)
-    self.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
+    setupNavBar()
+    self.tabBarItem.image = #imageLiteral(resourceName: "home")
+    self.tabBarItem.selectedImage = #imageLiteral(resourceName: "home_selected").withRenderingMode(.alwaysOriginal)
+    self.tabBarItem.imageInsets = UIEdgeInsets(top: 4, left: 0, bottom: -4, right: 0)
     self.configure(viewModel: viewModel)
   }
   
@@ -74,6 +73,14 @@ final class ShotFeedViewController: BaseViewController {
     self.collectionView.snp.makeConstraints { make in
       make.edges.equalToSuperview()
     }
+  }
+  
+  fileprivate func setupNavBar() {
+    let titleImageView = UIImageView(image: #imageLiteral(resourceName: "dribbble_icon"))
+    titleImageView.frame = CGRect(x: 0, y: 0, width: 28, height: 28)
+    titleImageView.contentMode = .scaleAspectFit
+    self.navigationItem.titleView = titleImageView
+    self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
   }
 
   // MARK: Configuring

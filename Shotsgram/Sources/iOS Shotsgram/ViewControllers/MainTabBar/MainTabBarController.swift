@@ -20,8 +20,9 @@ final class MainTabBarController: UITabBarController {
   
   init(viewModel: MainTabBarViewModelType) {
     super.init(nibName: nil, bundle: nil)
+    self.tabBar.barTintColor = .black
+    self.tabBar.isTranslucent = false
     self.configure(viewModel: viewModel)
-    self.tabBar.backgroundColor = .white
   }
   
   required init?(coder aDecoder: NSCoder) {

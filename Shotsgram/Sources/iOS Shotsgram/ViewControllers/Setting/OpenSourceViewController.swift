@@ -45,6 +45,7 @@ class OpenSourceViewController: UIViewController, UITableViewDataSource, UITable
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.navigationItem.title = "Software Libraries"
     
     tableView = UITableView(frame: UIScreen.main.bounds, style: .plain)
     tableView.delegate = self

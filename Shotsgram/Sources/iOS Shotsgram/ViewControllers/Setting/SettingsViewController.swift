@@ -33,11 +33,11 @@ final class SettingsViewController: BaseViewController {
   
   init(viewModel: SettingsViewModelType) {
     super.init()
-//    self.title = "Settings".localized
-    self.navigationItem.title = "Settings".localized
-    self.tabBarItem.image = #imageLiteral(resourceName: "setting")
-    self.tabBarItem.selectedImage = #imageLiteral(resourceName: "setting_selected").withRenderingMode(.alwaysOriginal)
-    self.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
+    self.navigationItem.title = "Settings"
+    self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    self.tabBarItem.image = #imageLiteral(resourceName: "settings")
+    self.tabBarItem.selectedImage = #imageLiteral(resourceName: "settings_selected").withRenderingMode(.alwaysOriginal)
+    self.tabBarItem.imageInsets = UIEdgeInsets(top: 4, left: 0, bottom: -4, right: 0)
     self.configure(viewModel: viewModel)
   }
   

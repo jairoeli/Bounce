@@ -95,7 +95,7 @@ final class SettingsViewModel: SettingsViewModelType {
   private class func aboutSection(provider: ServiceProviderType) -> Observable<SettingsViewSection> {
     let sectionsItems: [SettingsViewSectionItem] = [
       .icons(SettingItemCellModel(text: "Nucleo App", detailText: nil)),
-      .openSource(SettingItemCellModel(text: "Open Source License".localized, detailText: nil))
+      .openSource(SettingItemCellModel(text: "Software Libraries", detailText: nil))
     ]
     
     return .just(.about(sectionsItems))
