@@ -43,10 +43,10 @@ final class ShotFeedViewModel: ShotFeedViewModelType {
   
   // MARK: - Initializing
   
-  init(provider: ServiceProviderType, shot initialShot: Shot? = nil) {
+  init(provider: ServiceProviderType) {
     let isRefreshing = ActivityIndicator()
-    self.isRefreshing = isRefreshing.asDriver()
     let isLoading = ActivityIndicator()
+    self.isRefreshing = isRefreshing.asDriver()
     
     let nextURL = Variable<URL?>(nil)
     
