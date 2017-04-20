@@ -24,6 +24,9 @@
 		9C08EEAD1EA2B55D00A7FA16 /* ShotViewTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C08EEAC1EA2B55D00A7FA16 /* ShotViewTitleCell.swift */; };
 		9C287B911EA6ED5B00DF3B6F /* ShotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C287B901EA6ED5B00DF3B6F /* ShotViewController.swift */; };
 		9C423FD21EA8339800C0603C /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C423FD11EA8339800C0603C /* Comment.swift */; };
+		9C423FD51EA836A300C0603C /* CommentCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C423FD41EA836A300C0603C /* CommentCellModel.swift */; };
+		9C423FD71EA8374900C0603C /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C423FD61EA8374900C0603C /* CommentCell.swift */; };
+		9C423FD91EA8433D00C0603C /* CollectionActivityIndicatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C423FD81EA8433D00C0603C /* CollectionActivityIndicatorCell.swift */; };
 		9C6186721EA5659C004F3F04 /* SettingItemCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6186711EA5659C004F3F04 /* SettingItemCellModel.swift */; };
 		9C6186741EA5662D004F3F04 /* SettingItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6186731EA5662D004F3F04 /* SettingItemCell.swift */; };
 		9C6186761EA566B3004F3F04 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6186751EA566B3004F3F04 /* BaseTableViewCell.swift */; };
@@ -106,6 +109,9 @@
 		9C08EEAC1EA2B55D00A7FA16 /* ShotViewTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShotViewTitleCell.swift; path = "Sources/iOS Shotsgram/ViewControllers/Shot Detail/Title/ShotViewTitleCell.swift"; sourceTree = "<group>"; };
 		9C287B901EA6ED5B00DF3B6F /* ShotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShotViewController.swift; path = "Sources/iOS Shotsgram/ViewControllers/Shot Detail/ShotViewController.swift"; sourceTree = "<group>"; };
 		9C423FD11EA8339800C0603C /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Comment.swift; path = Sources/Model/Comment.swift; sourceTree = "<group>"; };
+		9C423FD41EA836A300C0603C /* CommentCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentCellModel.swift; path = "Sources/iOS Shotsgram/ViewControllers/Shot Detail/Comment/CommentCellModel.swift"; sourceTree = "<group>"; };
+		9C423FD61EA8374900C0603C /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentCell.swift; path = "Sources/iOS Shotsgram/ViewControllers/Shot Detail/Comment/CommentCell.swift"; sourceTree = "<group>"; };
+		9C423FD81EA8433D00C0603C /* CollectionActivityIndicatorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionActivityIndicatorCell.swift; path = "Sources/iOS Shotsgram/ViewControllers/CollectionActivityIndicatorCell.swift"; sourceTree = "<group>"; };
 		9C6186711EA5659C004F3F04 /* SettingItemCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingItemCellModel.swift; path = "Sources/iOS Shotsgram/ViewControllers/Setting/SettingItemCellModel.swift"; sourceTree = "<group>"; };
 		9C6186731EA5662D004F3F04 /* SettingItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingItemCell.swift; path = "Sources/iOS Shotsgram/ViewControllers/Setting/SettingItemCell.swift"; sourceTree = "<group>"; };
 		9C6186751EA566B3004F3F04 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseTableViewCell.swift; path = "Sources/iOS Shotsgram/ViewControllers/BaseTableViewCell.swift"; sourceTree = "<group>"; };
@@ -218,6 +224,15 @@
 			name = Title;
 			sourceTree = "<group>";
 		};
+		9C423FD31EA8367200C0603C /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				9C423FD61EA8374900C0603C /* CommentCell.swift */,
+				9C423FD41EA836A300C0603C /* CommentCellModel.swift */,
+			);
+			name = Comment;
+			sourceTree = "<group>";
+		};
 		9C6186701EA5653C004F3F04 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				9C08EEA51EA2885A00A7FA16 /* CollectionActivityIndicatorView.swift */,
+				9C423FD81EA8433D00C0603C /* CollectionActivityIndicatorCell.swift */,
 				9CFB686B1EA05D4200C0D9BB /* BaseViewController.swift */,
 				9CFB686D1EA05EC700C0D9BB /* BaseCollectionViewCell.swift */,
 				9C6186751EA566B3004F3F04 /* BaseTableViewCell.swift */,
@@ -326,6 +342,7 @@
 				9C287B8D1EA6E68D00DF3B6F /* Title */,
 				9CE2E7A41EA6597500FAE6CF /* Text */,
 				9CC64F931EA7ECE00024C1E4 /* Reaction */,
+				9C423FD31EA8367200C0603C /* Comment */,
 			);
 			name = "Shot Detail";
 			sourceTree = "<group>";
@@ -643,11 +660,13 @@
 				9C08EE8E1EA1C1DB00A7FA16 /* Observable+ActivityIndicator.swift in Sources */,
 				9CC64F9F1EA7F5630024C1E4 /* ReactionCellModel.swift in Sources */,
 				9CE2E7931EA649C100FAE6CF /* NSAttributedString+HTMLString.swift in Sources */,
+				9C423FD71EA8374900C0603C /* CommentCell.swift in Sources */,
 				9CC64F951EA7ED1E0024C1E4 /* ReactionButtonView.swift in Sources */,
 				9CE2E78F1EA6182100FAE6CF /* UITableView+Rx.swift in Sources */,
 				9CFB68611EA05A6B00C0D9BB /* ServiceProvider.swift in Sources */,
 				9CFB68731EA05FA100C0D9BB /* String+BoundingRect.swift in Sources */,
 				9C08EE951EA1C50900A7FA16 /* Paging.swift in Sources */,
+				9C423FD91EA8433D00C0603C /* CollectionActivityIndicatorCell.swift in Sources */,
 				9CE2E79B1EA64EA500FAE6CF /* BorderLayer.swift in Sources */,
 				9CC64F9D1EA7F4810024C1E4 /* ReactionCommentButtonViewModel.swift in Sources */,
 				9C6186821EA57E10004F3F04 /* MainTabBarViewModel.swift in Sources */,
@@ -692,6 +711,7 @@
 				9CE2E7911EA62EA900FAE6CF /* OpenSourceViewController.swift in Sources */,
 				9CCEB2311EA1865400D42EA4 /* AuthPlugin.swift in Sources */,
 				9CFB686E1EA05EC700C0D9BB /* BaseCollectionViewCell.swift in Sources */,
+				9C423FD51EA836A300C0603C /* CommentCellModel.swift in Sources */,
 				9CC64F971EA7EE940024C1E4 /* TouchAreaInsets.swift in Sources */,
 				9CCEB20D1EA14AD500D42EA4 /* AccessToken.swift in Sources */,
 				9CCEB2211EA161A600D42EA4 /* SplashViewController.swift in Sources */,

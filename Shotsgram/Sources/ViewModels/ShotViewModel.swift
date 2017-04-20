@@ -23,6 +23,13 @@ protocol ShotViewModelType {
 
 final class ShotViewModel: ShotViewModelType {
   
+  // MARK: - Types
+  
+  fileprivate enum CommentOperation {
+    case refresh([Comment])
+    case loadMore([Comment])
+  }
+  
   // MARK: - Input
   
   let dispose: PublishSubject<Void> = .init()
@@ -128,12 +135,57 @@ final class ShotViewModel: ShotViewModelType {
       .shareReplay(1)
     
     //
+    // Comment Section
+    //
+    let commentNextURL = Variable<URL?>(nil)
+    let commentOperationRefresh = didRefreshShot
+      .flatMap { shot in
+        provider.shotService.comments(shotID: shotID)
+          .catchErrorJustReturn(Feed(items: []))
+    }
+    .do(onNext: { commentList in
+        commentNextURL.value = commentList.nextURL
+    })
+      .map { commentList in
+        CommentOperation.refresh(commentList.items)
+    }
+    
+    let commentOperation = commentOperationRefresh
+    
+    let comments: Observable<[Comment]> = commentOperation
+      .scan([]) { comments, operation in
+        switch operation {
+          case let .refresh(newComments): return newComments
+          case let .loadMore(newComments): return comments + newComments
+        }
+    }
+    .startWith([])
+    
+    let commentSection: Observable<ShotViewSection> = comments
+      .map { comments in
+        let sectionItems: [ShotViewSectionItem] = comments.map { comment in
+          let viewModel = CommentCellModel(provider: provider, comment: comment)
+          let sectionItem = ShotViewSectionItem.comment(viewModel)
+          return sectionItem
+        }
+        
+        if sectionItems.isEmpty {
+          return ShotViewSection.comment([.activityIndicator])
+        } else {
+          return ShotViewSection.comment(sectionItems)
+        }
+    }
+    
+    //
     // Section
     //
-    let sections = [shotSection]
+    let sections = [shotSection, commentSection]
     self.sections = Observable<[ShotViewSection]>
-      .combineLatest(sections) { $0 }
-      .asDriver(onErrorJustReturn: [])
+      .combineLatest(sections) { sections in
+        guard !sections[0].items.isEmpty else { return [] }
+        return sections
+    }
+    .asDriver(onErrorJustReturn: [])
   }
   
 }

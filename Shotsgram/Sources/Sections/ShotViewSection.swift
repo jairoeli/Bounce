@@ -35,4 +35,6 @@ enum ShotViewSectionItem {
   case title(ShotViewTitleCellModelType)
   case text(ShotViewTextCellModelType)
   case reaction(ReactionCellModelType)
+  case comment(CommentCellModelType)
+  case activityIndicator
 }
