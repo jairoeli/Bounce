@@ -14,6 +14,7 @@ protocol ShotServiceType {
   func isLiked(shotID: Int) -> Observable<Bool>
   func like(shotID: Int) -> Observable<Void>
   func unlike(shotID: Int) -> Observable<Void>
+  func comments(shotID: Int) -> Observable<Feed<Comment>>
 }
 
 final class ShotService: BaseService, ShotServiceType {
@@ -43,6 +44,10 @@ final class ShotService: BaseService, ShotServiceType {
   
   func unlike(shotID: Int) -> Observable<Void> {
     return self.provider.networking.request(.unlikeShot(id: shotID)).mapVoid()
+  }
+  
+  func comments(shotID: Int) -> Observable<Feed<Comment>> {
+    return self.provider.networking.request(.shotComments(shotID: shotID)).map(Feed<Comment>.self)
   }
   
 }
