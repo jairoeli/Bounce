@@ -12,7 +12,6 @@ import Then
 @testable import Shotsgram
 
 final class MockAuthService: BaseService, AuthServiceType, Then {
-  
   var currentAccessToken: AccessToken? {
     return nil
   }
@@ -26,5 +25,4 @@ final class MockAuthService: BaseService, AuthServiceType, Then {
   
   func logout() {
   }
-  
 }

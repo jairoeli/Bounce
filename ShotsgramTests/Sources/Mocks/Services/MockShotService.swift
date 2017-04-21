@@ -12,7 +12,6 @@ import Then
 @testable import Shotsgram
 
 final class MockShotService: BaseService, ShotServiceType, Then {
-  
   func shots(paging: Paging) -> Observable<Feed<Shot>> {
     return .never()
   }
@@ -36,5 +35,4 @@ final class MockShotService: BaseService, ShotServiceType, Then {
   func comments(shotID: Int) -> Observable<Feed<Comment>> {
     return .never()
   }
-  
 }

@@ -7,6 +7,7 @@
 //
 
 import XCTest
+
 import RxCocoa
 import RxExpect
 import RxSwift
@@ -17,19 +18,38 @@ import RxTest
 final class SplashViewModelTests: XCTestCase {
   
   func testPresentLoginScreen() {
-    RxExpect("it should present login screen when not authenticated") { test in
+    RxExpect("it should present login screen when failed to fetch me") { test in
+      
       let provider = MockServiceProvider()
       provider.userService = MockUserService(provider: provider).then {
         $0.fetchMeClosure = { Observable.error(MockError()) }
       }
-      let reactor = SplashViewReactor(provider: provider)
-      test.input(reactor.checkIfAuthenticated, [
-        next(100, Void()),
-        ])
-      test.assert(reactor.presentLoginScreen.map(true))
+      
+      let viewModel = SplashViewModel(provider: provider)
+      test.input(viewModel.checkIfAuthenticated, [next(100, Void()),])
+      test.assert(viewModel.presentLoginScreen.map(true))
         .filterNext()
         .equal([true])
     }
+  }
+  
+  func testPresentMainScreen() {
+    
+    RxExpect("It should present main screen when succceed to fetch me") { test in
+      let provider = MockServiceProvider()
+      provider.userService = MockUserService(provider: provider).then {
+        $0.fetchMeClosure = { .just(Void()) }
+      }
+      
+      let viewModel = SplashViewModel(provider: provider)
+      test.input(viewModel.checkIfAuthenticated, [ next(100, Void()),])
+      
+      test.assert(viewModel.presentMainScreen.map(true))
+        .filterNext()
+        .equal([true])
+      
+    }
+    
   }
   
 }
