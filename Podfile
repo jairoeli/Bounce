@@ -44,4 +44,11 @@ target 'Shotsgram' do
   pod 'URLNavigator'
   pod 'KeychainAccess'
 
+  target 'ShotsgramTests' do
+    inherit! :search_paths
+
+    pod 'RxTest'
+    pod 'RxExpect'
+  end
+
 end

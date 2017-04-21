@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		52C70FC5C3F6C224224209F1 /* Pods_Shotsgram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14303A17F11DE2712520E2B8 /* Pods_Shotsgram.framework */; };
+		6754B68B4CBF53DB8F5DB604 /* Pods_ShotsgramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A54F8F63AEE1794BA69E3453 /* Pods_ShotsgramTests.framework */; };
 		9C08EE8C1EA1BDF800A7FA16 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C08EE8B1EA1BDF800A7FA16 /* Feed.swift */; };
 		9C08EE8E1EA1C1DB00A7FA16 /* Observable+ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C08EE8D1EA1C1DB00A7FA16 /* Observable+ActivityIndicator.swift */; };
 		9C08EE901EA1C33900A7FA16 /* RxOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C08EE8F1EA1C33900A7FA16 /* RxOperators.swift */; };
@@ -36,6 +37,12 @@
 		9C61867E1EA56E44004F3F04 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C61867D1EA56E44004F3F04 /* SettingsViewController.swift */; };
 		9C6186821EA57E10004F3F04 /* MainTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6186811EA57E10004F3F04 /* MainTabBarViewModel.swift */; };
 		9C6186861EA57F6C004F3F04 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6186851EA57F6C004F3F04 /* MainTabBarController.swift */; };
+		9C70BF161EAA7E84006204E5 /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70BF151EAA7E84006204E5 /* MockError.swift */; };
+		9C70BF1A1EAA7EDB006204E5 /* MockAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70BF191EAA7EDB006204E5 /* MockAuthService.swift */; };
+		9C70BF1C1EAA7F86006204E5 /* MockServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70BF1B1EAA7F86006204E5 /* MockServiceProvider.swift */; };
+		9C70BF1E1EAA801D006204E5 /* MockShotService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70BF1D1EAA801D006204E5 /* MockShotService.swift */; };
+		9C70BF201EAA80A0006204E5 /* MockUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70BF1F1EAA80A0006204E5 /* MockUserService.swift */; };
+		9C70BF231EAA820B006204E5 /* SplashViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70BF221EAA820B006204E5 /* SplashViewModelTests.swift */; };
 		9C738F5A1EA2EB65003CC0D8 /* ExclusiveGestureRecognizerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C738F591EA2EB65003CC0D8 /* ExclusiveGestureRecognizerDelegate.swift */; };
 		9CC64F921EA7E5180024C1E4 /* ModelStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC64F911EA7E5180024C1E4 /* ModelStream.swift */; };
 		9CC64F951EA7ED1E0024C1E4 /* ReactionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC64F941EA7ED1E0024C1E4 /* ReactionButtonView.swift */; };
@@ -89,9 +96,20 @@
 		9CFB687A1EA0608500C0D9BB /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB68791EA0608500C0D9BB /* UIViewController+Rx.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		9C70BF0E1EAA7D3F006204E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CFB683E1EA052BE00C0D9BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CFB68451EA052BE00C0D9BB;
+			remoteInfo = Shotsgram;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		08C1D24F279717C463081D91 /* Pods-Shotsgram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shotsgram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shotsgram/Pods-Shotsgram.debug.xcconfig"; sourceTree = "<group>"; };
 		14303A17F11DE2712520E2B8 /* Pods_Shotsgram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shotsgram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F9E05B697CE02F719C3BC17 /* Pods-ShotsgramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShotsgramTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShotsgramTests/Pods-ShotsgramTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7CFBEC196429B0DC65E7C580 /* Pods-Shotsgram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shotsgram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shotsgram/Pods-Shotsgram.release.xcconfig"; sourceTree = "<group>"; };
 		9C08EE8B1EA1BDF800A7FA16 /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Feed.swift; path = Sources/Model/Feed.swift; sourceTree = "<group>"; };
 		9C08EE8D1EA1C1DB00A7FA16 /* Observable+ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Observable+ActivityIndicator.swift"; path = "Sources/Rx/Observable+ActivityIndicator.swift"; sourceTree = "<group>"; };
@@ -121,6 +139,14 @@
 		9C61867D1EA56E44004F3F04 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = "Sources/iOS Shotsgram/ViewControllers/Setting/SettingsViewController.swift"; sourceTree = "<group>"; };
 		9C6186811EA57E10004F3F04 /* MainTabBarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarViewModel.swift; path = Sources/ViewModels/MainTabBarViewModel.swift; sourceTree = "<group>"; };
 		9C6186851EA57F6C004F3F04 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarController.swift; path = "Sources/iOS Shotsgram/ViewControllers/MainTabBar/MainTabBarController.swift"; sourceTree = "<group>"; };
+		9C70BF091EAA7D3F006204E5 /* ShotsgramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShotsgramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C70BF0D1EAA7D3F006204E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = "<group>"; };
+		9C70BF151EAA7E84006204E5 /* MockError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockError.swift; path = Sources/Mocks/MockError.swift; sourceTree = "<group>"; };
+		9C70BF191EAA7EDB006204E5 /* MockAuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockAuthService.swift; path = Sources/Mocks/Services/MockAuthService.swift; sourceTree = "<group>"; };
+		9C70BF1B1EAA7F86006204E5 /* MockServiceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockServiceProvider.swift; path = Sources/Mocks/Services/MockServiceProvider.swift; sourceTree = "<group>"; };
+		9C70BF1D1EAA801D006204E5 /* MockShotService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockShotService.swift; path = Sources/Mocks/Services/MockShotService.swift; sourceTree = "<group>"; };
+		9C70BF1F1EAA80A0006204E5 /* MockUserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockUserService.swift; path = Sources/Mocks/Services/MockUserService.swift; sourceTree = "<group>"; };
+		9C70BF221EAA820B006204E5 /* SplashViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashViewModelTests.swift; path = Sources/Mocks/ViewControllers/SplashViewModelTests.swift; sourceTree = "<group>"; };
 		9C738F591EA2EB65003CC0D8 /* ExclusiveGestureRecognizerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExclusiveGestureRecognizerDelegate.swift; path = Sources/Utils/ExclusiveGestureRecognizerDelegate.swift; sourceTree = "<group>"; };
 		9CC64F911EA7E5180024C1E4 /* ModelStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelStream.swift; path = Sources/Model/ModelStream.swift; sourceTree = "<group>"; };
 		9CC64F941EA7ED1E0024C1E4 /* ReactionButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReactionButtonView.swift; path = "Sources/iOS Shotsgram/ViewControllers/Shot Detail/Reaction/ReactionButtonView.swift"; sourceTree = "<group>"; };
@@ -174,9 +200,19 @@
 		9CFB68721EA05FA100C0D9BB /* String+BoundingRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+BoundingRect.swift"; path = "Sources/Utils/String+BoundingRect.swift"; sourceTree = "<group>"; };
 		9CFB68741EA05FF600C0D9BB /* UICollectionViewCell+CellWidth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UICollectionViewCell+CellWidth.swift"; path = "Sources/Utils/UICollectionViewCell+CellWidth.swift"; sourceTree = "<group>"; };
 		9CFB68791EA0608500C0D9BB /* UIViewController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Rx.swift"; path = "Sources/Rx/UIViewController+Rx.swift"; sourceTree = "<group>"; };
+		A54F8F63AEE1794BA69E3453 /* Pods_ShotsgramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShotsgramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2B347D2E7517D04B50F176F /* Pods-ShotsgramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShotsgramTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShotsgramTests/Pods-ShotsgramTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9C70BF061EAA7D3F006204E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6754B68B4CBF53DB8F5DB604 /* Pods_ShotsgramTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9CFB68431EA052BE00C0D9BB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -193,6 +229,8 @@
 			children = (
 				08C1D24F279717C463081D91 /* Pods-Shotsgram.debug.xcconfig */,
 				7CFBEC196429B0DC65E7C580 /* Pods-Shotsgram.release.xcconfig */,
+				2F9E05B697CE02F719C3BC17 /* Pods-ShotsgramTests.debug.xcconfig */,
+				C2B347D2E7517D04B50F176F /* Pods-ShotsgramTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -262,6 +300,52 @@
 				9C6186751EA566B3004F3F04 /* BaseTableViewCell.swift */,
 			);
 			name = Base;
+			sourceTree = "<group>";
+		};
+		9C70BF0A1EAA7D3F006204E5 /* ShotsgramTests */ = {
+			isa = PBXGroup;
+			children = (
+				9C70BF171EAA7E90006204E5 /* Mocks */,
+				9C70BF131EAA7E3C006204E5 /* Supporting Files */,
+			);
+			path = ShotsgramTests;
+			sourceTree = "<group>";
+		};
+		9C70BF131EAA7E3C006204E5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C70BF0D1EAA7D3F006204E5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C70BF171EAA7E90006204E5 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				9C70BF151EAA7E84006204E5 /* MockError.swift */,
+				9C70BF181EAA7EBD006204E5 /* Services */,
+				9C70BF211EAA8156006204E5 /* ViewControllers */,
+			);
+			name = Mocks;
+			sourceTree = "<group>";
+		};
+		9C70BF181EAA7EBD006204E5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9C70BF1B1EAA7F86006204E5 /* MockServiceProvider.swift */,
+				9C70BF191EAA7EDB006204E5 /* MockAuthService.swift */,
+				9C70BF1D1EAA801D006204E5 /* MockShotService.swift */,
+				9C70BF1F1EAA80A0006204E5 /* MockUserService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		9C70BF211EAA8156006204E5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9C70BF221EAA820B006204E5 /* SplashViewModelTests.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		9CC64F931EA7ECE00024C1E4 /* Reaction */ = {
@@ -369,6 +453,7 @@
 			isa = PBXGroup;
 			children = (
 				9CFB68481EA052BE00C0D9BB /* Shotsgram */,
+				9C70BF0A1EAA7D3F006204E5 /* ShotsgramTests */,
 				9CFB68471EA052BE00C0D9BB /* Products */,
 				17D4D5BDE1737177A176560F /* Pods */,
 				A00E9CF6DFB153BC0679D816 /* Frameworks */,
@@ -379,6 +464,7 @@
 			isa = PBXGroup;
 			children = (
 				9CFB68461EA052BE00C0D9BB /* Shotsgram.app */,
+				9C70BF091EAA7D3F006204E5 /* ShotsgramTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -514,6 +600,7 @@
 			isa = PBXGroup;
 			children = (
 				14303A17F11DE2712520E2B8 /* Pods_Shotsgram.framework */,
+				A54F8F63AEE1794BA69E3453 /* Pods_ShotsgramTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -521,6 +608,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9C70BF081EAA7D3F006204E5 /* ShotsgramTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C70BF101EAA7D3F006204E5 /* Build configuration list for PBXNativeTarget "ShotsgramTests" */;
+			buildPhases = (
+				392F5352EE1A9F0553A7A832 /* [CP] Check Pods Manifest.lock */,
+				9C70BF051EAA7D3F006204E5 /* Sources */,
+				9C70BF061EAA7D3F006204E5 /* Frameworks */,
+				9C70BF071EAA7D3F006204E5 /* Resources */,
+				E36A7319E0DFD97E75B6F6DA /* [CP] Embed Pods Frameworks */,
+				EA7D9A7351063BCBF66BBBB2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C70BF0F1EAA7D3F006204E5 /* PBXTargetDependency */,
+			);
+			name = ShotsgramTests;
+			productName = ShotsgramTests;
+			productReference = 9C70BF091EAA7D3F006204E5 /* ShotsgramTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		9CFB68451EA052BE00C0D9BB /* Shotsgram */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9CFB68581EA052BE00C0D9BB /* Build configuration list for PBXNativeTarget "Shotsgram" */;
@@ -551,6 +659,13 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = DevMountain;
 				TargetAttributes = {
+					9C70BF081EAA7D3F006204E5 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = Y9CEQN88G2;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9CFB68451EA052BE00C0D9BB;
+					};
 					9CFB68451EA052BE00C0D9BB = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = Y9CEQN88G2;
@@ -572,11 +687,19 @@
 			projectRoot = "";
 			targets = (
 				9CFB68451EA052BE00C0D9BB /* Shotsgram */,
+				9C70BF081EAA7D3F006204E5 /* ShotsgramTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9C70BF071EAA7D3F006204E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9CFB68441EA052BE00C0D9BB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -589,6 +712,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		392F5352EE1A9F0553A7A832 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		8ED8EAABC41FB2A21317A17F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -619,6 +757,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shotsgram/Pods-Shotsgram-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E36A7319E0DFD97E75B6F6DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShotsgramTests/Pods-ShotsgramTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA7D9A7351063BCBF66BBBB2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShotsgramTests/Pods-ShotsgramTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F9B93C9F7D60EA805092B31E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -637,6 +805,19 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9C70BF051EAA7D3F006204E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C70BF1C1EAA7F86006204E5 /* MockServiceProvider.swift in Sources */,
+				9C70BF1E1EAA801D006204E5 /* MockShotService.swift in Sources */,
+				9C70BF161EAA7E84006204E5 /* MockError.swift in Sources */,
+				9C70BF231EAA820B006204E5 /* SplashViewModelTests.swift in Sources */,
+				9C70BF1A1EAA7EDB006204E5 /* MockAuthService.swift in Sources */,
+				9C70BF201EAA80A0006204E5 /* MockUserService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9CFB68421EA052BE00C0D9BB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -723,6 +904,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9C70BF0F1EAA7D3F006204E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9CFB68451EA052BE00C0D9BB /* Shotsgram */;
+			targetProxy = 9C70BF0E1EAA7D3F006204E5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		9CFB68521EA052BE00C0D9BB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -736,6 +925,41 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9C70BF111EAA7D3F006204E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F9E05B697CE02F719C3BC17 /* Pods-ShotsgramTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = Y9CEQN88G2;
+				INFOPLIST_FILE = ShotsgramTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jed.ShotsgramTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ShotsgramTests/ShotsgramTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shotsgram.app/Shotsgram";
+			};
+			name = Debug;
+		};
+		9C70BF121EAA7D3F006204E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2B347D2E7517D04B50F176F /* Pods-ShotsgramTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = Y9CEQN88G2;
+				INFOPLIST_FILE = ShotsgramTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jed.ShotsgramTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ShotsgramTests/ShotsgramTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shotsgram.app/Shotsgram";
+			};
+			name = Release;
+		};
 		9CFB68561EA052BE00C0D9BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -761,6 +985,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -811,6 +1036,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -860,6 +1086,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9C70BF101EAA7D3F006204E5 /* Build configuration list for PBXNativeTarget "ShotsgramTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C70BF111EAA7D3F006204E5 /* Debug */,
+				9C70BF121EAA7D3F006204E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9CFB68411EA052BE00C0D9BB /* Build configuration list for PBXProject "Shotsgram" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
