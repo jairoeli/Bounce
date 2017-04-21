@@ -12,17 +12,15 @@ import Then
 @testable import Shotsgram
 
 final class MockAuthService: BaseService, AuthServiceType, Then {
-  var currentAccessToken: AccessToken? {
-    return nil
-  }
+  var currentAccessToken: AccessToken? { return nil }
   
+  var authorizeClosure: () -> Observable<Void> = { return .never() }
   func authorize() -> Observable<Void> {
-    return .never()
+    return self.authorizeClosure()
   }
   
-  func callback(code: String) {
-  }
+  func callback(code: String) {}
   
-  func logout() {
-  }
+  func logout() {}
+  
 }

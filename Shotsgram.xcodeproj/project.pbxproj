@@ -82,6 +82,10 @@
 		9CF636341EAA9373008A39C8 /* MockShotService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF636331EAA9373008A39C8 /* MockShotService.swift */; };
 		9CF636361EAA93A3008A39C8 /* MockUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF636351EAA93A3008A39C8 /* MockUserService.swift */; };
 		9CF636391EAA93EC008A39C8 /* SplashViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF636381EAA93EC008A39C8 /* SplashViewModelTests.swift */; };
+		9CF6363B1EAA9727008A39C8 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF6363A1EAA9727008A39C8 /* LoginViewModelTests.swift */; };
+		9CF6363E1EAA9E6A008A39C8 /* ShotFixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF6363D1EAA9E6A008A39C8 /* ShotFixtures.swift */; };
+		9CF636401EAAA0E6008A39C8 /* ShotFeedViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF6363F1EAAA0E6008A39C8 /* ShotFeedViewModelTests.swift */; };
+		9CF636421EAAA4C2008A39C8 /* ShotViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF636411EAAA4C2008A39C8 /* ShotViewModelTest.swift */; };
 		9CFB68511EA052BE00C0D9BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CFB68501EA052BE00C0D9BB /* Assets.xcassets */; };
 		9CFB68541EA052BE00C0D9BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CFB68521EA052BE00C0D9BB /* LaunchScreen.storyboard */; };
 		9CFB685C1EA0543C00C0D9BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB685B1EA0543C00C0D9BB /* AppDelegate.swift */; };
@@ -186,6 +190,10 @@
 		9CF636331EAA9373008A39C8 /* MockShotService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockShotService.swift; path = Sources/Mocks/Services/MockShotService.swift; sourceTree = "<group>"; };
 		9CF636351EAA93A3008A39C8 /* MockUserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockUserService.swift; path = Sources/Mocks/Services/MockUserService.swift; sourceTree = "<group>"; };
 		9CF636381EAA93EC008A39C8 /* SplashViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashViewModelTests.swift; path = Sources/Mocks/ViewControllers/SplashViewModelTests.swift; sourceTree = "<group>"; };
+		9CF6363A1EAA9727008A39C8 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewModelTests.swift; path = Sources/Mocks/ViewControllers/LoginViewModelTests.swift; sourceTree = "<group>"; };
+		9CF6363D1EAA9E6A008A39C8 /* ShotFixtures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShotFixtures.swift; path = Sources/Mocks/Fixtures/ShotFixtures.swift; sourceTree = "<group>"; };
+		9CF6363F1EAAA0E6008A39C8 /* ShotFeedViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShotFeedViewModelTests.swift; path = Sources/Mocks/ViewControllers/ShotFeedViewModelTests.swift; sourceTree = "<group>"; };
+		9CF636411EAAA4C2008A39C8 /* ShotViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShotViewModelTest.swift; path = Sources/Mocks/ViewControllers/ShotViewModelTest.swift; sourceTree = "<group>"; };
 		9CFB68461EA052BE00C0D9BB /* Shotsgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shotsgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CFB68501EA052BE00C0D9BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		9CFB68531EA052BE00C0D9BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -416,6 +424,7 @@
 			isa = PBXGroup;
 			children = (
 				9CF6362C1EAA9282008A39C8 /* MockError.swift */,
+				9CF6363C1EAA9E52008A39C8 /* Fixtures */,
 				9CF6362E1EAA929A008A39C8 /* Services */,
 				9CF636371EAA93D6008A39C8 /* ViewControllers */,
 			);
@@ -437,8 +446,19 @@
 			isa = PBXGroup;
 			children = (
 				9CF636381EAA93EC008A39C8 /* SplashViewModelTests.swift */,
+				9CF6363A1EAA9727008A39C8 /* LoginViewModelTests.swift */,
+				9CF6363F1EAAA0E6008A39C8 /* ShotFeedViewModelTests.swift */,
+				9CF636411EAAA4C2008A39C8 /* ShotViewModelTest.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9CF6363C1EAA9E52008A39C8 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				9CF6363D1EAA9E6A008A39C8 /* ShotFixtures.swift */,
+			);
+			name = Fixtures;
 			sourceTree = "<group>";
 		};
 		9CFB683D1EA052BE00C0D9BB = {
@@ -801,11 +821,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CF636421EAAA4C2008A39C8 /* ShotViewModelTest.swift in Sources */,
 				9CF636321EAA934C008A39C8 /* MockServiceProvider.swift in Sources */,
 				9CF636341EAA9373008A39C8 /* MockShotService.swift in Sources */,
 				9CF6362D1EAA9282008A39C8 /* MockError.swift in Sources */,
 				9CF636391EAA93EC008A39C8 /* SplashViewModelTests.swift in Sources */,
+				9CF636401EAAA0E6008A39C8 /* ShotFeedViewModelTests.swift in Sources */,
 				9CF636301EAA92B3008A39C8 /* MockAuthService.swift in Sources */,
+				9CF6363E1EAA9E6A008A39C8 /* ShotFixtures.swift in Sources */,
+				9CF6363B1EAA9727008A39C8 /* LoginViewModelTests.swift in Sources */,
 				9CF636361EAA93A3008A39C8 /* MockUserService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
