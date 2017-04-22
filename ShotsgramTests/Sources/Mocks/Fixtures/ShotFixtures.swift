@@ -1,6 +1,6 @@
 //
 //  ShotFixtures.swift
-//  Shotsgram
+//  Bounce
 //
 //  Created by Jairo Eli de Leon on 4/21/17.
 //  Copyright © 2017 DevMountain. All rights reserved.
@@ -8,7 +8,7 @@
 
 import Foundation
 import ObjectMapper
-@testable import Shotsgram
+@testable import Bounce
 
 struct ShotFixture {
   static let shot1 = try! Shot(JSON: [

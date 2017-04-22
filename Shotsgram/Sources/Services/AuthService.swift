@@ -1,6 +1,6 @@
 //
 //  AuthService.swift
-//  Shotsgram
+//  Bounce
 //
 //  Created by Jairo Eli de Leon on 4/14/17.
 //  Copyright © 2017 DevMountain. All rights reserved.
@@ -36,7 +36,7 @@ final class AuthService: BaseService, AuthServiceType {
   fileprivate var currentViewController: UIViewController?
   fileprivate let callbackSubject = PublishSubject<String>()
   
-  fileprivate let keychain = Keychain(service: "jed.Shotsgram")
+  fileprivate let keychain = Keychain(service: "jed.Bounce")
   private(set) var currentAccessToken: AccessToken?
   
   override init(provider: ServiceProviderType) {

@@ -1,6 +1,6 @@
 //
 //  ShotViewTextCell.swift
-//  Shotsgram
+//  Bounce
 //
 //  Created by Jairo Eli de Leon on 4/18/17.
 //  Copyright © 2017 DevMountain. All rights reserved.
@@ -23,8 +23,8 @@ final class ShotViewTextCell: BaseCollectionViewCell {
   
   fileprivate let label = TTTAttributedLabel(frame: .zero).then {
     $0.numberOfLines = 0
-    $0.linkAttributes = [NSForegroundColorAttributeName: UIColor.linkBlue]
-    $0.activeLinkAttributes = [NSForegroundColorAttributeName: UIColor.darkLinkBlue]
+    $0.linkAttributes = [NSForegroundColorAttributeName: UIColor.pink]
+    $0.activeLinkAttributes = [NSForegroundColorAttributeName: UIColor.darkPink]
   }
   
   override init(frame: CGRect) {

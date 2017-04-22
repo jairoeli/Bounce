@@ -1,6 +1,6 @@
 //
 //  NSAttributedString+BoundingRect.swift
-//  Shotsgram
+//  Bounce
 //
 //  Created by Jairo Eli de Leon on 4/18/17.
 //  Copyright © 2017 DevMountain. All rights reserved.
@@ -14,16 +14,6 @@ extension NSAttributedString {
     let size = TTTAttributedLabel.sizeThatFitsAttributedString(self, withConstraints: size, limitedToNumberOfLines: UInt(limitedToNumberOfLines))
     return snap(size)
   }
-  
-  /*
-   var width: CGFloat {
-   let constraintSize = CGSize(
-   width: CGFloat.greatestFiniteMagnitude,
-   height: CGFloat.greatestFiniteMagnitude
-   )
-   return self.size(thatFits: constraintSize).width
-   }
-   */
   
   func height(thatFitsWidth width: CGFloat) -> CGFloat {
     let constraintSize = CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)

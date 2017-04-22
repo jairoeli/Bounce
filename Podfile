@@ -1,7 +1,7 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '10.3'
 
-target 'Shotsgram' do
+target 'Bounce' do
   use_frameworks!
 
   # Networking
@@ -44,7 +44,7 @@ target 'Shotsgram' do
   pod 'URLNavigator'
   pod 'KeychainAccess'
 
-  target 'ShotsgramTests' do
+  target 'BounceTests' do
     inherit! :search_paths
 
     pod 'RxTest'

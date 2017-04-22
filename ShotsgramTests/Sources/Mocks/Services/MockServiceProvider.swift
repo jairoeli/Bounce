@@ -1,12 +1,12 @@
 //
 //  MockServiceProvider.swift
-//  Shotsgram
+//  Bounce
 //
 //  Created by Jairo Eli de Leon on 4/21/17.
 //  Copyright © 2017 DevMountain. All rights reserved.
 //
 
-@testable import Shotsgram
+@testable import Bounce
 
 final class MockServiceProvider: ServiceProviderType {
   lazy var networking: Networking<DribbbleAPI> = .init()

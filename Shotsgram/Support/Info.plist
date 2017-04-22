@@ -23,7 +23,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>shotsgram</string>
+				<string>bounce</string>
 			</array>
 		</dict>
 	</array>

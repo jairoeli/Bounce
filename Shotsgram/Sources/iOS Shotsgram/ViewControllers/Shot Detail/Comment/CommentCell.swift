@@ -1,6 +1,6 @@
 //
 //  CommentCell.swift
-//  Shotsgram
+//  Bounce
 //
 //  Created by Jairo Eli de Leon on 4/19/17.
 //  Copyright © 2017 DevMountain. All rights reserved.
@@ -41,8 +41,8 @@ final class CommentCell: BaseCollectionViewCell {
   
   fileprivate let messageLabel = TTTAttributedLabel(frame: .zero).then {
     $0.numberOfLines = 0
-    $0.linkAttributes = [NSForegroundColorAttributeName: UIColor.linkBlue]
-    $0.activeLinkAttributes = [NSForegroundColorAttributeName: UIColor.darkLinkBlue]
+    $0.linkAttributes = [NSForegroundColorAttributeName: UIColor.pink]
+    $0.activeLinkAttributes = [NSForegroundColorAttributeName: UIColor.darkPink]
   }
   
   // MARK: - Initializing

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		10F1638C361358A6E54F2773 /* Pods_ShotsgramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A54F8F63AEE1794BA69E3453 /* Pods_ShotsgramTests.framework */; };
-		52C70FC5C3F6C224224209F1 /* Pods_Shotsgram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14303A17F11DE2712520E2B8 /* Pods_Shotsgram.framework */; };
 		9C08EE8C1EA1BDF800A7FA16 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C08EE8B1EA1BDF800A7FA16 /* Feed.swift */; };
 		9C08EE8E1EA1C1DB00A7FA16 /* Observable+ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C08EE8D1EA1C1DB00A7FA16 /* Observable+ActivityIndicator.swift */; };
 		9C08EE901EA1C33900A7FA16 /* RxOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C08EE8F1EA1C33900A7FA16 /* RxOperators.swift */; };
@@ -98,6 +97,8 @@
 		9CFB68731EA05FA100C0D9BB /* String+BoundingRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB68721EA05FA100C0D9BB /* String+BoundingRect.swift */; };
 		9CFB68751EA05FF600C0D9BB /* UICollectionViewCell+CellWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB68741EA05FF600C0D9BB /* UICollectionViewCell+CellWidth.swift */; };
 		9CFB687A1EA0608500C0D9BB /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB68791EA0608500C0D9BB /* UIViewController+Rx.swift */; };
+		9F7E4D863979575C465ADD71 /* Pods_Bounce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3EE2E1A48F4F34D525E1FF /* Pods_Bounce.framework */; };
+		BC7560C2ACD4F86C876CB9CD /* Pods_BounceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 803318EAFE13E12214906C68 /* Pods_BounceTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,8 +114,13 @@
 /* Begin PBXFileReference section */
 		08C1D24F279717C463081D91 /* Pods-Shotsgram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shotsgram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shotsgram/Pods-Shotsgram.debug.xcconfig"; sourceTree = "<group>"; };
 		14303A17F11DE2712520E2B8 /* Pods_Shotsgram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shotsgram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C8F23DE2A25C224222A042B /* Pods-Bounce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bounce.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bounce/Pods-Bounce.debug.xcconfig"; sourceTree = "<group>"; };
 		2F9E05B697CE02F719C3BC17 /* Pods-ShotsgramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShotsgramTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShotsgramTests/Pods-ShotsgramTests.debug.xcconfig"; sourceTree = "<group>"; };
+		407EEB2BFC4A06DBF7C302B0 /* Pods-BounceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BounceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BounceTests/Pods-BounceTests.debug.xcconfig"; sourceTree = "<group>"; };
+		676E7F2285A6794BAAD70997 /* Pods-BounceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BounceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BounceTests/Pods-BounceTests.release.xcconfig"; sourceTree = "<group>"; };
+		7823B83078574FCA40BEE3AA /* Pods-Bounce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bounce.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bounce/Pods-Bounce.release.xcconfig"; sourceTree = "<group>"; };
 		7CFBEC196429B0DC65E7C580 /* Pods-Shotsgram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shotsgram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shotsgram/Pods-Shotsgram.release.xcconfig"; sourceTree = "<group>"; };
+		803318EAFE13E12214906C68 /* Pods_BounceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BounceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C08EE8B1EA1BDF800A7FA16 /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Feed.swift; path = Sources/Model/Feed.swift; sourceTree = "<group>"; };
 		9C08EE8D1EA1C1DB00A7FA16 /* Observable+ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Observable+ActivityIndicator.swift"; path = "Sources/Rx/Observable+ActivityIndicator.swift"; sourceTree = "<group>"; };
 		9C08EE8F1EA1C33900A7FA16 /* RxOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RxOperators.swift; path = Sources/Rx/RxOperators.swift; sourceTree = "<group>"; };
@@ -182,7 +188,7 @@
 		9CE2E7A51EA6599E00FAE6CF /* ShowViewTextCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShowViewTextCellModel.swift; path = "Sources/iOS Shotsgram/ViewControllers/Shot Detail/Text/ShowViewTextCellModel.swift"; sourceTree = "<group>"; };
 		9CE2E7A71EA65A1F00FAE6CF /* ShotViewTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShotViewTextCell.swift; path = "Sources/iOS Shotsgram/ViewControllers/Shot Detail/Text/ShotViewTextCell.swift"; sourceTree = "<group>"; };
 		9CE2E7AB1EA66C9E00FAE6CF /* NSAttributedString+BoundingRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSAttributedString+BoundingRect.swift"; path = "Sources/Utils/NSAttributedString+BoundingRect.swift"; sourceTree = "<group>"; };
-		9CF636211EAA91EE008A39C8 /* ShotsgramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShotsgramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CF636211EAA91EE008A39C8 /* BounceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BounceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CF636251EAA91EF008A39C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CF6362C1EAA9282008A39C8 /* MockError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockError.swift; path = Sources/Mocks/MockError.swift; sourceTree = "<group>"; };
 		9CF6362F1EAA92B3008A39C8 /* MockAuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockAuthService.swift; path = Sources/Mocks/Services/MockAuthService.swift; sourceTree = "<group>"; };
@@ -194,7 +200,7 @@
 		9CF6363D1EAA9E6A008A39C8 /* ShotFixtures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShotFixtures.swift; path = Sources/Mocks/Fixtures/ShotFixtures.swift; sourceTree = "<group>"; };
 		9CF6363F1EAAA0E6008A39C8 /* ShotFeedViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShotFeedViewModelTests.swift; path = Sources/Mocks/ViewControllers/ShotFeedViewModelTests.swift; sourceTree = "<group>"; };
 		9CF636411EAAA4C2008A39C8 /* ShotViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShotViewModelTest.swift; path = Sources/Mocks/ViewControllers/ShotViewModelTest.swift; sourceTree = "<group>"; };
-		9CFB68461EA052BE00C0D9BB /* Shotsgram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shotsgram.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CFB68461EA052BE00C0D9BB /* Bounce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bounce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CFB68501EA052BE00C0D9BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		9CFB68531EA052BE00C0D9BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CFB68551EA052BE00C0D9BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Support/Info.plist; sourceTree = "<group>"; };
@@ -210,6 +216,7 @@
 		9CFB68791EA0608500C0D9BB /* UIViewController+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Rx.swift"; path = "Sources/Rx/UIViewController+Rx.swift"; sourceTree = "<group>"; };
 		A54F8F63AEE1794BA69E3453 /* Pods_ShotsgramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShotsgramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2B347D2E7517D04B50F176F /* Pods-ShotsgramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShotsgramTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShotsgramTests/Pods-ShotsgramTests.release.xcconfig"; sourceTree = "<group>"; };
+		FD3EE2E1A48F4F34D525E1FF /* Pods_Bounce.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bounce.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10F1638C361358A6E54F2773 /* Pods_ShotsgramTests.framework in Frameworks */,
+				BC7560C2ACD4F86C876CB9CD /* Pods_BounceTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,7 +233,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52C70FC5C3F6C224224209F1 /* Pods_Shotsgram.framework in Frameworks */,
+				9F7E4D863979575C465ADD71 /* Pods_Bounce.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +247,10 @@
 				7CFBEC196429B0DC65E7C580 /* Pods-Shotsgram.release.xcconfig */,
 				2F9E05B697CE02F719C3BC17 /* Pods-ShotsgramTests.debug.xcconfig */,
 				C2B347D2E7517D04B50F176F /* Pods-ShotsgramTests.release.xcconfig */,
+				1C8F23DE2A25C224222A042B /* Pods-Bounce.debug.xcconfig */,
+				7823B83078574FCA40BEE3AA /* Pods-Bounce.release.xcconfig */,
+				407EEB2BFC4A06DBF7C302B0 /* Pods-BounceTests.debug.xcconfig */,
+				676E7F2285A6794BAAD70997 /* Pods-BounceTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -475,8 +487,8 @@
 		9CFB68471EA052BE00C0D9BB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9CFB68461EA052BE00C0D9BB /* Shotsgram.app */,
-				9CF636211EAA91EE008A39C8 /* ShotsgramTests.xctest */,
+				9CFB68461EA052BE00C0D9BB /* Bounce.app */,
+				9CF636211EAA91EE008A39C8 /* BounceTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -613,6 +625,8 @@
 			children = (
 				14303A17F11DE2712520E2B8 /* Pods_Shotsgram.framework */,
 				A54F8F63AEE1794BA69E3453 /* Pods_ShotsgramTests.framework */,
+				FD3EE2E1A48F4F34D525E1FF /* Pods_Bounce.framework */,
+				803318EAFE13E12214906C68 /* Pods_BounceTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -620,9 +634,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9CF636201EAA91EE008A39C8 /* ShotsgramTests */ = {
+		9CF636201EAA91EE008A39C8 /* BounceTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9CF636281EAA91EF008A39C8 /* Build configuration list for PBXNativeTarget "ShotsgramTests" */;
+			buildConfigurationList = 9CF636281EAA91EF008A39C8 /* Build configuration list for PBXNativeTarget "BounceTests" */;
 			buildPhases = (
 				4065D55F2198EE0BA997450B /* [CP] Check Pods Manifest.lock */,
 				9CF6361D1EAA91EE008A39C8 /* Sources */,
@@ -636,14 +650,14 @@
 			dependencies = (
 				9CF636271EAA91EF008A39C8 /* PBXTargetDependency */,
 			);
-			name = ShotsgramTests;
+			name = BounceTests;
 			productName = ShotsgramTests;
-			productReference = 9CF636211EAA91EE008A39C8 /* ShotsgramTests.xctest */;
+			productReference = 9CF636211EAA91EE008A39C8 /* BounceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9CFB68451EA052BE00C0D9BB /* Shotsgram */ = {
+		9CFB68451EA052BE00C0D9BB /* Bounce */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9CFB68581EA052BE00C0D9BB /* Build configuration list for PBXNativeTarget "Shotsgram" */;
+			buildConfigurationList = 9CFB68581EA052BE00C0D9BB /* Build configuration list for PBXNativeTarget "Bounce" */;
 			buildPhases = (
 				8ED8EAABC41FB2A21317A17F /* [CP] Check Pods Manifest.lock */,
 				9CFB68421EA052BE00C0D9BB /* Sources */,
@@ -656,9 +670,9 @@
 			);
 			dependencies = (
 			);
-			name = Shotsgram;
+			name = Bounce;
 			productName = Shotsgram;
-			productReference = 9CFB68461EA052BE00C0D9BB /* Shotsgram.app */;
+			productReference = 9CFB68461EA052BE00C0D9BB /* Bounce.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -685,7 +699,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9CFB68411EA052BE00C0D9BB /* Build configuration list for PBXProject "Shotsgram" */;
+			buildConfigurationList = 9CFB68411EA052BE00C0D9BB /* Build configuration list for PBXProject "Bounce" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -698,8 +712,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9CFB68451EA052BE00C0D9BB /* Shotsgram */,
-				9CF636201EAA91EE008A39C8 /* ShotsgramTests */,
+				9CFB68451EA052BE00C0D9BB /* Bounce */,
+				9CF636201EAA91EE008A39C8 /* BounceTests */,
 			);
 		};
 /* End PBXProject section */
@@ -766,7 +780,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShotsgramTests/Pods-ShotsgramTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BounceTests/Pods-BounceTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A8BDF6DB9BA671107FA12E2F /* [CP] Embed Pods Frameworks */ = {
@@ -781,7 +795,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shotsgram/Pods-Shotsgram-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bounce/Pods-Bounce-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B333DBADC3512057915DF3E5 /* [CP] Embed Pods Frameworks */ = {
@@ -796,7 +810,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShotsgramTests/Pods-ShotsgramTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BounceTests/Pods-BounceTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F9B93C9F7D60EA805092B31E /* [CP] Copy Pods Resources */ = {
@@ -811,7 +825,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shotsgram/Pods-Shotsgram-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bounce/Pods-Bounce-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -923,7 +937,7 @@
 /* Begin PBXTargetDependency section */
 		9CF636271EAA91EF008A39C8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9CFB68451EA052BE00C0D9BB /* Shotsgram */;
+			target = 9CFB68451EA052BE00C0D9BB /* Bounce */;
 			targetProxy = 9CF636261EAA91EF008A39C8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -943,7 +957,7 @@
 /* Begin XCBuildConfiguration section */
 		9CF636291EAA91EF008A39C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F9E05B697CE02F719C3BC17 /* Pods-ShotsgramTests.debug.xcconfig */;
+			baseConfigurationReference = 407EEB2BFC4A06DBF7C302B0 /* Pods-BounceTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -954,13 +968,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shotsgram.app/Shotsgram";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bounce.app/Bounce";
 			};
 			name = Debug;
 		};
 		9CF6362A1EAA91EF008A39C8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2B347D2E7517D04B50F176F /* Pods-ShotsgramTests.release.xcconfig */;
+			baseConfigurationReference = 676E7F2285A6794BAAD70997 /* Pods-BounceTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -970,7 +984,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jed.ShotsgramTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shotsgram.app/Shotsgram";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bounce.app/Bounce";
 			};
 			name = Release;
 		};
@@ -1071,13 +1085,13 @@
 		};
 		9CFB68591EA052BE00C0D9BB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 08C1D24F279717C463081D91 /* Pods-Shotsgram.debug.xcconfig */;
+			baseConfigurationReference = 1C8F23DE2A25C224222A042B /* Pods-Bounce.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Y9CEQN88G2;
 				INFOPLIST_FILE = "$(SRCROOT)/Shotsgram/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jed.Shotsgram;
+				PRODUCT_BUNDLE_IDENTIFIER = jed.Bounce;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -1085,13 +1099,13 @@
 		};
 		9CFB685A1EA052BE00C0D9BB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7CFBEC196429B0DC65E7C580 /* Pods-Shotsgram.release.xcconfig */;
+			baseConfigurationReference = 7823B83078574FCA40BEE3AA /* Pods-Bounce.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Y9CEQN88G2;
 				INFOPLIST_FILE = "$(SRCROOT)/Shotsgram/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jed.Shotsgram;
+				PRODUCT_BUNDLE_IDENTIFIER = jed.Bounce;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -1100,7 +1114,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9CF636281EAA91EF008A39C8 /* Build configuration list for PBXNativeTarget "ShotsgramTests" */ = {
+		9CF636281EAA91EF008A39C8 /* Build configuration list for PBXNativeTarget "BounceTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9CF636291EAA91EF008A39C8 /* Debug */,
@@ -1109,7 +1123,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9CFB68411EA052BE00C0D9BB /* Build configuration list for PBXProject "Shotsgram" */ = {
+		9CFB68411EA052BE00C0D9BB /* Build configuration list for PBXProject "Bounce" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9CFB68561EA052BE00C0D9BB /* Debug */,
@@ -1118,7 +1132,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9CFB68581EA052BE00C0D9BB /* Build configuration list for PBXNativeTarget "Shotsgram" */ = {
+		9CFB68581EA052BE00C0D9BB /* Build configuration list for PBXNativeTarget "Bounce" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9CFB68591EA052BE00C0D9BB /* Debug */,

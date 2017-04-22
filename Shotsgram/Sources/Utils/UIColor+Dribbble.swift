@@ -1,6 +1,6 @@
 //
 //  UIColor+Dribbble.swift
-//  Shotsgram
+//  Bounce
 //
 //  Created by Jairo Eli de Leon on 4/15/17.
 //  Copyright © 2017 DevMountain. All rights reserved.
@@ -16,7 +16,5 @@ extension UIColor {
   class var charcoal: UIColor { return 0x333333.color }
   class var pink: UIColor { return 0xEA4C89.color }
   class var darkPink: UIColor { return 0xDF3E7B.color }
-  class var linkBlue: UIColor { return 0x3A8BBB.color }
-  class var darkLinkBlue: UIColor { return 0x17374A.color }
   
 }
