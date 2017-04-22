@@ -26,7 +26,7 @@ final class LoginViewController: BaseViewController {
   // MARK: - UI
   
   override var preferredStatusBarStyle: UIStatusBarStyle {
-    return .lightContent
+    return .default
   }
   
   fileprivate let loginButton = UIButton().then {
