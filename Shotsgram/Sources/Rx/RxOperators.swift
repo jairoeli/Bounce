@@ -30,7 +30,6 @@ extension SharedSequence {
   }
 }
 
-
 // MARK: - mapVoid()
 extension ObservableType {
   func mapVoid() -> Observable<Void> {
@@ -44,16 +43,14 @@ extension SharedSequence {
   }
 }
 
-
 // MARK: - ignoreErrors()
 extension ObservableType {
   func ignoreErrors() -> Observable<E> {
-    return self.catchError { error -> Observable<E> in
+    return self.catchError { _ -> Observable<E> in
       return .empty()
     }
   }
 }
-
 
 // MARK: - catchError()
 extension ObservableType {

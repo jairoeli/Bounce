@@ -14,22 +14,22 @@ import RxTest
 @testable import Bounce
 
 final class ShotFeedViewModelTests: XCTestCase {
-  
+
   func testIsRefreshing() {
-    
-    RxExpect() { test in
+
+    RxExpect { test in
       let provider = MockServiceProvider()
       let viewModel = ShotFeedViewModel(provider: provider)
-      
+
       test.input(viewModel.refresh, [next(100, Void())])
       test.assert(viewModel.isRefreshing)
         .filterNext()
         .equal([false, true, false])
     }
   }
-  
+
   func testSections() {
-    
+
     RxExpect { test in
       let provider = MockServiceProvider()
       provider.shotService = MockShotService(provider: provider).then {
@@ -37,10 +37,10 @@ final class ShotFeedViewModelTests: XCTestCase {
           .just(Feed(items: [ShotFixture.shot1, ShotFixture.shot2]))
         }
       }
-      
+
       let viewModel = ShotFeedViewModel(provider: provider)
       test.input(viewModel.refresh, [next(100, Void())])
-      
+
       let sectionItemCount = viewModel.sections.map { $0[0].items.count }
       test.assert(sectionItemCount)
         .filterNext()
@@ -48,9 +48,9 @@ final class ShotFeedViewModelTests: XCTestCase {
           0,// initial
           2 // after refreshing
         ])
-      
+
     }
-    
+
   }
-  
+
 }

@@ -20,14 +20,14 @@ extension ShotViewSection: SectionModelType {
       case .comment(let items): return items
     }
   }
-  
+
   init(original: ShotViewSection, items: [ShotViewSectionItem]) {
     switch original {
       case .shot: self = .shot(items)
       case .comment: self = .comment(items)
     }
   }
-  
+
 }
 
 enum ShotViewSectionItem {

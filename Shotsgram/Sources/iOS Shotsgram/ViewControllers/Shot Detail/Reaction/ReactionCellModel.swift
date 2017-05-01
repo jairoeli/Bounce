@@ -14,13 +14,13 @@ protocol ReactionCellModelType: class {
 }
 
 final class ReactionCellModel: ReactionCellModelType {
-  
+
   let likeButtonViewModel: ReactionButtonViewModelType
   let commentButtonViewModel: ReactionButtonViewModelType
-  
+
   init(provider: ServiceProviderType, shot: Shot) {
     self.likeButtonViewModel = ReactionLikeButtonViewModel(provider: provider, shot: shot)
     self.commentButtonViewModel = ReactionCommentButtonViewModel(provider: provider, shot: shot)
   }
-  
+
 }

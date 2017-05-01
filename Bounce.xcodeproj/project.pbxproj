@@ -23,6 +23,7 @@
 		9C08EEAB1EA2B48D00A7FA16 /* ShotViewTitleCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C08EEAA1EA2B48D00A7FA16 /* ShotViewTitleCellModel.swift */; };
 		9C08EEAD1EA2B55D00A7FA16 /* ShotViewTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C08EEAC1EA2B55D00A7FA16 /* ShotViewTitleCell.swift */; };
 		9C287B911EA6ED5B00DF3B6F /* ShotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C287B901EA6ED5B00DF3B6F /* ShotViewController.swift */; };
+		9C2F408F1EB69DAA00F604CF /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 9C2F408E1EB69DA900F604CF /* .swiftlint.yml */; };
 		9C423FD21EA8339800C0603C /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C423FD11EA8339800C0603C /* Comment.swift */; };
 		9C423FD51EA836A300C0603C /* CommentCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C423FD41EA836A300C0603C /* CommentCellModel.swift */; };
 		9C423FD71EA8374900C0603C /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C423FD61EA8374900C0603C /* CommentCell.swift */; };
@@ -136,6 +137,7 @@
 		9C08EEAA1EA2B48D00A7FA16 /* ShotViewTitleCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShotViewTitleCellModel.swift; path = "Sources/iOS Shotsgram/ViewControllers/Shot Detail/Title/ShotViewTitleCellModel.swift"; sourceTree = "<group>"; };
 		9C08EEAC1EA2B55D00A7FA16 /* ShotViewTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShotViewTitleCell.swift; path = "Sources/iOS Shotsgram/ViewControllers/Shot Detail/Title/ShotViewTitleCell.swift"; sourceTree = "<group>"; };
 		9C287B901EA6ED5B00DF3B6F /* ShotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShotViewController.swift; path = "Sources/iOS Shotsgram/ViewControllers/Shot Detail/ShotViewController.swift"; sourceTree = "<group>"; };
+		9C2F408E1EB69DA900F604CF /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		9C423FD11EA8339800C0603C /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Comment.swift; path = Sources/Model/Comment.swift; sourceTree = "<group>"; };
 		9C423FD41EA836A300C0603C /* CommentCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentCellModel.swift; path = "Sources/iOS Shotsgram/ViewControllers/Shot Detail/Comment/CommentCellModel.swift"; sourceTree = "<group>"; };
 		9C423FD61EA8374900C0603C /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentCell.swift; path = "Sources/iOS Shotsgram/ViewControllers/Shot Detail/Comment/CommentCell.swift"; sourceTree = "<group>"; };
@@ -476,6 +478,7 @@
 		9CFB683D1EA052BE00C0D9BB = {
 			isa = PBXGroup;
 			children = (
+				9C2F408E1EB69DA900F604CF /* .swiftlint.yml */,
 				9CFB68481EA052BE00C0D9BB /* Shotsgram */,
 				9CF636221EAA91EF008A39C8 /* ShotsgramTests */,
 				9CFB68471EA052BE00C0D9BB /* Products */,
@@ -665,6 +668,7 @@
 				9CFB68441EA052BE00C0D9BB /* Resources */,
 				A8BDF6DB9BA671107FA12E2F /* [CP] Embed Pods Frameworks */,
 				F9B93C9F7D60EA805092B31E /* [CP] Copy Pods Resources */,
+				9C2F40901EB6A21F00F604CF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -730,6 +734,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C2F408F1EB69DAA00F604CF /* .swiftlint.yml in Resources */,
 				9CFB68541EA052BE00C0D9BB /* LaunchScreen.storyboard in Resources */,
 				9CFB68511EA052BE00C0D9BB /* Assets.xcassets in Resources */,
 			);
@@ -782,6 +787,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BounceTests/Pods-BounceTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		9C2F40901EB6A21F00F604CF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		A8BDF6DB9BA671107FA12E2F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

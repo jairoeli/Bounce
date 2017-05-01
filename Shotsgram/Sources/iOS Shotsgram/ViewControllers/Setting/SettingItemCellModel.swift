@@ -15,13 +15,13 @@ protocol SettingItemCellModelType {
 }
 
 final class SettingItemCellModel: SettingItemCellModelType {
-  
+
   let textLabelText: String?
   let detailTextLabel: String?
-  
+
   init(text: String?, detailText: String?) {
     self.textLabelText = text
     self.detailTextLabel = detailText
   }
-  
+
 }

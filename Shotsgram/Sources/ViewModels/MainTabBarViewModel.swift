@@ -16,17 +16,17 @@ protocol MainTabBarViewModelType {
 }
 
 final class MainTabBarViewModel: MainTabBarViewModelType {
-  
+
   // MARK: - Output
-  
+
   let shotFeedViewModel: Driver<ShotFeedViewModelType>
   let settingsViewModel: Driver<SettingsViewModelType>
-  
+
   // MARK: - Initializing
-  
+
   init(provider: ServiceProviderType) {
     self.shotFeedViewModel = .just(ShotFeedViewModel(provider: provider))
     self.settingsViewModel = .just(SettingsViewModel(provider: provider))
   }
-  
+
 }

@@ -10,15 +10,15 @@ import UIKit
 import RxSwift
 
 class BaseTableViewCell: UITableViewCell {
-  
+
   // MARK: Initializing
-  
+
   override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
   }
-  
+
   required convenience init?(coder aDecoder: NSCoder) {
     self.init(style: .default, reuseIdentifier: nil)
   }
-  
+
 }

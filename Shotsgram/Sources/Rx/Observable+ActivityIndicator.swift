@@ -12,7 +12,7 @@ import RxSwiftUtilities
 public typealias ActivityIndicatorFilter = (activityIndicator: ActivityIndicator, condition: Bool)
 
 public extension ObservableConvertibleType {
-  
+
   /// Filters the elements of an observable sequence based on an ActivityIndicator.
   ///
   ///     let loading = ActivityIndicator()
@@ -24,16 +24,16 @@ public extension ObservableConvertibleType {
   public func filter(_ activityIndicator: ActivityIndicator) -> Observable<Self.E> {
     return self.filter(activityIndicator == true)
   }
-  
+
   public func filter(_ activityIndicatorFilter: ActivityIndicatorFilter) -> Observable<Self.E> {
     let (activityIndicator, condition) = activityIndicatorFilter
-    
+
     return self.asObservable()
       .withLatestFrom(activityIndicator.asObservable().startWith(false)) { ($0, $1) }
       .filter { _, isLoading in isLoading == condition }
       .map { element, _ in element }
   }
-  
+
 }
 
 prefix operator !

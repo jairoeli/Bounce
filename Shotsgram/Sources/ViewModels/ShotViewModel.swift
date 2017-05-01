@@ -14,34 +14,34 @@ protocol ShotViewModelType {
   // Input
   var dispose: PublishSubject<Void> { get }
   var refresh: PublishSubject<Void> { get }
-  
+
   // Output
   var isRefreshing: Driver<Bool> { get }
   var sections: Driver<[ShotViewSection]> { get }
-  
+
 }
 
 final class ShotViewModel: ShotViewModelType {
-  
+
   // MARK: - Types
-  
+
   fileprivate enum CommentOperation {
     case refresh([Comment])
     case loadMore([Comment])
   }
-  
+
   // MARK: - Input
-  
+
   let dispose: PublishSubject<Void> = .init()
   let refresh: PublishSubject<Void> = .init()
-  
+
   // MARK: - Output
-  
+
   let isRefreshing: Driver<Bool>
   let sections: Driver<[ShotViewSection]>
-  
+
   // MARK: - Initializing
-  
+
   init(provider: ServiceProviderType, shotID: Int, shot initialShot: Shot? = nil) {
     let shot: Observable<Shot> = Shot.event
       .scan(initialShot) { oldShot, event in
@@ -49,22 +49,22 @@ final class ShotViewModel: ShotViewModelType {
           case let .create(newShot):
             guard newShot.id == shotID else { return oldShot }
             return newShot
-          
+
           case let .update(newShot):
             guard newShot.id == shotID else { return oldShot }
             return newShot
-          
+
           case let .delete(id):
             guard id == shotID else { return oldShot }
             return nil
-          
+
           case let .like(id):
             guard id == shotID else { return oldShot }
             return oldShot?.with {
               $0.isLiked = true
               $0.likeCount += 1
           }
-          
+
           case let .unlike(id):
             guard id == shotID else { return oldShot }
             return oldShot?.with {
@@ -76,10 +76,10 @@ final class ShotViewModel: ShotViewModelType {
     .startWith(initialShot)
     .filterNil()
     .shareReplay(1)
-    
+
     let isRefreshing = ActivityIndicator()
     self.isRefreshing = isRefreshing.asDriver()
-    
+
     let didRefreshShot = self.refresh
       .filter(!isRefreshing)
       .flatMap {
@@ -88,13 +88,13 @@ final class ShotViewModel: ShotViewModelType {
           .ignoreErrors()
     }
     .shareReplay(1)
-    
+
     // Refresh shot
     _ = didRefreshShot
       .map(Shot.Event.update)
       .takeUntil(self.dispose)
       .bind(to: Shot.event)
-    
+
     // Refresh isLiked
     _ = didRefreshShot
       .flatMap { shot in
@@ -110,36 +110,35 @@ final class ShotViewModel: ShotViewModelType {
     .takeUntil(self.dispose)
     .bind(to: Shot.event)
 
-
     let shotSectionItemImage: Observable<ShotViewSectionItem> = shot
       .map { shot in .image(ShotViewImageCellModel(provider: provider, shot: shot)) }
       .shareReplay(1)
-    
+
     let shotSectionItemTitle: Observable<ShotViewSectionItem> = shot
       .map { shot in .title(ShotViewTitleCellModel(provider: provider, shot: shot)) }
       .shareReplay(1)
-    
+
     let shotSectionItemText: Observable<ShotViewSectionItem> = shot
       .map { shot in .text(ShotViewTextCellModel(provider: provider, shot: shot)) }
       .shareReplay(1)
-    
+
     let shotSectionItemReaction: Observable<ShotViewSectionItem> = shot
       .map { shot in .reaction(ReactionCellModel(provider: provider, shot: shot)) }
-    
+
     let shotSectionItems = [shotSectionItemImage, shotSectionItemTitle, shotSectionItemText, shotSectionItemReaction]
-    
+
     let shotSection: Observable<ShotViewSection> = Observable<[ShotViewSectionItem]>
       .combineLatest(shotSectionItems) { $0 }
       .startWith([])
       .map { sectionItems in ShotViewSection.shot(sectionItems) }
       .shareReplay(1)
-    
+
     //
     // Comment Section
     //
     let commentNextURL = Variable<URL?>(nil)
     let commentOperationRefresh = didRefreshShot
-      .flatMap { shot in
+      .flatMap { _ in
         provider.shotService.comments(shotID: shotID)
           .catchErrorJustReturn(Feed(items: []))
     }
@@ -149,9 +148,9 @@ final class ShotViewModel: ShotViewModelType {
       .map { commentList in
         CommentOperation.refresh(commentList.items)
     }
-    
+
     let commentOperation = commentOperationRefresh
-    
+
     let comments: Observable<[Comment]> = commentOperation
       .scan([]) { comments, operation in
         switch operation {
@@ -160,7 +159,7 @@ final class ShotViewModel: ShotViewModelType {
         }
     }
     .startWith([])
-    
+
     let commentSection: Observable<ShotViewSection> = comments
       .map { comments in
         let sectionItems: [ShotViewSectionItem] = comments.map { comment in
@@ -168,14 +167,14 @@ final class ShotViewModel: ShotViewModelType {
           let sectionItem = ShotViewSectionItem.comment(viewModel)
           return sectionItem
         }
-        
+
         if sectionItems.isEmpty {
           return ShotViewSection.comment([.activityIndicator])
         } else {
           return ShotViewSection.comment(sectionItems)
         }
     }
-    
+
     //
     // Section
     //
@@ -187,5 +186,5 @@ final class ShotViewModel: ShotViewModelType {
     }
     .asDriver(onErrorJustReturn: [])
   }
-  
+
 }

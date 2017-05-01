@@ -9,12 +9,12 @@
 import UIKit
 
 extension UICollectionView {
-  
+
   func sectionWidth(at section: Int) -> CGFloat {
     var width = self.width
     width -= self.contentInset.left
     width -= self.contentInset.right
-    
+
     if let delegate = self.delegate as? UICollectionViewDelegateFlowLayout,
       let inset = delegate.collectionView?(self, layout: self.collectionViewLayout, insetForSectionAt: section) {
       width -= inset.left
@@ -23,8 +23,8 @@ extension UICollectionView {
       width -= layout.sectionInset.left
       width -= layout.sectionInset.right
     }
-    
+
     return width
   }
-  
+
 }

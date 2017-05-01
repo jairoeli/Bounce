@@ -16,7 +16,7 @@ protocol ReactionButtonViewModelType {
   // Input
   var dispose: PublishSubject<Void> { get }
   var toggleReaction: PublishSubject<Void> { get }
-  
+
   // Output
   var isReacted: Bool { get }
   var canToggleReaction: Bool { get }

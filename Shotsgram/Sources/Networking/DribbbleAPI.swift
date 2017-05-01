@@ -21,18 +21,18 @@ enum DribbbleAPI {
 }
 
 extension DribbbleAPI: SugarTargetType {
-  
+
   var baseURL: URL {
     return URL(string: "https://api.dribbble.com/v1")!
   }
-  
+
   var url: URL {
     switch self {
       case .url(let url): return url
       default: return self.defaultURL
     }
   }
-  
+
   var route: Route {
     switch self {
       case .url: return .get("")
@@ -45,26 +45,26 @@ extension DribbbleAPI: SugarTargetType {
       case let .shotComments(shotID): return .get("/shots/\(shotID)/comments")
     }
   }
-  
+
   var params: Parameters? {
     switch self {
       case .shots: return ["per_page": 100]
       default: return nil
     }
   }
-  
+
   var task: Task {
     switch self {
       default: return .request
     }
   }
-  
+
   var httpHeaderFields: [String : String]? {
     return ["Accept": "application/json"]
   }
-  
+
   var sampleData: Data {
     return Data()
   }
-  
+
 }

@@ -15,13 +15,13 @@ protocol ShotViewImageCellModelType {
 }
 
 final class ShotViewImageCellModel: ShotViewImageCellModelType {
-  
+
   // MARK: - Output
-  
+
   let imageViewURL: URL
-  
+
   // MARK: - Initializing
-  
+
   init(provider: ServiceProviderType, shot: Shot) {
     self.imageViewURL = shot.imageURLs.hidpi ?? shot.imageURLs.normal
   }

@@ -11,7 +11,7 @@ import ObjectMapper
 @testable import Bounce
 
 struct ShotFixture {
-  static let shot1 = try! Shot(JSON: [
+  static let shot1 = try? Shot(JSON: [
     "id": 1,
     "title": "title1",
     "description": "description1",
@@ -33,7 +33,7 @@ struct ShotFixture {
     "animated": false,
     "tags": [
       "tag1",
-      "tag2",
+      "tag2"
     ],
     "user": [
       "id": 123,
@@ -50,9 +50,9 @@ struct ShotFixture {
       "pro": false,
       "created_at": "2009-07-08T02:51:22Z",
       "updated_at": "2014-02-22T17:10:33Z"
-    ],
+    ]
     ])
-  static let shot2 = try! Shot(JSON: [
+  static let shot2 = try? Shot(JSON: [
     "id": 2,
     "title": "title2",
     "description": "description2",
@@ -74,7 +74,7 @@ struct ShotFixture {
     "animated": false,
     "tags": [
       "tag1",
-      "tag2",
+      "tag2"
     ],
     "user": [
       "id": 123,
@@ -91,6 +91,6 @@ struct ShotFixture {
       "pro": false,
       "created_at": "2009-07-08T02:51:22Z",
       "updated_at": "2014-02-22T17:10:33Z"
-    ],
+    ]
     ])
 }

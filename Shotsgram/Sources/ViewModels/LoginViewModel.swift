@@ -13,24 +13,23 @@ import RxSwiftUtilities
 protocol LoginViewModelType {
   // Input
   var login: PublishSubject<Void> { get }
-  
+
   // Output
   var isLoading: Driver<Bool> { get }
   var presentMainScreen: Observable<MainTabBarViewModelType> { get }
 }
 
 final class LoginViewModel: LoginViewModelType {
-  
+
   // MARK: Input
   let login: PublishSubject<Void> = .init()
-  
-  
+
   // MARK: Output
   let isLoading: Driver<Bool>
   let presentMainScreen: Observable<MainTabBarViewModelType>
-  
+
   // MARK: Initializing
-  
+
   init(provider: ServiceProviderType) {
     let isLoading = ActivityIndicator()
     self.isLoading = isLoading.asDriver()
@@ -40,7 +39,5 @@ final class LoginViewModel: LoginViewModelType {
       .flatMap { provider.userService.fetchMe() }
       .map { MainTabBarViewModel(provider: provider) }
   }
-  
+
 }
-
-

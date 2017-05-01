@@ -13,7 +13,6 @@ protocol ServiceProviderType: class {
   var shotService: ShotServiceType { get }
 }
 
-
 final class ServiceProvider: ServiceProviderType {
   lazy var networking: Networking<DribbbleAPI> = .init(plugins: [AuthPlugin(provider: self)])
   lazy var authService: AuthServiceType = AuthService(provider: self)

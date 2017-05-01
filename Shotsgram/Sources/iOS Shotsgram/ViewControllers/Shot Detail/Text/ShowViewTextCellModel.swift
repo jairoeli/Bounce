@@ -14,7 +14,7 @@ protocol ShotViewTextCellModelType {
 
 final class ShotViewTextCellModel: ShotViewTextCellModelType {
   let text: NSAttributedString?
-  
+
   init(provider: ServiceProviderType, shot: Shot) {
     if let text = shot.text {
       self.text = try? NSAttributedString(htmlString: text)

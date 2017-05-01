@@ -13,19 +13,19 @@ enum ShotFeedViewSection {
 }
 
 extension ShotFeedViewSection: SectionModelType {
-  
+
   var items: [ShotFeedViewSectionItem] {
     switch self {
       case .shotTile(let items): return items
     }
   }
-  
+
   init(original: ShotFeedViewSection, items: [ShotFeedViewSectionItem]) {
     switch original {
       case .shotTile: self = .shotTile(items)
     }
   }
-  
+
 }
 
 enum ShotFeedViewSectionItem {

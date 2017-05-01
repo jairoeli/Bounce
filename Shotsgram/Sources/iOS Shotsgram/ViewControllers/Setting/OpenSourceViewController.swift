@@ -9,10 +9,10 @@
 import UIKit
 
 class OpenSourceViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-  
+
   var tableView: UITableView = UITableView()
   let cellId = "cellId"
-  
+
   let items = [
     "Alamofire",
     "Moya/RxSwift",
@@ -42,31 +42,31 @@ class OpenSourceViewController: UIViewController, UITableViewDataSource, UITable
     "URLNavigator",
     "KeychainAccess"
   ]
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
     self.navigationItem.title = "Software Libraries"
-    
+
     tableView = UITableView(frame: UIScreen.main.bounds, style: .plain)
     tableView.delegate = self
     tableView.dataSource = self
     tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
     self.view.addSubview(self.tableView)
   }
-  
+
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
-    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 112, 0)
+    self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 112, right: 0)
   }
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return items.count
   }
-  
+
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = UITableViewCell(style: .default, reuseIdentifier: cellId)
     cell.textLabel?.text = items[indexPath.row]
     return cell
   }
-  
+
 }

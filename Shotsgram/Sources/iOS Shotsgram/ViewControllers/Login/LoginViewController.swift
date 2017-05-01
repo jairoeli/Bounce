@@ -10,25 +10,25 @@ import SafariServices
 import UIKit
 
 final class LoginViewController: BaseViewController {
-  
+
   // MARK: - Constants
-  
+
   fileprivate struct Metric {
     static let loginButtonLeftRight = 30.f
     static let loginButtonBottom = 30.f
     static let loginButtonHeight = 40.f
   }
-  
+
   fileprivate struct Font {
     static let loginButtonTitle = UIFont.boldSystemFont(ofSize: 15)
   }
-  
+
   // MARK: - UI
-  
+
   override var preferredStatusBarStyle: UIStatusBarStyle {
     return .default
   }
-  
+
   fileprivate let loginButton = UIButton().then {
     $0.titleLabel?.font = Font.loginButtonTitle
     $0.setTitle("Login with Dribbble", for: .normal)
@@ -47,20 +47,20 @@ final class LoginViewController: BaseViewController {
       for: .highlighted
     )
   }
-  
+
   fileprivate let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .white)
-  
+
   // MARK: - Initializing
-  
+
   init(viewModel: LoginViewModelType) {
     super.init()
     self.configure(viewModel: viewModel)
   }
-  
+
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
-  
+
   // MARK: - View Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -68,7 +68,7 @@ final class LoginViewController: BaseViewController {
     self.view.addSubview(self.loginButton)
     self.view.addSubview(self.activityIndicatorView)
   }
-  
+
   override func setupConstraints() {
     self.loginButton.snp.makeConstraints { make in
       make.left.equalTo(Metric.loginButtonLeftRight)
@@ -80,27 +80,27 @@ final class LoginViewController: BaseViewController {
       make.center.equalTo(self.loginButton)
     }
   }
-  
+
   // MARK: - Configuring
-  
+
   private func configure(viewModel: LoginViewModelType) {
     // Input
     self.loginButton.rx.tap
       .bind(to: viewModel.login)
       .disposed(by: self.disposeBag)
-    
+
     // Output
     viewModel.isLoading
       .drive(self.loginButton.rx.isHidden)
       .disposed(by: self.disposeBag)
-    
+
     viewModel.isLoading
       .drive(self.activityIndicatorView.rx.isAnimating)
       .disposed(by: self.disposeBag)
-    
+
     viewModel.presentMainScreen
       .subscribe(onNext: AppDelegate.shared.presentMainScreen)
       .disposed(by: self.disposeBag)
   }
-  
+
 }

@@ -11,7 +11,7 @@ import ObjectMapper
 import RxSwift
 
 extension ObservableType where E == Moya.Response {
-  
+
   func map<T: ImmutableMappable>(_ mappableType: T.Type) -> Observable<T> {
     return self.mapString()
       .map { jsonString -> T in
@@ -23,7 +23,7 @@ extension ObservableType where E == Moya.Response {
         }
       })
   }
-  
+
   func map<T: ImmutableMappable>(_ mappableType: [T].Type) -> Observable<[T]> {
     return self.mapString()
       .map { jsonString -> [T] in
@@ -35,7 +35,7 @@ extension ObservableType where E == Moya.Response {
         }
       })
   }
-  
+
   func map<T: ImmutableMappable>(_ mappableType: Feed<T>.Type) -> Observable<Feed<T>> {
     return self
       .map { response in
@@ -52,5 +52,5 @@ extension ObservableType where E == Moya.Response {
         }
       })
   }
-  
+
 }

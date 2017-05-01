@@ -18,7 +18,7 @@ protocol SettingsViewModelType: class {
   // input
   var tableViewDidSelectItem: PublishSubject<SettingsViewSectionItem> { get }
   var logoutAlertDidSelectActionItem: PublishSubject<LogoutAlertActionItem> { get }
-  
+
   // output
   var tableViewSections: Driver<[SettingsViewSection]> { get }
   var presentWebViewController: Observable<URL> { get }
@@ -28,31 +28,31 @@ protocol SettingsViewModelType: class {
 }
 
 final class SettingsViewModel: SettingsViewModelType {
-  
+
   // MARK: - Input
-  
+
   let tableViewDidSelectItem: PublishSubject<SettingsViewSectionItem> = .init()
   var logoutAlertDidSelectActionItem: PublishSubject<LogoutAlertActionItem> = .init()
-  
+
   // MARK: - Output
-  
+
   let tableViewSections: Driver<[SettingsViewSection]>
   let presentWebViewController: Observable<URL>
   let presentOpenSourceViewController: Observable<Void>
   let presentLogoutAlert: Observable<[LogoutAlertActionItem]>
   let presentLoginScreen: Observable<LoginViewModelType>
-  
+
   // MARK: - Initializing
-  
+
   init(provider: ServiceProviderType) {
     let cls = SettingsViewModel.self
-    
+
     let sections = [cls.aboutSection(provider: provider), cls.logoutSection(provider: provider)]
-    
+
     self.tableViewSections = Observable
       .combineLatest(sections) { $0 }
       .asDriver(onErrorJustReturn: [])
-    
+
     self.presentWebViewController = self.tableViewDidSelectItem
       .filter { sectionItem -> Bool in
         if case .icons = sectionItem {
@@ -62,7 +62,7 @@ final class SettingsViewModel: SettingsViewModelType {
         }
     }
     .map(URL(string: "https://nucleoapp.com")!)
-    
+
     self.presentOpenSourceViewController = self.tableViewDidSelectItem
       .filter { sectionItem -> Bool in
         if case .openSource = sectionItem {
@@ -72,7 +72,7 @@ final class SettingsViewModel: SettingsViewModelType {
         }
     }
     .mapVoid()
-    
+
     self.presentLogoutAlert = self.tableViewDidSelectItem
       .filter { sectionItem -> Bool in
         if case .logout = sectionItem {
@@ -82,35 +82,35 @@ final class SettingsViewModel: SettingsViewModelType {
         }
     }
       .map { _ in [.logout, .cancel] }
-    
+
     self.presentLoginScreen = self.logoutAlertDidSelectActionItem
       .filter { $0 == .logout }
       .do(onNext: { _ in provider.authService.logout() })
       .map { _ in LoginViewModel(provider: provider) }
-    
+
   }
-  
+
   // MARK: - Functions
-  
+
   private class func aboutSection(provider: ServiceProviderType) -> Observable<SettingsViewSection> {
     let sectionsItems: [SettingsViewSectionItem] = [
       .icons(SettingItemCellModel(text: "Nucleo App", detailText: nil)),
       .openSource(SettingItemCellModel(text: "Software Libraries", detailText: nil))
     ]
-    
+
     return .just(.about(sectionsItems))
   }
-  
+
   private class func logoutSection(provider: ServiceProviderType) -> Observable<SettingsViewSection> {
-    
+
     let logoutSectionItem: Observable<SettingsViewSectionItem> = provider.userService.currentUser
       .map { user -> SettingsViewSectionItem in
         .logout(SettingItemCellModel(text: "Logout".localized, detailText: user?.name))
     }
-    
+
     return logoutSectionItem
       .map { sectionItem in [sectionItem] }
       .map { sectionItems in .logout(sectionItems) }
   }
-  
+
 }

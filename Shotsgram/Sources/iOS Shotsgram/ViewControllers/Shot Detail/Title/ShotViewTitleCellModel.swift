@@ -17,18 +17,18 @@ protocol ShotViewTitleCellModelType {
 }
 
 final class ShotViewTitleCellModel: ShotViewTitleCellModelType {
-  
+
   // MARK: Output
   let avatarURL: URL?
   let title: String
   let username: String
-  
+
   // MARK: - Initializing
-  
+
   init(provider: ServiceProviderType, shot: Shot) {
     self.avatarURL = shot.user.avatarURL
     self.title = shot.title
     self.username = "by \(shot.user.name)"
   }
-  
+
 }

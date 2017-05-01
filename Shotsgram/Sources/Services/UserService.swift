@@ -10,18 +10,18 @@ import RxSwift
 
 protocol UserServiceType {
   var currentUser: Observable<User?> { get }
-  
+
   func fetchMe() -> Observable<Void>
 }
 
 final class UserService: BaseService, UserServiceType {
-  
+
   fileprivate let userSubject = PublishSubject<User?>()
-  
+
   lazy var currentUser: Observable<User?> = self.userSubject.asObservable()
     .startWith(nil)
     .shareReplay(1)
-  
+
   func fetchMe() -> Observable<Void> {
     return self.provider.networking.request(.me)
       .map(User.self)
@@ -30,5 +30,5 @@ final class UserService: BaseService, UserServiceType {
       })
       .map { _ in Void() }
   }
-  
+
 }

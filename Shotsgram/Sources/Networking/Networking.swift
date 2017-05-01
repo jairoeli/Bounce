@@ -11,26 +11,26 @@ import MoyaSugar
 import RxSwift
 
 final class Networking<Target: SugarTargetType>: RxMoyaSugarProvider<Target> {
-  
+
   init(plugins: [PluginType] = []) {
     let configuration = URLSessionConfiguration.default
     configuration.httpAdditionalHeaders = Manager.defaultHTTPHeaders
     configuration.timeoutIntervalForRequest = 10
-    
+
     let manager = Manager(configuration: configuration)
     manager.startRequestsImmediately = false
-    
+
     super.init(manager: manager, plugins: plugins)
   }
-  
+
   @available(*, unavailable)
   override func request(_ token: Target) -> Observable<Response> {
     return super.request(token)
   }
-  
+
   func request(_ token: Target, file: StaticString = #file, function: StaticString = #function, line: UInt = #line) -> Observable<Response> {
     let requestString = "\(token.method) \(token.path)"
-    
+
     return super.request(token)
       .filterSuccessfulStatusCodes()
       .do(onNext: { value in
@@ -52,10 +52,10 @@ final class Networking<Target: SugarTargetType>: RxMoyaSugarProvider<Target> {
           let message = "FAILURE: \(requestString)\n\(error)"
           log.warning(message, file: file, function: function, line: line)
         }
-      }, onSubscribe: { 
+      }, onSubscribe: {
         let message = "REQUEST: \(requestString)"
         log.debug(message, file: file, function: function, line: line)
       })
   }
-  
+
 }

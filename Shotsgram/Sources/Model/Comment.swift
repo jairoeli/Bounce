@@ -9,15 +9,15 @@
 import ObjectMapper
 
 struct Comment: ModelType {
-  
+
   enum Event {}
-  
+
   var id: Int
   var body: String
   var createdAt: Date
   var likeCount: Int
   var user: User
-  
+
   init(map: Map) throws {
     self.id = try map.value("id")
     self.body = try map.value("body")
@@ -25,5 +25,5 @@ struct Comment: ModelType {
     self.likeCount = try map.value("likes_count")
     self.user = try map.value("user")
   }
-  
+
 }

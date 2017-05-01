@@ -11,7 +11,7 @@ import Foundation
 struct Feed<Element> {
   var items: [Element]
   var nextURL: URL?
-  
+
   init(items: [Element], nextURL: URL? = nil) {
     self.items = items
     self.nextURL = nextURL

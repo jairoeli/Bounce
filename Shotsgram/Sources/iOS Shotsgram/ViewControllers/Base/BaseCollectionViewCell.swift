@@ -10,15 +10,15 @@ import UIKit
 import RxSwift
 
 class BaseCollectionViewCell: UICollectionViewCell {
-  
+
   // MARK: - Initializing
-  
+
   override init(frame: CGRect) {
     super.init(frame: frame)
   }
-  
+
   required convenience init?(coder aDecoder: NSCoder) {
     self.init(frame: .zero)
   }
-  
+
 }

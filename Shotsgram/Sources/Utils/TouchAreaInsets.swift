@@ -27,7 +27,7 @@ extension NSObject {
   func associatedObject(for key: UnsafeRawPointer) -> Any? {
     return objc_getAssociatedObject(self, key)
   }
-  
+
   func setAssociatedObject(_ object: Any?, for key: UnsafeRawPointer) {
     objc_setAssociatedObject(self, key, object, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
   }
@@ -36,7 +36,7 @@ extension NSObject {
 private var touchAreaInsetsKey = "touchAreaInsetsKey"
 
 extension UIView {
-  
+
   static func initialized() {
     guard self === UIView.self else { return }
     self.swizzle(
@@ -44,12 +44,12 @@ extension UIView {
       #selector(UIView.swizzled_point(inside:with:))
     )
   }
-  
+
   var touchAreaInsets: UIEdgeInsets {
     get { return self.associatedObject(for: &touchAreaInsetsKey) as? UIEdgeInsets ?? .zero }
     set { self.setAssociatedObject(newValue, for: &touchAreaInsetsKey) }
   }
-  
+
   func swizzled_point(inside point: CGPoint, with event: UIEvent?) -> Bool {
     let touchAreaInsets = self.touchAreaInsets
     let insetBounds = CGRect(
@@ -60,5 +60,5 @@ extension UIView {
     )
     return insetBounds.contains(point)
   }
-  
+
 }

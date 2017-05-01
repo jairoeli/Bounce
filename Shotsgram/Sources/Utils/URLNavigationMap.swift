@@ -10,13 +10,13 @@ import UIKit
 import URLNavigator
 
 final class URLNavigationMap {
-  
+
   static func initialize(provider: ServiceProviderType) {
-    Navigator.map("bounce://oauth/callback") { url, values in
+    Navigator.map("bounce://oauth/callback") { url, _ in
       guard let code = url.queryParameters["code"] else { return false }
       provider.authService.callback(code: code)
       return true
     }
   }
-  
+
 }

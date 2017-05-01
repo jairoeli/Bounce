@@ -16,16 +16,16 @@ protocol CommentCellModelType {
 }
 
 struct CommentCellModel: CommentCellModelType {
-  
+
   let avatarURL: URL?
   let name: String
   let message: NSAttributedString
-  
+
   init(provider: ServiceProviderType, comment: Comment) {
     self.avatarURL = comment.user.avatarURL
     self.name = comment.user.name
     self.message = (try? NSAttributedString(htmlString: comment.body))
       ?? NSAttributedString(string: comment.body)
   }
-  
+
 }

@@ -9,24 +9,24 @@
 import RxSwift
 
 final class ReactionCommentButtonViewModel: ReactionButtonViewModelType {
-  
+
   // MARK: - Input
-  
+
   let dispose: PublishSubject<Void> = .init()
   let toggleReaction: PublishSubject<Void> = .init()
-  
+
   // MARK: - Output
-  
+
   let isReacted: Bool
   let canToggleReaction: Bool
   let text: String
-  
+
   // MARK: - Initializing
-  
+
   init(provider: ServiceProviderType, shot: Shot) {
     self.isReacted = false
     self.canToggleReaction = true
     self.text = "\(shot.commentCount)"
   }
-  
+
 }

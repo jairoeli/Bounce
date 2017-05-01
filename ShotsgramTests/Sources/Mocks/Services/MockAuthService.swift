@@ -13,14 +13,14 @@ import Then
 
 final class MockAuthService: BaseService, AuthServiceType, Then {
   var currentAccessToken: AccessToken? { return nil }
-  
+
   var authorizeClosure: () -> Observable<Void> = { return .never() }
   func authorize() -> Observable<Void> {
     return self.authorizeClosure()
   }
-  
+
   func callback(code: String) {}
-  
+
   func logout() {}
-  
+
 }

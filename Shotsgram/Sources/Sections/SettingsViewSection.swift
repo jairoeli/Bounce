@@ -20,14 +20,14 @@ extension SettingsViewSection: SectionModelType {
       case .logout(let items): return items
     }
   }
-  
+
   init(original: SettingsViewSection, items: [SettingsViewSectionItem]) {
     switch original {
       case .about: self = .about(items)
       case .logout: self = .logout(items)
     }
   }
-  
+
 }
 
 enum SettingsViewSectionItem {
