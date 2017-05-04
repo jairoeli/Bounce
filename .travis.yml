@@ -9,3 +9,6 @@ install:
 - bundle exec pod --version
 - bundle exec pod repo update --verbose
 - bundle exec pod install
+
+script:    
+    xctool -workspace Bounce.xcworkspace -scheme Bounce build test -sdk iphonesimulator
