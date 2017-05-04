@@ -29,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   class var shared: AppDelegate {
     return UIApplication.shared.delegate as! AppDelegate
+    // swiftlint:disable:previous force_cast
   }
 
   // MARK: - UI
