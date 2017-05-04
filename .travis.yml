@@ -3,3 +3,9 @@ osx_image: xcode8.3
 xcode_workspace: Bounce.xcworkspace
 xcode_scheme: Bounce
 xcode_sdk: iphonesimulator10.3
+
+install:
+- bundle install --deployment
+- bundle exec pod --version
+- bundle exec pod repo update --verbose
+- bundle exec pod install
