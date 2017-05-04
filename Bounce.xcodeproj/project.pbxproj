@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10F1638C361358A6E54F2773 /* Pods_ShotsgramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A54F8F63AEE1794BA69E3453 /* Pods_ShotsgramTests.framework */; };
 		9C08EE8C1EA1BDF800A7FA16 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C08EE8B1EA1BDF800A7FA16 /* Feed.swift */; };
 		9C08EE8E1EA1C1DB00A7FA16 /* Observable+ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C08EE8D1EA1C1DB00A7FA16 /* Observable+ActivityIndicator.swift */; };
 		9C08EE901EA1C33900A7FA16 /* RxOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C08EE8F1EA1C33900A7FA16 /* RxOperators.swift */; };
@@ -89,18 +88,7 @@
 		9CFB68751EA05FF600C0D9BB /* UICollectionViewCell+CellWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB68741EA05FF600C0D9BB /* UICollectionViewCell+CellWidth.swift */; };
 		9CFB687A1EA0608500C0D9BB /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFB68791EA0608500C0D9BB /* UIViewController+Rx.swift */; };
 		9F7E4D863979575C465ADD71 /* Pods_Bounce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3EE2E1A48F4F34D525E1FF /* Pods_Bounce.framework */; };
-		BC7560C2ACD4F86C876CB9CD /* Pods_BounceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 803318EAFE13E12214906C68 /* Pods_BounceTests.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		9CF636261EAA91EF008A39C8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9CFB683E1EA052BE00C0D9BB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9CFB68451EA052BE00C0D9BB;
-			remoteInfo = Shotsgram;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		08C1D24F279717C463081D91 /* Pods-Shotsgram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shotsgram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shotsgram/Pods-Shotsgram.debug.xcconfig"; sourceTree = "<group>"; };
@@ -180,7 +168,6 @@
 		9CE2E7A51EA6599E00FAE6CF /* ShowViewTextCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShowViewTextCellModel.swift; path = "Sources/iOS Shotsgram/ViewControllers/Shot Detail/Text/ShowViewTextCellModel.swift"; sourceTree = "<group>"; };
 		9CE2E7A71EA65A1F00FAE6CF /* ShotViewTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShotViewTextCell.swift; path = "Sources/iOS Shotsgram/ViewControllers/Shot Detail/Text/ShotViewTextCell.swift"; sourceTree = "<group>"; };
 		9CE2E7AB1EA66C9E00FAE6CF /* NSAttributedString+BoundingRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSAttributedString+BoundingRect.swift"; path = "Sources/Utils/NSAttributedString+BoundingRect.swift"; sourceTree = "<group>"; };
-		9CF636211EAA91EE008A39C8 /* BounceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BounceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CFB68461EA052BE00C0D9BB /* Bounce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bounce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CFB68501EA052BE00C0D9BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		9CFB68531EA052BE00C0D9BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -201,15 +188,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9CF6361E1EAA91EE008A39C8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				10F1638C361358A6E54F2773 /* Pods_ShotsgramTests.framework in Frameworks */,
-				BC7560C2ACD4F86C876CB9CD /* Pods_BounceTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9CFB68431EA052BE00C0D9BB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -419,7 +397,6 @@
 			isa = PBXGroup;
 			children = (
 				9CFB68461EA052BE00C0D9BB /* Bounce.app */,
-				9CF636211EAA91EE008A39C8 /* BounceTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -565,27 +542,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9CF636201EAA91EE008A39C8 /* BounceTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9CF636281EAA91EF008A39C8 /* Build configuration list for PBXNativeTarget "BounceTests" */;
-			buildPhases = (
-				4065D55F2198EE0BA997450B /* [CP] Check Pods Manifest.lock */,
-				9CF6361D1EAA91EE008A39C8 /* Sources */,
-				9CF6361E1EAA91EE008A39C8 /* Frameworks */,
-				9CF6361F1EAA91EE008A39C8 /* Resources */,
-				B333DBADC3512057915DF3E5 /* [CP] Embed Pods Frameworks */,
-				8F34189BC3C8B529A4648653 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9CF636271EAA91EF008A39C8 /* PBXTargetDependency */,
-			);
-			name = BounceTests;
-			productName = ShotsgramTests;
-			productReference = 9CF636211EAA91EE008A39C8 /* BounceTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		9CFB68451EA052BE00C0D9BB /* Bounce */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9CFB68581EA052BE00C0D9BB /* Build configuration list for PBXNativeTarget "Bounce" */;
@@ -617,13 +573,6 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = DevMountain;
 				TargetAttributes = {
-					9CF636201EAA91EE008A39C8 = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = Y9CEQN88G2;
-						LastSwiftMigration = 0830;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 9CFB68451EA052BE00C0D9BB;
-					};
 					9CFB68451EA052BE00C0D9BB = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = Y9CEQN88G2;
@@ -645,19 +594,11 @@
 			projectRoot = "";
 			targets = (
 				9CFB68451EA052BE00C0D9BB /* Bounce */,
-				9CF636201EAA91EE008A39C8 /* BounceTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9CF6361F1EAA91EE008A39C8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9CFB68441EA052BE00C0D9BB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -671,21 +612,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4065D55F2198EE0BA997450B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		8ED8EAABC41FB2A21317A17F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -699,21 +625,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		8F34189BC3C8B529A4648653 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BounceTests/Pods-BounceTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9C2F40901EB6A21F00F604CF /* ShellScript */ = {
@@ -744,21 +655,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bounce/Pods-Bounce-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B333DBADC3512057915DF3E5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BounceTests/Pods-BounceTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		F9B93C9F7D60EA805092B31E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -777,13 +673,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9CF6361D1EAA91EE008A39C8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9CFB68421EA052BE00C0D9BB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -870,14 +759,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		9CF636271EAA91EF008A39C8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9CFB68451EA052BE00C0D9BB /* Bounce */;
-			targetProxy = 9CF636261EAA91EF008A39C8 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
 		9CFB68521EA052BE00C0D9BB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -891,41 +772,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		9CF636291EAA91EF008A39C8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 407EEB2BFC4A06DBF7C302B0 /* Pods-BounceTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = Y9CEQN88G2;
-				INFOPLIST_FILE = ShotsgramTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jed.ShotsgramTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bounce.app/Bounce";
-			};
-			name = Debug;
-		};
-		9CF6362A1EAA91EF008A39C8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 676E7F2285A6794BAAD70997 /* Pods-BounceTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = Y9CEQN88G2;
-				INFOPLIST_FILE = ShotsgramTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jed.ShotsgramTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bounce.app/Bounce";
-			};
-			name = Release;
-		};
 		9CFB68561EA052BE00C0D9BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1052,15 +898,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9CF636281EAA91EF008A39C8 /* Build configuration list for PBXNativeTarget "BounceTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9CF636291EAA91EF008A39C8 /* Debug */,
-				9CF6362A1EAA91EF008A39C8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		9CFB68411EA052BE00C0D9BB /* Build configuration list for PBXProject "Bounce" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
