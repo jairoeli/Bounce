@@ -4,11 +4,15 @@ xcode_workspace: Bounce.xcworkspace
 xcode_scheme: Bounce
 xcode_sdk: iphonesimulator10.3
 
+before_install:
+- rvm use system
+- sudo gem install cocoapods -v '1.2.1'
+
 install:
 - bundle install --deployment
 - bundle exec pod --version
 - bundle exec pod repo update --verbose
 - bundle exec pod install
-
-script:    
-    xctool -workspace Bounce.xcworkspace -scheme Bounce build test -sdk iphonesimulator
+ 
+script:
+xctool -workspace Bounce.xcworkspace -scheme Bounce build -sdk iphonesimulator
