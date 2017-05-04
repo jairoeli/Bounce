@@ -11,7 +11,6 @@ cache:
 env:
   global:
     - WORKSPACE="Bounce.xcworkspace"
-    - SCHEME="Bounce"
     - IOS_SDK="iphonesimulator10.3"
   matrix:
     - SDK="$IOS_SDK"  DESTINATION="platform=iOS Simulator,name=iPhone 7,OS=10.3"
@@ -28,7 +27,6 @@ before_script:
 script:
   - xcodebuild clean build test
     -workspace "$WORKSPACE"
-    -scheme "$SCHEME"
     -sdk "$SDK"
     -destination "$DESTINATION"
     -configuration Debug
