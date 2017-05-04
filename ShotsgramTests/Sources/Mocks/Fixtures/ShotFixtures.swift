@@ -11,7 +11,7 @@ import ObjectMapper
 @testable import Bounce
 
 struct ShotFixture {
-  static let shot1 = try? Shot(JSON: [
+  static let shot1 = try! Shot(JSON: [
     "id": 1,
     "title": "title1",
     "description": "description1",
@@ -52,7 +52,7 @@ struct ShotFixture {
       "updated_at": "2014-02-22T17:10:33Z"
     ]
     ])
-  static let shot2 = try? Shot(JSON: [
+  static let shot2 = try! Shot(JSON: [
     "id": 2,
     "title": "title2",
     "description": "description2",
