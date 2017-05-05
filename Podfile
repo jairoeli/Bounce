@@ -44,11 +44,4 @@ target 'Bounce' do
   pod 'URLNavigator'
   pod 'KeychainAccess'
 
-  target 'BounceTests' do
-    inherit! :search_paths
-
-    pod 'RxTest'
-    pod 'RxExpect'
-  end
-
 end
