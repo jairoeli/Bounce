@@ -1,7 +1,7 @@
 # Bounce
 
 ![Swift](https://img.shields.io/badge/Swift-3.1-orange.svg)
-[![Build Status](https://travis-ci.org/jairoeli/Bounce.svg?branch=master)](https://travis-ci.org/devxoul/Drrrible)
+[![Build Status](https://travis-ci.org/jairoeli/Bounce.svg?branch=master)](https://travis-ci.org/jairoeli/Bounce)
 
 The aim of this project is to learn how to use RxSwift in a MVVM architecture.
 
